@@ -17,12 +17,74 @@
 % ********************************************************** %
 %               THINGS TO EDIT BELOW THIS LINE               %
 % ********************************************************** %
-
+\newcommand{\D}{\nabla}
+\renewcommand{\d}{\delta}
 
 \title{\textsc{MATH 173 Problem Set 1}}
 \author{Stepan (Styopa) Zharkov}
 \date{April 6, 2022}
 \begin{document}
 \maketitle
-\problem{1}
+\problem{1} TODO \tri
+\hop
+\solution
+First, we see that 
+\[\D \times F = \D \times \D f = \del{\d_2\d_3 f - \d_3\d_2 f,\d_3\d_1 f - \d_3\d_1 f, \d_1\d_2 f - \d_1\d_2 f} = (0,0,0)\]
+because order of differentiation does not matter. Also, 
+\[\D \cdot F = \D \cdot \D f = \d_1\d_1 f +  \d_2\d_2 f  + \d_3\d_3 f  = \Delta f,\]
+as we wanted. \qed
+
+
+\newpage
+\problem{2} TODO \tri
+\hop
+\solution 
+\begin{enumerate}[(a)]
+    \item Consider $u(x_1, x_2) = x_1 - x_2$. We see that $\d_1u+\d_2u=1-1=0$ and $u(x,x)=0$, but $u$ is nonzero.\qed
+    \item Suppose $u(\hat x_1, \hat x_2) \ne 0$ for some $\hat x_1, \hat x_2$. Consider the function $f(s) = u(\hat x_1 + s, \hat x_2 + s)$. We see that $f(0)\ne 0$ and $f((-\hat x_1 -\hat x_2)/2)= u((\hat x_1-\hat x_2)/2, (-\hat x_1+\hat x_2)/2) = 0$. By the mean value theorem, there is some point where $f' \ne 0$. 
+    \hop
+    However, we see that $f'(s) = \d_1u(\hat x_1+s,\hat x_2+s)+\d_2u(\hat x_1+s, \hat x_2+s) = 0$. So, we have a contradiction and thus there is no such $\hat x_1, \hat x_2$ and $u = 0$. \qed
+    \item Let $f_r(s) = u(r+s,-r+s)$. We $f'(s) = \d_1u(r+s,-r+s)+\d_2u(r+s, -r+s) = 0$, so $f_r$ is constant. Thus, $u(r,-r)$ defines all of $f_r$. Note that any point $(x_1, x_2)$ is expressed uniquely as $(r+s, -r+s)$, so the $f_r$ cover the entire plane with no overlap. In other words, Any solution can be described as $u(x_1, x_2) = g(x_1-x_2)$ 
+\end{enumerate}
+
+\newpage
+\problem{3} TODO \tri
+\hop
+\solution
+\begin{enumerate}[(a)]
+    \item TODO
+    \item TODO
+\end{enumerate}
+
+
+\newpage
+\problem{4} TODO \tri
+\hop
+\solution TODO
+
+
+\newpage
+\problem{5} TODO \tri
+\hop
+\solution
+\begin{enumerate}[(a)]
+    \item TODO
+    \item TODO
+\end{enumerate}
+
+\newpage
+\problem{6} TODO \tri
+\hop
+\solution TODO
+
+
+\newpage
+\problem{7} TODO \tri
+\hop
+\solution
+\begin{enumerate}[(a)]
+    \item TODO
+    \item TODO
+\end{enumerate}
+
 \end{document}
