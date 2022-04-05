@@ -113,8 +113,20 @@ for all points $(x_1, x_2)$ that are on some characteristic curve. We can confir
     \hop
     Solving this, we have $f_t(s) = s$ and $f_x(s) = s+r$. So, we can let
     \[f_r(s)=(s, s+r)\]
-    be the characteristic curves. 
-    \item TODO
+    be the characteristic curves. We can define $y_r(s) = u(f_r(s))$ along the curves, and we know $y_r'(s) = y_r(s)^2$ with $y_r(0) = e^{-f_x(0)^2} = e^{-r^2}$. 
+    \hop
+    We can solve for $y$ in the exact same way as Example 3.3 in the lecture notes to get that 
+    \[y_r(s) = \frac{1}{e^{r^2}-s}\]
+    when $s \ne e^{r^2}$. Since we can write $s = t, r = x-t$, we see that 
+    \[u(x,t) = \frac{1}{e^{(x-t)^2}-t}\]
+    when $e^{(x-t)^2} \ne t$. So, we have a solution that blows up on the curve $e^{(x-t)^2} = t$. \qed
+
+    %TODO: insert picture 
+    \item The intuition for this problem is that we must pick a $T$ such that the vertical line of $t = T$ just barely touches the blow up curve in the picture above.
+    \hop
+    Let $T=1, x_0 = 1$. We see that for $t < T$, we have $e^{(x-t)^2} \ge 1 > t$,  so $\frac{1}{e^{(x-t)^2}-t} = u(x,t)$ is continuously differentiable. However, 
+    \[\lim_{t \to 1^-}\frac{1}{e^{(1-t)^2}-t} = \infty\]
+    because both $e^{(1-t)^2}$ and $t$ approach 1 as $t \to 1^-$. So, we have found the desired point. \qed
 \end{enumerate}
 
 \end{document}
