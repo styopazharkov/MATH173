@@ -1,0 +1,77 @@
+
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{../commands}[command shortcuts]
+
+%%% SHORTCUTS FOR MATH %%%
+\newcommand{\eps}{\varepsilon} %epsilon
+\newcommand{\ZZ}{\mathbb{Z}} % integers
+\newcommand{\RR}{\mathbb{R}} % reals
+\newcommand{\QQ}{\mathbb{Q}} % rationals
+\newcommand{\CC}{\mathbb{C}} % complex numbers
+\newcommand{\FF}{\mathbb{F}} % arbitrary field
+\newcommand{\NN}{\mathbb{N}} % natural numbers
+\newcommand{\PP}{\mathbb{P}} % probability
+\newcommand{\EE}{\mathbb{E}} % expectation
+\renewcommand{\SS}{\mathbb{S}} % circle
+\DeclareMathOperator{\spn}{span} % span
+\DeclareMathOperator{\img}{Img} % span
+\DeclareMathOperator{\ran}{Ran} % range
+\DeclareMathOperator{\adj}{adj} % adjugate/adjoint
+\DeclareMathOperator{\vol}{Vol} % volume
+\DeclareMathOperator{\var}{Var} % variance
+\DeclareMathOperator{\adv}{Adv} % advantage
+\newcommand{\limty}{{\lim_{n \to \infty}}} % limit to infinity. Usage: \limty{n}
+\newcommand{\sumty}{{\sum_{n=1}^\infty}}
+\newcommand{\subt}[2]{#1_{\text{#2}}} % text subscript. Usage: \subt{a}{text}
+\newcommand{\supt}[2]{#1^{\text{#2}}} % text superscript. Usage: \supt{a}{text}
+\newcommand{\floor}[1]{\left\lfloor#1\right\rfloor} % floor function.  Usage: \floor{a}
+\newcommand{\ol}[1]{{\overline{#1}}} 
+\newcommand{\bb}[1]{{\mathbb{#1}}} 
+\newcommand{\scr}[1]{\mathscr{#1}} 
+\renewcommand{\cal}[1]{\mathcal{#1}} 
+\newcommand{\ceil}[1]{\left\lceil#1\right\rceil} % ceiling function.  Usage: \ceil{a}
+\newcommand{\ang}[1]{\langle#1\rangle} %  Usage: \ang{a}
+\newcommand{\inv}{{^{-1}}} %inverse. power of -1
+\newcommand{\lra}{\leftrightarrow}
+\newcommand{\Lra}{\Leftrightarrow}
+\newcommand{\sse}{\subseteq}
+\newcommand{\nor}{\triangleleft}
+\newcommand{\zo}{{\{0,1\}}} %bit set
+\renewcommand{\P}{\mathsf{P}} %P
+\newcommand{\NP}{\mathsf{NP}} % NP
+\newcommand{\PH}{\mathsf{PH}} %polynomial hierarchy
+
+\newcommand{\hop}[1][0.2cm]{ %vertical space to replace medskip
+    \vspace{#1}\\
+}
+\newcommand{\Hop}{
+	\vspace{0.3cm}\\
+}
+
+\newcommand\xqed[1]{% triangle command
+  \leavevmode\unskip\penalty9999 \hbox{}\nobreak\hfill
+  \quad\hbox{#1}}
+\newcommand{\tri}{\xqed{$\triangleleft$}}
+
+\newcommand{\TODOimg}{ %todo image
+    \begin{center}
+        \includegraphics[height=1cm]{../images/TODO}
+    \end{center}
+}
+
+\newcommand{\pigeon}{
+	\begin{center} %pigeon image
+		\includegraphics[height=0.7cm]{../images/pigeon.jpeg}
+	\end{center}
+}
+
+\newcommand{\problem}[1]{\textbf{Problem #1.}}
+\newcommand{\solution}{\textbf{\textit{Solution. }}}
+\newcommand{\hint}{\textit{Hint: }}
+
+% SPECIFIC TO CS 355: %
+
+\newcommand{\negl}{\text{negl}}
+\newcommand{\poly}{\text{poly}}
+\newcommand{\Ot}{\tilde{O}}
+\newcommand{\A}{\mathcal{A}}
