@@ -44,7 +44,9 @@ as we wanted. \qed
     \item Suppose $u(\hat x_1, \hat x_2) \ne 0$ for some $\hat x_1, \hat x_2$. Consider the function $f(s) = u(\hat x_1 + s, \hat x_2 + s)$. We see that $f(0)\ne 0$ and $f((-\hat x_1 -\hat x_2)/2)= u((\hat x_1-\hat x_2)/2, (-\hat x_1+\hat x_2)/2) = 0$. By the mean value theorem, there is some point where $f' \ne 0$. 
     \hop
     However, we see that $f'(s) = \d_1u(\hat x_1+s,\hat x_2+s)+\d_2u(\hat x_1+s, \hat x_2+s) = 0$. So, we have a contradiction and thus there is no such $\hat x_1, \hat x_2$ and $u = 0$. \qed
-    \item Let $f_r(s) = u(r+s,-r+s)$. We $f'(s) = \d_1u(r+s,-r+s)+\d_2u(r+s, -r+s) = 0$, so $f_r$ is constant. Thus, $u(r,-r)$ defines all of $f_r$. Note that any point $(x_1, x_2)$ is expressed uniquely as $(r+s, -r+s)$, so the $f_r$ cover the entire plane with no overlap. In other words, Any solution can be described as $u(x_1, x_2) = g(x_1-x_2)$ 
+    \item Let $f_r(s) = u(r+s,-r+s)$. We $f'(s) = \d_1u(r+s,-r+s)+\d_2u(r+s, -r+s) = 0$, so $f_r$ is constant. Thus, $u(r,-r)$ defines all of $f_r$. Note that any point $(x_1, x_2)$ is expressed uniquely as $(r+s, -r+s)$, so the $f_r$ cover the entire plane with no overlap. 
+    \hop
+    In other words, Any solution can be described as $u(x_1, x_2) = g((x_1-x_2)/2)$ where $g(r): \RR \to \RR$ is a $C^1$ function. We also see that any choice of $g$ gives a solution, so this characterizes all solutions. \qed
 \end{enumerate}
 
 \newpage
@@ -58,17 +60,26 @@ as we wanted. \qed
 
 
 \newpage
-\problem{4} TODO \tri
+\problem{4} TODO\tri
 \hop
-\solution TODO
-
+\solution We can rewrite the equation as 
+\[x_1\d_1u+x_2\d_2u=(2-x_1)u\]
+First, let's find the characteristic curves with starts on the curve $\Gamma: x_2 = e^{x_1}$. Any characteristic curve $f$ has $f_1'(s) = s$ and $f'_2(s) = s$ with $f_2(0)=e^{f_1(0)}$. 
+\hop 
+Solving this, we have $f_1(s) = re^s$ and $f_2(s) = e^re^s$ for some $r$. Let $f_r(s) = (re^s, e^re^s)$ be the characteristic curves, then. Since $e^s$ can be any positive number and the vector $(r,e^r)$ can point in any direction above the $x_1$-axis and above the line of slope $e$, we see that our characteristic curves cover the plane above these two lines.
+\hop %TODO: image here. 
+Let $y_r(s) = u(f_r(s))$. Since $f_r$ are characteristic curves, we know $y_r'(s)=(2-re^s)$ and $y_r(0)=re^0 = r$. Using our calculus methods, we have $dy/y = (2-re^s)ds$, so $\ln y = 22s-re^s+c$. The initial condition gives us that  
+\[y_r(s)=e^{2s-re^s+r+\ln r}=re^{2s-re^s+r}.\]
+Since we can express $x_1 = re^s$ and $x_2 = e^{r+s}$, we see that 
+\[u(x_1,x_2) = y_r(s) = re^{2s-re^s+r} = re^s \cdot e^{s+r}\cdot e^{re^s} = x_1x_2e^{x_1}\]
+for all points $(x_1, x_2)$ that are on some characteristic curve. So, we have found a solution $u$ that is uniquely determined on the region above the $x_1$-axis and the line with slope $e$. \qed
 
 \newpage
 \problem{5} TODO \tri
 \hop
 \solution
 \begin{enumerate}[(a)]
-    \item TODO
+    \item This problem is solved using the same idea as problem 4, but with three variables.
     \item TODO
 \end{enumerate}
 
