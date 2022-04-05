@@ -1,7 +1,7 @@
 # Fdb version 3
-["pdflatex"] 1649137182 "/Users/styopazharkov/Desktop/Stanford/MATH173/math173pset1/math173pset1.tex" "math173pset1.pdf" "math173pset1" 1649137184
+["pdflatex"] 1649138899 "/Users/styopazharkov/Desktop/Stanford/MATH173/math173pset1/math173pset1.tex" "math173pset1.pdf" "math173pset1" 1649138900
   "../commands.sty" 1649125431 2637 c05bf08d1f44d67d04c483ad2e5a2dc5 ""
-  "/Users/styopazharkov/Desktop/Stanford/MATH173/math173pset1/math173pset1.tex" 1649137182 4406 1c97f7e11ae4764ead6fdb73772b83d7 ""
+  "/Users/styopazharkov/Desktop/Stanford/MATH173/math173pset1/math173pset1.tex" 1649138898 6201 b189a85c8470260ca11fbf6c9c92237c ""
   "/usr/local/texlive/2021basic/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/local/texlive/2021basic/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1246382020 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
   "/usr/local/texlive/2021basic/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm" 1246382020 916 f87d7c45f9c908e672703b83b72241a3 ""
@@ -27,6 +27,7 @@
   "/usr/local/texlive/2021basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb" 1248133631 34811 78b52f49e893bcba91bd7581cdc144c0 ""
   "/usr/local/texlive/2021basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb" 1248133631 36554 b67dc2cfa451409e100b3fcf5f506509 ""
   "/usr/local/texlive/2021basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb" 1248133631 32001 6aeea3afe875097b1eb0da29acd61e28 ""
+  "/usr/local/texlive/2021basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb" 1248133631 30251 6afa5cb1d0204815a708a080681d4674 ""
   "/usr/local/texlive/2021basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb" 1248133631 36299 5f9df58c2139e7edcf37c8fca4bd384d ""
   "/usr/local/texlive/2021basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb" 1248133631 37912 77d683123f92148345f3fc36a38d9ab1 ""
   "/usr/local/texlive/2021basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb" 1248133631 36281 c355509802a035cadc5f15869451dcee ""
@@ -72,9 +73,9 @@
   "/usr/local/texlive/2021basic/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1630312226 80852 40249a14ccba7756519b0319714c2960 ""
   "/usr/local/texlive/2021basic/texmf-var/web2c/pdftex/pdflatex.fmt" 1628234101 2057442 211bdc457773f153dc7646b9a839ff2a ""
   "/usr/local/texlive/2021basic/texmf.cnf" 1616691442 628 e23d78b1be89c53495d66eec94d2300d ""
-  "math173pset1.aux" 1649137183 32 4d1825978335c8847f72f7c473f9edc8 "pdflatex"
-  "math173pset1.tex" 1649137182 4406 1c97f7e11ae4764ead6fdb73772b83d7 ""
+  "math173pset1.aux" 1649138899 32 4d1825978335c8847f72f7c473f9edc8 "pdflatex"
+  "math173pset1.tex" 1649138898 6201 b189a85c8470260ca11fbf6c9c92237c ""
   (generated)
+  "math173pset1.aux"
   "math173pset1.pdf"
   "math173pset1.log"
-  "math173pset1.aux"

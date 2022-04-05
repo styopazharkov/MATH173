@@ -72,15 +72,30 @@ Let $y_r(s) = u(f_r(s))$. Since $f_r$ are characteristic curves, we know $y_r'(s
 \[y_r(s)=e^{2s-re^s+r+\ln r}=re^{2s-re^s+r}.\]
 Since we can express $x_1 = re^s$ and $x_2 = e^{r+s}$, we see that 
 \[u(x_1,x_2) = y_r(s) = re^{2s-re^s+r} = re^s \cdot e^{s+r}\cdot e^{re^s} = x_1x_2e^{x_1}\]
-for all points $(x_1, x_2)$ that are on some characteristic curve. So, we have found a solution $u$ that is uniquely determined on the region above the $x_1$-axis and the line with slope $e$. \qed
+for all points $(x_1, x_2)$ that are on some characteristic curve. We can confirm the solution by differentiating So, we have found a solution $u$ that is uniquely determined on the region above the $x_1$-axis and the line with slope $e$. \qed
 
 \newpage
 \problem{5} TODO \tri
 \hop
 \solution
 \begin{enumerate}[(a)]
-    \item This problem is solved using the same idea as problem 4, but with three variables.
-    \item TODO
+    \item This problem is solved using the same idea as problem 4, but with three variables. First, let's find the characteristic curves starting on the surface $\Gamma: x_3 = 0$. 
+    Any characteristic curve $f$ has $f_1'(s) = f_1(s)$, $f_2'(s) = f_2(s)$, and $f_3'(s) = f_1(s)f_2(s)$ with $f_3(0) = 0$. 
+    \hop 
+    Solving this, we have $f_1(s) = ae^s$, $f_2(s)=be^s$, and $f_3(s)=\frac{1}{2}abe^{2s}-\frac{1}{2}ab$. So, let 
+    \[f_{a,b}(s) = \del{ae^s, be^s,\frac{1}{2}abe^{2s}-\frac{1}{2}ab}\]
+    be the characteristic curves. Now, along the curve $f_{a,b}$, we can define $y_{a,b}(s) = u(f_{a,b}(s))$ and we know $y'_{a,b}(s) = 0$ as well as $y_{a,b}(0) = f_1(0)^2 + f_2(0)^2 = a^2+b^2$. So, $y_{a,b}$ is the constant function with a value of $a^2 + b^2$. 
+    \hop 
+    We can write $x_1 = ae^s$, $x_2 = be^s$ and $x_3=\frac{1}{2}abe^{2s}-\frac{1}{2}ab$. So,
+    \[s = \frac{1}{2}\ln\del{\frac{\frac{1}{2}x_1x_2}{\frac{1}{2}x_1x_2-x_3}}, a = \frac{x_1}{\sqrt{\frac{\frac{1}{2}x_1x_2}{\frac{1}{2}x_1x_2-x_3}}}, b = \frac{x_2}{\sqrt{\frac{\frac{1}{2}x_1x_2}{\frac{1}{2}x_1x_2-x_3}}}\]
+    for all $x_1,x_2,x_3$ such that 
+    \[\frac{\frac{1}{2}x_1x_2}{\frac{1}{2}x_1x_2-x_3} > 0.\]
+    Plugging this in, we have that 
+    \[u(x_1, x_2, x_3) = y_{a,b}(s)=a^2+b^2 = \frac{x_1^2 + x_2^2}{\frac{\frac{1}{2}x_1x_2}{\frac{1}{2}x_1x_2-x_3}} = \frac{(x_1^2+x_2^2)(x_1x_2-2x_3)}{x_1x_2}\]
+    for all such $x_1, x_2,x_3$. We can confirm the solution by differentiating. So, we have solved the equation on part of the space. \qed
+    \item We see that $u(1,1,1) = -2$ even though initial conditions are non-negative and $u$ is constant along any characteristic curve. This is possible because the point $(1,1,1)$ is not within the boundary of where our solution works. We needed
+    \[\frac{\frac{1}{2}x_1x_2}{\frac{1}{2}x_1x_2-x_3} > 0\]
+    and this isn't true for $(1,1,1)$. \qed
 \end{enumerate}
 
 \newpage
@@ -94,7 +109,11 @@ for all points $(x_1, x_2)$ that are on some characteristic curve. So, we have f
 \hop
 \solution
 \begin{enumerate}[(a)]
-    \item TODO
+    \item This problem is solved similar to problem 4 and 5. First, let's find the characteristic curves starting on the surface $\Gamma: t = 0$. We see that if $f$ is a characteristic curve, then $f_t'(s) = 1$, $f_x(s)' =1$ and $f_t(0)= 0$.
+    \hop
+    Solving this, we have $f_t(s) = s$ and $f_x(s) = s+r$. So, we can let
+    \[f_r(s)=(s, s+r)\]
+    be the characteristic curves. 
     \item TODO
 \end{enumerate}
 
