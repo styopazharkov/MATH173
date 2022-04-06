@@ -88,7 +88,7 @@ Solving this, we have $f_1(s) = re^s$ and $f_2(s) = e^re^s$ for some $r$. Let $f
 Let $y_r(s) = u(f_r(s))$. Since $f_r$ are characteristic curves, we know $y_r'(s)=(2-re^s)$ and $y_r(0)=re^0 = r$. Using our calculus methods, we have $dy/y = (2-re^s)ds$, so $\ln y = 22s-re^s+c$. The initial condition gives us that  
 \[y_r(s)=e^{2s-re^s+r+\ln r}=re^{2s-re^s+r}.\]
 Since we can express $x_1 = re^s$ and $x_2 = e^{r+s}$, we see that 
-\[u(x_1,x_2) = y_r(s) = re^{2s-re^s+r} = re^s \cdot e^{s+r}\cdot e^{re^s} = x_1x_2e^{x_1}\]
+\[u(x_1,x_2) = y_r(s) = re^{2s-re^s+r} = re^s \cdot e^{s+r}\cdot e^{-re^s} = x_1x_2e^{-x_1}\]
 for all points $(x_1, x_2)$ that are on some characteristic curve. We can confirm the solution by differentiating So, we have found a solution $u$ that is uniquely determined on the region above the $x_1$-axis and the line with slope $e$. \qed
 
 \newpage
@@ -125,7 +125,7 @@ for all points $(x_1, x_2)$ that are on some characteristic curve. We can confir
 \newpage
 \problem{6} Find general solution to the equation $x_1\d_1u + ... + x_n\d_nu = cu$. \tri
 \hop
-\solution TODO
+\solution Let $\Gamma$ be the unit sphere $\SS^{n-1}$. Let $u$ restricted to the unit sphere be $g: \SS^{n-1} \to \RR$. 
 
 
 \newpage
