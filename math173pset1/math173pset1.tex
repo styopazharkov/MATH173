@@ -92,7 +92,24 @@ $\d_1u + \d_2u = 0$, where $u = u(x_1, x_2) : \RR^2 \to \RR$.
     We see that $\abs{\D u}^{p-2}$ and $\abs{\D u}^{p-4}$ are functions of the first partial derivatives of $u$, and $\Delta u$ is a linear function of second derivatives, so this is indeed in the quasilinear form 
     \[\sum_{|\alpha|=2}a_\alpha(x,u,\d u)(\d^\alpha u)\]
     and our expression is quasilinear. \qed
-    \item TODO
+    \item This problem is also manipulations. First, note that for $F(x,y,v) = |v|^p$, we have $\d_y F=0$ and $\d_{x_j} F =0$. So.in the general form of the Euler-Lagrange equation, most terms are 0 and we are left with 
+    \[\sum_{j=1}^n\sum_{k=1}^n \d_{v_k}\d_{v_j}|v|^p \d_k\d_j u = 0.\]
+    We can see that 
+    \[\d_{v_j} |v|^p = \d_{v_j}\del{\sum_{i=1}^n v_i^2}^{p/2} = pv_j \del{\sum_{i=1}^n v_i^2}^{p/2-1}.\]
+    Continuing with the computation, we see that for $j \ne k$
+    \[\d_{v_k}\d_{v_j} |v|^{p} = v_kv_jp(p-2)\del{\sum_{i=1}^n v_i^2}^{p/2-2}\]
+    and for $j =k$, 
+    \[\d_{v_k}\d_{v_j} |v|^{p} = v_kv_jp(p-2)\del{\sum_{i=1}^n v_i^2}^{p/2-2} + p\del{\sum_{i=1}^n v_i^2}^{p/2-1}.\]
+    Placing this in the original equation, we have 
+    \begin{align*}
+        0 &= \sum_{j=1}^n\sum_{k=1}^n \d_{v_k}\d_{v_j}|du|^p \d_k\d_j u \\
+        &= p \sum_{j,k =1}^n \del{ (\d_k u)(\d_j u)(p-2)\del{\sum_{i=1}^n (\d_i u)^2}^{p/2-2}\d_j\d_k u} + p\sum_{j=1}^n\del{\del{\sum_{i=1}^n (\d_iu)^2}^{p/2-1}\d_j\d_j u} \\
+        &= p\del{(p-2)\abs{\D u}^{p-4}\sum_{j,k = 1}^n\del{(\d_j u)(\d_k u)\d_j\d_k u} + \abs{\D u}^{p-2}\sum_{j=1}^n(\d_j\d_j u)}\\
+        &= p\del{\D \cdot \del{\abs{\D u}^{p-2}u}}
+    \end{align*}
+    by part (a). Since $p>0$, we can divide both sides by $p$ to get 
+    \[0 = \del{\D \cdot \del{\abs{\D u}^{p-2}u}},\]
+    which is precisely the $p$-Laplace equation. \qed
 \end{enumerate}
 
 

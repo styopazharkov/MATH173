@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.8.6)  6 APR 2022 07:47
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.8.6)  6 APR 2022 08:44
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -246,38 +246,38 @@ File: ../images/rain.jpeg Graphic file (type jpg)
 <use ../images/rain.jpeg>
 Package pdftex.def Info: ../images/rain.jpeg  used on input line 60.
 (pdftex.def)             Requested size: 198.90952pt x 170.71652pt.
- [2 <../images/rain.jpeg>] [3]
-<../images/sunrise.jpeg, id=25, 2119.92pt x 1350.04375pt>
+ [2 <../images/rain.jpeg>] [3] [4]
+<../images/sunrise.jpeg, id=29, 2119.92pt x 1350.04375pt>
 File: ../images/sunrise.jpeg Graphic file (type jpg)
 <use ../images/sunrise.jpeg>
-Package pdftex.def Info: ../images/sunrise.jpeg  used on input line 115.
+Package pdftex.def Info: ../images/sunrise.jpeg  used on input line 132.
 (pdftex.def)             Requested size: 268.06235pt x 170.71652pt.
- [4 <../images/sunrise.jpeg>] [5]
-<../images/explosion.jpeg, id=34, 1763.58875pt x 1307.88625pt>
+ [5 <../images/sunrise.jpeg>] [6]
+<../images/explosion.jpeg, id=37, 1763.58875pt x 1307.88625pt>
 File: ../images/explosion.jpeg Graphic file (type jpg)
 <use ../images/explosion.jpeg>
-Package pdftex.def Info: ../images/explosion.jpeg  used on input line 160.
+Package pdftex.def Info: ../images/explosion.jpeg  used on input line 177.
 (pdftex.def)             Requested size: 230.18953pt x 170.71652pt.
- [6 <../images/explosion.jpeg>]
-<../images/comet.jpeg, id=38, 1866.975pt x 1320.935pt>
+ [7 <../images/explosion.jpeg>]
+<../images/comet.jpeg, id=42, 1866.975pt x 1320.935pt>
 File: ../images/comet.jpeg Graphic file (type jpg)
 <use ../images/comet.jpeg>
-Package pdftex.def Info: ../images/comet.jpeg  used on input line 188.
+Package pdftex.def Info: ../images/comet.jpeg  used on input line 205.
 (pdftex.def)             Requested size: 241.26239pt x 170.71652pt.
- [7 <../images/comet.jpeg>] (./math173pset1.aux) ) 
+ [8 <../images/comet.jpeg>] (./math173pset1.aux) ) 
 Here is how much of TeX's memory you used:
  3586 strings out of 480445
  49338 string characters out of 5892392
- 353438 words of memory out of 5000000
+ 355438 words of memory out of 5000000
  20811 multiletter control sequences out of 15000+600000
  411041 words of font info for 57 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
- 68i,12n,74p,439b,315s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 68i,13n,74p,439b,315s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2021basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2021basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/local/texlive/2021basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/local/texlive/2021basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2021basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2021basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2021basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2021basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2021basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2021basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2021basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2021basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2021basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2021basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2021basic/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on math173pset1.pdf (7 pages, 1224663 bytes).
+Output written on math173pset1.pdf (8 pages, 1229340 bytes).
 PDF statistics:
- 92 PDF objects out of 1000 (max. 8388607)
- 63 compressed objects within 1 object stream
+ 95 PDF objects out of 1000 (max. 8388607)
+ 65 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  21 words of extra memory for PDF output out of 10000 (max. 10000000)
 
