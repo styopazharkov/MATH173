@@ -25,7 +25,7 @@
 \date{April 6, 2022}
 \begin{document}
 \maketitle
-\problem{1} TODO \tri
+\problem{1} Let $f \in C^2(\RR^3)$. Define $F = \D f$ . Show that $\D \times F = 0$ and that $\D \cdot F = \Delta f$. \tri
 \hop
 \solution
 First, we see that 
@@ -36,7 +36,14 @@ as we wanted. \qed
 
 
 \newpage
-\problem{2} TODO \tri
+\problem{2}Consider the following first order linear equation with constant coefficients
+$\d_1u + \d_2u = 0$, where $u = u(x_1, x_2) : \RR^2 \to \RR$.
+\begin{enumerate}[(a)]
+    \item Give an example of a non-zero solution with satisfies $u(x, x) = 0$ for all $x \in \RR$.
+    \item Show that if $u$ solves the equation and satisfies $u(x, -x) = 0$ for all $x$, then $u = 0$.
+    \item Describe all solutions $u \in C^1(\RR^2)$.
+\end{enumerate}
+\tri
 \hop
 \solution 
 \begin{enumerate}[(a)]
@@ -50,7 +57,16 @@ as we wanted. \qed
 \end{enumerate}
 
 \newpage
-\problem{3} TODO \tri
+\problem{3} Let $p > 0$, the equation $\D \cdot (|\D u|^{p-2}\D u) = 0$ is called the $p$-Laplace equation.
+\begin{enumerate}[(a)]
+    \item Rewrite the equation to show that it is quasilinear.
+    \item Find the Euler-Lagrange equation for the functional $I(u) = \int_D F (x, u, \d u)dx$, where
+    $F (x, y, v) = |v|^p =
+    \del{\sum^n
+    _{j=1} v^2_j
+    }^{p/2}$
+    . Compare to the $p$-Laplace equation.
+\end{enumerate}\tri
 \hop
 \solution
 \begin{enumerate}[(a)]
@@ -60,7 +76,8 @@ as we wanted. \qed
 
 
 \newpage
-\problem{4} TODO\tri
+\problem{4} Solve the equation $x_1\d_1u+x_2\d_2u+(x_1-1)u = 0$ with the condition $u(x, e^x) = x$.
+In which region is $u$ uniquely determined?\tri
 \hop
 \solution We can rewrite the equation as 
 \[x_1\d_1u+x_2\d_2u=(2-x_1)u\]
@@ -75,7 +92,14 @@ Since we can express $x_1 = re^s$ and $x_2 = e^{r+s}$, we see that
 for all points $(x_1, x_2)$ that are on some characteristic curve. We can confirm the solution by differentiating So, we have found a solution $u$ that is uniquely determined on the region above the $x_1$-axis and the line with slope $e$. \qed
 
 \newpage
-\problem{5} TODO \tri
+\problem{5} 
+\begin{enumerate}[(a)]
+    \item Solve the equation $x_1\d_1u+x_2\d_2u+x_1x_2\d_3u = 0$ with the condition $u(x1, x2, 0) =
+    x^2_1 + x^2_2$.
+    \item Compute $u(1, 1, 1)$ for the solution in part (a). Explain why $u(1, 1, 1)$ is negative while the
+    initial condition is non-negative.
+\end{enumerate}
+\tri
 \hop
 \solution
 \begin{enumerate}[(a)]
@@ -99,13 +123,19 @@ for all points $(x_1, x_2)$ that are on some characteristic curve. We can confir
 \end{enumerate}
 
 \newpage
-\problem{6} TODO \tri
+\problem{6} Find general solution to the equation $x_1\d_1u + ... + x_n\d_nu = cu$. \tri
 \hop
 \solution TODO
 
 
 \newpage
-\problem{7} TODO \tri
+\problem{7} 
+\begin{enumerate}[(a)]
+    \item Solve $u_t + u_x = u^2, u(0, x) = e^{-x^2}$.
+    \item Show that there is $T > 0$ such that $u$ blows up at time $T$ , i.e. $u$ is continuously differentiable
+    for $t \in [0, T )$, and $x$ arbitrary, but for some $x_0, \lim_{t\to T^-}|u(x_0, t)|= \infty$. What is $T$ ?
+\end{enumerate}
+\tri
 \hop
 \solution
 \begin{enumerate}[(a)]
