@@ -18,7 +18,7 @@
 %               THINGS TO EDIT BELOW THIS LINE               %
 % ********************************************************** %
 \newcommand{\D}{\nabla}
-\renewcommand{\d}{\delta}
+\renewcommand{\d}{\partial}
 
 \title{\textsc{MATH 173 Problem Set 1}}
 \author{Stepan (Styopa) Zharkov}
@@ -56,6 +56,10 @@ $\d_1u + \d_2u = 0$, where $u = u(x_1, x_2) : \RR^2 \to \RR$.
     In other words, Any solution can be described as $u(x_1, x_2) = g((x_1-x_2)/2)$ where $g(r): \RR \to \RR$ is a $C^1$ function. We also see that any choice of $g$ gives a solution, so this characterizes all solutions. \qed
 \end{enumerate}
 
+\begin{center}
+    \includegraphics[height=6cm]{../images/rain}
+\end{center}
+
 \newpage
 \problem{3} Let $p > 0$, the equation $\D \cdot (|\D u|^{p-2}\D u) = 0$ is called the $p$-Laplace equation.
 \begin{enumerate}[(a)]
@@ -70,7 +74,24 @@ $\d_1u + \d_2u = 0$, where $u = u(x_1, x_2) : \RR^2 \to \RR$.
 \hop
 \solution
 \begin{enumerate}[(a)]
-    \item TODO
+    \item This problem is solved by bashing. We see that 
+    \begin{align*}
+        \D \cdot \del{\abs{\D u}^{p-2}\D u} &=\sum_{i=1}^n \frac{\d}{\d x_i} \del{\abs{\D u}^{p-2}\frac{\d u}{\d x_i}} \\ 
+        &= \sum_{i=1}^n \del{\frac{\d u}{\d x_i}\frac{\d}{\d x_i}\abs{\D u}^{p-2}}+\sum_{i=1}^n\abs{\D u}^{p-2}\frac{\d^2u}{\d x_i^2}\\
+        &= \sum_{i=1}^n \del{\frac{\d u}{\d x_i}\frac{\d}{\d x_i}\abs{\D u}^{p-2}}+\abs{\D u}^{p-2}\Delta u.
+    \end{align*}
+    Now, we can check that 
+    \begin{align*}
+        \frac{\d}{\d x_j}\abs{\D u}^{p-2} &= \abs{\D u}^{p-3}(p-2)\frac{\d}{\d x_j} \del{\sum_{i=1}^n \del{\frac{\d u}{\d x_i}}^2}^{1/2} \\
+        &= \abs{\D u}^{p-4} (p-2) \sum_{i=1}^n \frac{\d u }{\d x_i}\frac{\d^2 u}{\d x_i x_j}. 
+    \end{align*}
+    Plugging this in to our first computation, we see that 
+    \begin{align*}
+        \D \cdot \del{\abs{\D u}^{p-2}\D u} =  \abs{\D u}^{p-4}(p-2) \sum_{j=1}^n \sum_{i=1}^n \del{\frac{\d u}{\d x_j}\frac{\d u }{\d x_i}\frac{\d^2 u}{\d x_i x_j}}+\abs{\D u}^{p-2}\Delta u.
+    \end{align*}
+    We see that $\abs{\D u}^{p-2}$ and $\abs{\D u}^{p-4}$ are functions of the first partial derivatives of $u$, and $\Delta u$ is a linear function of second derivatives, so this is indeed in the quasilinear form 
+    \[\sum_{|\alpha|=2}a_\alpha(x,u,\d u)(\d^\alpha u)\]
+    and our expression is quasilinear. \qed
     \item TODO
 \end{enumerate}
 
@@ -85,12 +106,14 @@ First, let's find the characteristic curves with starts on the curve $\Gamma: x_
 \hop 
 Solving this, we have $f_1(s) = re^s$ and $f_2(s) = e^re^s$ for some $r$. Let $f_r(s) = (re^s, e^re^s)$ be the characteristic curves, then. Since $e^s$ can be any positive number and the vector $(r,e^r)$ can point in any direction above the $x_1$-axis and above the line of slope $e$, we see that our characteristic curves cover the plane above these two lines.
 \hop %TODO: image here. 
-Let $y_r(s) = u(f_r(s))$. Since $f_r$ are characteristic curves, we know $y_r'(s)=(2-re^s)$ and $y_r(0)=re^0 = r$. Using our calculus methods, we have $dy/y = (2-re^s)ds$, so $\ln y = 22s-re^s+c$. The initial condition gives us that  
+Let $y_r(s) = u(f_r(s))$. Since $f_r$ are characteristic curves, we know $y_r'(s)=(2-re^s)$ and $y_r(0)=re^0 = r$. Using our calculus methods, we have $dy/y = (2-re^s)ds$, so $\ln y = 2s-re^s+c$. The initial condition gives us that  
 \[y_r(s)=e^{2s-re^s+r+\ln r}=re^{2s-re^s+r}.\]
 Since we can express $x_1 = re^s$ and $x_2 = e^{r+s}$, we see that 
 \[u(x_1,x_2) = y_r(s) = re^{2s-re^s+r} = re^s \cdot e^{s+r}\cdot e^{-re^s} = x_1x_2e^{-x_1}\]
-for all points $(x_1, x_2)$ that are on some characteristic curve. We can confirm the solution by differentiating So, we have found a solution $u$ that is uniquely determined on the region above the $x_1$-axis and the line with slope $e$. \qed
-
+for all points $(x_1, x_2)$ that are on some characteristic curve. We can confirm the solution by differentiating. So, we have found a solution $u$ that is locally determined on the region above the $x_1$-axis and the line with slope $e$. \qed
+\begin{center}
+    \includegraphics[height=6cm]{../images/sunrise}
+\end{center}
 \newpage
 \problem{5} 
 \begin{enumerate}[(a)]
@@ -125,7 +148,17 @@ for all points $(x_1, x_2)$ that are on some characteristic curve. We can confir
 \newpage
 \problem{6} Find general solution to the equation $x_1\d_1u + ... + x_n\d_nu = cu$. \tri
 \hop
-\solution Let $\Gamma$ be the unit sphere $\SS^{n-1}$. Let $u$ restricted to the unit sphere be $g: \SS^{n-1} \to \RR$. 
+\solution Let $\Gamma$ be the unit sphere $\SS^{n-1}$. Let $u$ restricted to the unit sphere be $g: \SS^{n-1} \to \RR$. If $f$ is a characteristic curve with a start on $\Gamma$, then $f_i'(s) = f_i(s)$, so $f_i(s) = a_ie^s$ and we can define
+\[f_a(s)=(a_ie^s, \dots, a_ne^s)\]
+as the characteristic curve, where $a = (a_1, \dots, a_n) \in \SS^{n-1}$. Intuitively, these are rays pointing out of the origin. Let $y_a(s)=u(f_a(s))$. We see that $y'_a(s) = cy_a(s)$ and $y_a(0) = g(a)$, so $y_a(s) = g(a)e^{cs}$. 
+\hop
+Note that we can place any nonzero $x \in \RR^n$ on a characteristic curve uniquely with $a = \frac{x}{|x|}$ and $e^s = |x|$. So, we can write 
+\[u(x) = y_a(s) = g(a)e^{cs} = g\del{\frac{x}{|x|}}|x|^c\]
+as the general solution defined everywhere but the origin, where $g$ is some $C^1$ function on the sphere. \qed
+
+\begin{center}
+    \includegraphics[height=6cm]{../images/explosion.jpeg}
+\end{center}
 
 
 \newpage
@@ -151,7 +184,10 @@ for all points $(x_1, x_2)$ that are on some characteristic curve. We can confir
     \[u(x,t) = \frac{1}{e^{(x-t)^2}-t}\]
     when $e^{(x-t)^2} \ne t$. So, we have a solution that blows up on the curve $e^{(x-t)^2} = t$. \qed
 
-    %TODO: insert picture 
+    \begin{center}
+        \includegraphics[height=6cm]{../images/comet}
+    \end{center}
+
     \item The intuition for this problem is that we must pick a $T$ such that the vertical line of $t = T$ just barely touches the blow up curve in the picture above.
     \hop
     Let $T=1, x_0 = 1$. We see that for $t < T$, we have $e^{(x-t)^2} \ge 1 > t$,  so $\frac{1}{e^{(x-t)^2}-t} = u(x,t)$ is continuously differentiable. However, 

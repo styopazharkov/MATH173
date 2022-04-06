@@ -1,7 +1,11 @@
 # Fdb version 3
-["pdflatex"] 1649221651 "/Users/styopazharkov/Desktop/Stanford/MATH173/math173pset1/math173pset1.tex" "math173pset1.pdf" "math173pset1" 1649221651
+["pdflatex"] 1649256449 "/Users/styopazharkov/Desktop/Stanford/MATH173/math173pset1/math173pset1.tex" "math173pset1.pdf" "math173pset1" 1649256480
   "../commands.sty" 1649177945 2517 6303f48b8be1ad5042b743956bcadab3 ""
-  "/Users/styopazharkov/Desktop/Stanford/MATH173/math173pset1/math173pset1.tex" 1649221650 9468 52a808f9690d0f51c5243286f81e186e ""
+  "../images/comet.jpeg" 1649225293 192573 10d230e35fc541fdc5162375b99d3474 ""
+  "../images/explosion.jpeg" 1649225254 317929 69335e6f7055ac63ab9251645440e4bd ""
+  "../images/rain.jpeg" 1649225322 238409 f998190bc702bdd73fdc34d52a83da18 ""
+  "../images/sunrise.jpeg" 1649225274 309850 2fea1b18957033444fb77ab2003f439a ""
+  "/Users/styopazharkov/Desktop/Stanford/MATH173/math173pset1/math173pset1.tex" 1649256477 11839 2cd64d23bb9168c22deeceb27404380f ""
   "/usr/local/texlive/2021basic/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/local/texlive/2021basic/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1246382020 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
   "/usr/local/texlive/2021basic/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm" 1246382020 916 f87d7c45f9c908e672703b83b72241a3 ""
@@ -74,9 +78,9 @@
   "/usr/local/texlive/2021basic/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1630312226 80852 40249a14ccba7756519b0319714c2960 ""
   "/usr/local/texlive/2021basic/texmf-var/web2c/pdftex/pdflatex.fmt" 1628234101 2057442 211bdc457773f153dc7646b9a839ff2a ""
   "/usr/local/texlive/2021basic/texmf.cnf" 1616691442 628 e23d78b1be89c53495d66eec94d2300d ""
-  "math173pset1.aux" 1649221651 32 4d1825978335c8847f72f7c473f9edc8 "pdflatex"
-  "math173pset1.tex" 1649221650 9468 52a808f9690d0f51c5243286f81e186e ""
+  "math173pset1.aux" 1649256450 32 4d1825978335c8847f72f7c473f9edc8 "pdflatex"
+  "math173pset1.tex" 1649256477 11839 2cd64d23bb9168c22deeceb27404380f ""
   (generated)
-  "math173pset1.pdf"
   "math173pset1.aux"
+  "math173pset1.pdf"
   "math173pset1.log"
