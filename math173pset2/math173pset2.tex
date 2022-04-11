@@ -41,7 +41,9 @@ TODO: insert image here
 
 
 \newpage
-\problem{2} For this question, we will answer both parts (a) and (b) together because we must go through the ideas to solve part (b) to be able to find the solution in (a) anyway. This is a quasilinear PDE that can be solved by finding the characteristic curves in 3-dimensional space, as discussed in chapters 3 and 4. 
+\problem{2}TODO \tri 
+\hop 
+For this question, we will answer both parts (a) and (b) together because we must go through the ideas to solve part (b) to be able to find the solution in (a) anyway. This is a quasilinear PDE that can be solved by finding the characteristic curves in 3-dimensional space, as discussed in chapters 3 and 4. 
 \hop 
 Let $(t(s), x(s), z(s)$ be the characteristic curve on the graph of $u(t,x)$. We see that $t'(s) = 1, x'(s)=\sqrt{z(s)}, z'(s) = 0$ and that the initial conditions give us $t(0)=0, z(0)= x(0)^2.$ Solving this, we have that $t(s)=s, z(s)=a$ and $x(s) = s\sqrt{a} \pm \sqrt{a}$ for some constant $a\ge0$. Let $\omega^+_a(s) = (s, s\sqrt{a} + \sqrt{a}, a)$ and $\omega^-_a(s) = (s, s\sqrt{a} - \sqrt{a}, a)$ be the characteristic curves. Note that $\omega^+_0$ and $\omega^-_0$ are the same curve. When projected onto the $(x,y)$ plane, the curves look as follows:
 \hop %TODO: insert image
@@ -55,13 +57,10 @@ Note that since $\omega^+_0$ and $\omega^-_0$ are the same curve with $a=0$, we 
     \del{\frac{x}{t+1}}^2 &\text{ if } x\ge  0 \\
     \del{\frac{x}{t-1}}^2 &\text{ if } x\le 0.
 \end{cases}\]
-is our solution fo $|t|<1$. 
+is our solution fo $|t|<1$. To finish answering part (b), we see that for $T=1$, our expression is continuously differentiable on $[0,T] \times \RR$. The only thing we have to check for this is that the derivatives near $x = 0$ match up, but we see that $u_x$ approaches $0$ from both sides, so we can continue.
+\hop 
+Finally, we can check that for any $T>1$, we encounter problems. The characteristic curves $\omega_0^-$ and $\omega_1^-$ pass through the same point $1, 0$, but with different values of $a$, so any solution must be equal to both $0$ and $1$ at that point, which is impossible. Thus, $T=1$ is the largest choice we could have made. \qed
 \hop
-\solution
-\begin{enumerate}
-    \item TODO
-    \item TODO
-\end{enumerate}
 
 
 \newpage
@@ -76,7 +75,9 @@ TODO \qed
 \hop
 \solution
 \begin{enumerate}
-    \item TODO
+    \item We can approach this as we approached conservation laws in class. As always, let $(t(s), x(s), z(s))$ be a characteristic curve on the graph of $u$. From our derivation in class, we know that $t(s) = s, x(s)= F'(g(a))s + s$, and $z(s) = g(a)$ for the parameter $a$. So, all the characteristics are straight lines and $u$ is constant along them. Rearranging our expressions, we see that $s = t$ and $a = x - F'(g(a))t$. Plugging this in, we see that 
+    \[u(t,x) = z(s) = g(a) = g(x - F'(g(a))t) = g(x - F'(u(t,x))t),\]
+    as we wanted.  \qed
     \item TODO
 \end{enumerate}
 
