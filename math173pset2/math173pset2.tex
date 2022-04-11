@@ -32,12 +32,30 @@ This is a semilinear PDE and can be solved with the same methods as last week. L
 Let $(x(s), y(s))$ be a characteristic curve. We see that $x'(s) = 1, y'(s) = \cos$ with $x(0) = 0$. 
 \hop
 Solving this, we get that $x(s) = s, y(s) = \sin(s) + a$. Let $f_a(s) = (s, 
-sin(s)+a)$ be the characteristic curve. Also, let $\omega_a(s) = u(f_a(s))$.  We know $\omega_a'(s) = y(s) = \sin(s) + a$ and $\omega_a(0) = a$. So, we see that $\omega_a(s) = -\cos(s)+as +a +1$. We see that $x= s$, $y= \sin(s)+a$. Solving for $a, s$, we have that $s =x$ and $a = y - \sin(x) + y$
+sin(s)+a)$ be the characteristic curve. Also, let $\omega_a(s) = u(f_a(s))$.  We know $\omega_a'(s) = y(s) = \sin(s) + a$ and $\omega_a(0) = a$. So, we see that $\omega_a(s) = -\cos(s)+as +a +1$. We see that $x= s$, $y= \sin(s)+a$. Solving for $a, s$, we have that $s =x$ and $a = y - \sin(x) + y$. Thus,
+\[u(x,y) = \omega_a(s)=-\cos(s)+as +a +1 = -\cos(x)+xy - x\sin(x)+y-\sin(x)+1.\]
+We can check that this solution fits $u_x +\cos(x)u_y = y$ indeed. 
+\hop
+TODO: insert image here
 \qed
 
 
 \newpage
-\problem{2} TODO
+\problem{2} For this question, we will answer both parts (a) and (b) together because we must go through the ideas to solve part (b) to be able to find the solution in (a) anyway. This is a quasilinear PDE that can be solved by finding the characteristic curves in 3-dimensional space, as discussed in chapters 3 and 4. 
+\hop 
+Let $(t(s), x(s), z(s)$ be the characteristic curve on the graph of $u(t,x)$. We see that $t'(s) = 1, x'(s)=\sqrt{z(s)}, z'(s) = 0$ and that the initial conditions give us $t(0)=0, z(0)= x(0)^2.$ Solving this, we have that $t(s)=s, z(s)=a$ and $x(s) = s\sqrt{a} \pm \sqrt{a}$ for some constant $a\ge0$. Let $\omega^+_a(s) = (s, s\sqrt{a} + \sqrt{a}, a)$ and $\omega^-_a(s) = (s, s\sqrt{a} - \sqrt{a}, a)$ be the characteristic curves. Note that $\omega^+_0$ and $\omega^-_0$ are the same curve. When projected onto the $(x,y)$ plane, the curves look as follows:
+\hop %TODO: insert image
+The value of $u$ is constant and equal to $a$ along each curve. We see that in the region where $|t| > 1$, the curves either intersect or do no pass through at all. For the region $|t| < 1$, we can find a solution. Namely, we see that $t= s$ and $x = s\sqrt{a} \pm \sqrt{a}$, so we can solve to see that any $(x,t)$ where $t < 1$ and $x \ne 0$ can be uniquely expressed by setting 
+\[s= t, a = \begin{cases}
+    \del{\frac{x}{t+1}}^2 &\text{ if } x\ge  0 \\
+    \del{\frac{x}{t-1}}^2 &\text{ if } x\le 0.
+\end{cases}\]
+Note that since $\omega^+_0$ and $\omega^-_0$ are the same curve with $a=0$, we do not have any problems at 0. Since $u(t,x) = z(s) = a$, we can see that  
+\[u(t,x) = \begin{cases}
+    \del{\frac{x}{t+1}}^2 &\text{ if } x\ge  0 \\
+    \del{\frac{x}{t-1}}^2 &\text{ if } x\le 0.
+\end{cases}\]
+is our solution fo $|t|<1$. 
 \hop
 \solution
 \begin{enumerate}
