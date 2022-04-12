@@ -87,7 +87,8 @@ TODO \qed
 \hop
 \solution
 \begin{enumerate}
-    \item TODO
+    \item We see that $u$ is constant along the characteristic curves, so the value of $u$ is $0$ along any curve that starts at $(0,x)$ for $|x| > R$. We see that the slope of the projection onto the $(t,x)$-plane is $\frac{F'(g(a))}{1} = F'(g(a))$ for the curve that starts at $(0, a, g(a))$. Since $F'(g(a))$ is continuous on $[-R, R]$, we can let $C > \sup \{F'(g(a)) : |a| \le R \}$. Then, the projections of the characteristics starting at $(0,a)$ for $|a| \le R$ are limited to the region $\{(t,x): |x| \le R+Ct\}$. So, any point outside this region must be on a characteristic starting at  $(0,a)$ for $|a| > R$ and thus $u$ has a value of 0 there, which is what we wanted to prove. \qed 
+    % TODO: need image here.
     \item TODO
 \end{enumerate}
 
@@ -96,9 +97,9 @@ TODO \qed
 \problem{6} TODO
 \hop
 \solution
-
-TODO 
-
+This problem is similar to the example with only 1 and 0 in the range that we did in class, but we have to insert $1/2$ in between the two regions.
+\hop 
+Let $h(t)$ be a border between two constant value regions and $a_+, a_-$ be the values in the two regions. If $u$ is a weak solution, then by the Rankine-Hugoniot condition, we have $(a_+-a_-)h'(t) = a_+^2/2-a_-^2/2$. Since we assume that the values are different, we can divide by $a_+-a_- \ne 0$, so $h'(t) = (a_++a_-)/2$. 
 
 \newpage
 \problem{7} TODO
