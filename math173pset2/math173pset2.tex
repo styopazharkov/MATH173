@@ -99,8 +99,13 @@ TODO \qed
 \solution
 This problem is similar to the example with only 1 and 0 in the range that we did in class, but we have to insert $1/2$ in between the two regions.
 \hop 
-Let $h(t)$ be a border between two constant value regions and $a_+, a_-$ be the values in the two regions. If $u$ is a weak solution, then by the Rankine-Hugoniot condition, we have $(a_+-a_-)h'(t) = a_+^2/2-a_-^2/2$. Since we assume that the values are different, we can divide by $a_+-a_- \ne 0$, so $h'(t) = (a_++a_-)/2$. 
-
+Let $h(t)$ be a border between two constant value regions and $a_+, a_-$ be the values in the two regions. If $u$ is a weak solution, then by the Rankine-Hugoniot condition, we have $(a_+-a_-)h'(t) = a_+^2/2-a_-^2/2$. Since we assume that the values are different, we can divide by $a_+-a_- \ne 0$, so $h'(t) = (a_++a_-)/2$. Thus, we see that $h(t)= (a_++a_-)/2 \cdot t$. For $(a_+,a_-)$ set to $(0,1), (1/2, 1)$, and $(0, 1/2)$, we see $h(t)$ must be a line with a slope of $1/2, 3/4$, and $1/4$ respectively. Note that the order of $a_+,a_-$ does not change the slope. Since the problem asks that all 3 values are in the range, and we know that $u(0,x)$ is 0 below $x=0$ and 1 above, we can conclude that the only possible option satisfying the R-H condition. Namely, 
+\[u(t,x)= \begin{cases}
+    0 &\text{ if } x <  \frac{1}{4}y \\
+    1/2 &\text{ if } \frac{1}{4}y \le x \le  \frac{3}{4}y \\
+    1/2 &\text{ if }x > \frac{3}{4}y.
+\end{cases}\]
+We see that constant functions satisfy $u_t + uu_x=0$ and our function satisfies the jump condition, so it is indeed a weak solution. \hop 
 \newpage
 \problem{7} TODO
 \hop
