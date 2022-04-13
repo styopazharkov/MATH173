@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.4.8)  13 APR 2022 09:50
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.4.8)  13 APR 2022 10:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -180,11 +180,19 @@ Package: ../commands command shortcuts
 \Urlmuskip=\muskip17
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
+(/usr/local/texlive/2022basic/texmf-dist/tex/latex/wrapfig/wrapfig.sty
+\wrapoverhang=\dimen159
+\WF@size=\dimen160
+\c@WF@wrappedlines=\count276
+\WF@box=\box53
+\WF@everypar=\toks32
+Package: wrapfig 2003/01/31  v 3.6
+)
 (/usr/local/texlive/2022basic/texmf-dist/tex/latex/l3backend/l3backend-pdftex.d
 ef
 File: l3backend-pdftex.def 2022-02-07 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count276
-\l__pdf_internal_box=\box53
+\l__color_backend_stack_int=\count277
+\l__pdf_internal_box=\box54
 ) (./math173pset2.aux)
 \openout1 = `math173pset2.aux'.
 
@@ -239,17 +247,17 @@ LaTeX Font Info:    ... okay on input line 26.
 
 (/usr/local/texlive/2022basic/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count277
-\scratchdimen=\dimen159
-\scratchbox=\box54
-\nofMPsegments=\count278
-\nofMParguments=\count279
-\everyMPshowfont=\toks32
-\MPscratchCnt=\count280
-\MPscratchDim=\dimen160
-\MPnumerator=\count281
-\makeMPintoPDFobject=\count282
-\everyMPtoPDFconversion=\toks33
+\scratchcounter=\count278
+\scratchdimen=\dimen161
+\scratchbox=\box55
+\nofMPsegments=\count279
+\nofMParguments=\count280
+\everyMPshowfont=\toks33
+\MPscratchCnt=\count281
+\MPscratchDim=\dimen162
+\MPnumerator=\count282
+\makeMPintoPDFobject=\count283
+\everyMPtoPDFconversion=\toks34
 )
 (/usr/local/texlive/2022basic/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.s
 ty
@@ -271,15 +279,40 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 27.
 
 (/usr/local/texlive/2022basic/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [1
+)
+<../images/waves.jpeg, id=1, 983.675pt x 984.67876pt>
+File: ../images/waves.jpeg Graphic file (type jpg)
+<use ../images/waves.jpeg>
+Package pdftex.def Info: ../images/waves.jpeg  used on input line 41.
+(pdftex.def)             Requested size: 170.71652pt x 170.87897pt.
+ [1
 
-{/usr/local/texlive/2022basic/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Underfull \hbox (badness 10000) in paragraph at lines 67--72
+{/usr/local/texlive/2022basic/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <..
+/images/waves.jpeg>]
+<../images/sqrts.jpeg, id=16, 1308.89pt x 1451.4225pt>
+File: ../images/sqrts.jpeg Graphic file (type jpg)
+<use ../images/sqrts.jpeg>
+Package pdftex.def Info: ../images/sqrts.jpeg  used on input line 59.
+(pdftex.def)             Requested size: 119.50148pt x 132.50487pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--75
 
  []
 
-[2] [3] [4]
-Overfull \hbox (51.35135pt too wide) detected at line 152
+[2 <../images/sqrts.jpeg>] [3]
+<../images/roof.jpeg, id=27, 675.52374pt x 1360.08125pt>
+File: ../images/roof.jpeg Graphic file (type jpg)
+<use ../images/roof.jpeg>
+Package pdftex.def Info: ../images/roof.jpeg  used on input line 128.
+(pdftex.def)             Requested size: 99.58464pt x 200.4961pt.
+ [4 <../images/roof.jpeg>] [5]
+<../images/death-zone.jpeg, id=34, 783.92876pt x 1380.15625pt>
+File: ../images/death-zone.jpeg Graphic file (type jpg)
+<use ../images/death-zone.jpeg>
+Package pdftex.def Info: ../images/death-zone.jpeg  used on input line 152.
+(pdftex.def)             Requested size: 101.80666pt x 179.25244pt.
+
+Overfull \hbox (51.35135pt too wide) detected at line 159
 \OML/cmm/m/it/10 @[] [][] u\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 t; x\OT1/cmr/m/n/1
 0 )\OML/cmm/m/it/10 dx \OT1/cmr/m/n/10 = [][] \OML/cmm/m/it/10 u[]\OT1/cmr/m/n/
 10 (\OML/cmm/m/it/10 t; x\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 dx \OT1/cmr/m/n/10 =
@@ -293,36 +326,48 @@ x\OT1/cmr/m/n/10 ))) = \OMS/cmsy/m/n/10 ^^@\OML/cmm/m/it/10 F\OT1/cmr/m/n/10 (0
 ) + \OML/cmm/m/it/10 F\OT1/cmr/m/n/10 (0) = 0\OML/cmm/m/it/10 :
  []
 
-[5] [6] [7] (./math173pset2.aux) ) 
+[6 <../images/death-zone.jpeg>]
+<../images/one-half.jpeg, id=40, 1407.2575pt x 1345.025pt>
+File: ../images/one-half.jpeg Graphic file (type jpg)
+<use ../images/one-half.jpeg>
+Package pdftex.def Info: ../images/one-half.jpeg  used on input line 189.
+(pdftex.def)             Requested size: 148.8293pt x 142.26378pt.
+ [7 <../images/one-half.jpeg>]
+<../images/uv.jpeg, id=45, 1983.41pt x 998.73125pt>
+File: ../images/uv.jpeg Graphic file (type jpg)
+<use ../images/uv.jpeg>
+Package pdftex.def Info: ../images/uv.jpeg  used on input line 223.
+(pdftex.def)             Requested size: 169.51068pt x 85.35826pt.
+ [8 <../images/uv.jpeg>] (./math173pset2.aux) ) 
 Here is how much of TeX's memory you used:
- 3858 strings out of 479719
- 58573 string characters out of 5880575
- 360725 words of memory out of 5000000
- 21816 multiletter control sequences out of 15000+600000
+ 4017 strings out of 479719
+ 61661 string characters out of 5880575
+ 361394 words of memory out of 5000000
+ 21960 multiletter control sequences out of 15000+600000
  476870 words of font info for 58 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
- 55i,13n,62p,851b,256s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2022basic/texmf-dist/font
-s/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2022basic/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/local/texlive/2022basic/texmf
--dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/local/texlive/2022basic/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2022ba
-sic/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/20
-22basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive
-/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texl
-ive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/t
-exlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local
-/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/loc
-al/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr
-/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></
-usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb
-></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/symbols/m
-sbm10.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/
-symbols/msbm7.pfb>
-Output written on math173pset2.pdf (7 pages, 176101 bytes).
+ 55i,13n,62p,851b,317s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/local/texlive/2022basic/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2022basi
+c/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/local/texlive/20
+22basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/local/texli
+ve/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/t
+exlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/loc
+al/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/
+local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></u
+sr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb>
+</usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pf
+b></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.
+pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cms
+y10.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmsy5.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmsy7.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfo
+nts/symbols/msbm10.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/pub
+lic/amsfonts/symbols/msbm7.pfb>
+Output written on math173pset2.pdf (8 pages, 1625563 bytes).
 PDF statistics:
- 103 PDF objects out of 1000 (max. 8388607)
- 63 compressed objects within 1 object stream
+ 112 PDF objects out of 1000 (max. 8388607)
+ 65 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 31 words of extra memory for PDF output out of 10000 (max. 10000000)
 

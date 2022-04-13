@@ -19,7 +19,7 @@
 % ********************************************************** %
 \newcommand{\D}{\nabla}
 \renewcommand{\d}{\partial}
-
+\usepackage{wrapfig}
 \title{\textsc{MATH 173 Problem Set 2}}
 \author{Stepan (Styopa) Zharkov}
 \date{April 13, 2022}
@@ -33,12 +33,13 @@ This is a semilinear PDE and can be solved with the same methods as last week. L
 Let $(x(s), y(s))$ be a characteristic curve. We see that $x'(s) = 1, y'(s) = \cos$ with $x(0) = 0$. 
 \hop
 Solving this, we get that $x(s) = s, y(s) = \sin(s) + a$. Let $f_a(s) = (s, 
-sin(s)+a)$ be the characteristic curve. Also, let $\omega_a(s) = u(f_a(s))$.  We know $\omega_a'(s) = y(s) = \sin(s) + a$ and $\omega_a(0) = a$. So, we see that $\omega_a(s) = -\cos(s)+as +a +1$. We see that $x= s$, $y= \sin(s)+a$. Solving for $a, s$, we have that $s =x$ and $a = y - \sin(x) + y$. Thus,
+\sin(s)+a)$ be the characteristic curve. Also, let $\omega_a(s) = u(f_a(s))$.  We know $\omega_a'(s) = y(s) = \sin(s) + a$ and $\omega_a(0) = a$. So, we see that $\omega_a(s) = -\cos(s)+as +a +1$. We see that $x= s$, $y= \sin(s)+a$. Solving for $a, s$, we have that $s =x$ and $a = y - \sin(x) + y$. Thus,
 \[u(x,y) = \omega_a(s)=-\cos(s)+as +a +1 = -\cos(x)+xy - x\sin(x)+y-\sin(x)+1.\]
 We can check that this solution fits $u_x +\cos(x)u_y = y$ indeed. 
-\hop
-TODO: insert image here
 \qed
+\begin{center}
+    \includegraphics[width=6cm]{../images/waves.jpeg}
+  \end{center}
 
 
 \newpage
@@ -46,7 +47,7 @@ TODO: insert image here
 \begin{enumerate}[(a)]
     \item Solve the equation $u_t+ \sqrt{u}u_x= 0, u(0, x) = x^2$.
     \item  Draw the (projections) of some of the characteristic curves to the $(t, x)$-plane. Find the
-    largest $T $such that the solution exists in $C^1((0, T ) \times 
+    largest $T$ such that the solution exists in $C^1((0, T ) \times 
     \RR)$.
 \end{enumerate}
 \tri 
@@ -54,7 +55,9 @@ TODO: insert image here
 For this question, we will answer both parts (a) and (b) together because we must go through the ideas to solve part (b) to be able to find the solution in (a) anyway. This is a quasilinear PDE that can be solved by finding the characteristic curves in 3-dimensional space, as discussed in chapters 3 and 4. 
 \hop 
 Let $(t(s), x(s), z(s)$ be the characteristic curve on the graph of $u(t,x)$. We see that $t'(s) = 1, x'(s)=\sqrt{z(s)}, z'(s) = 0$ and that the initial conditions give us $t(0)=0, z(0)= x(0)^2.$ Solving this, we have that $t(s)=s, z(s)=a$ and $x(s) = s\sqrt{a} \pm \sqrt{a}$ for some constant $a\ge0$. Let $\omega^+_a(s) = (s, s\sqrt{a} + \sqrt{a}, a)$ and $\omega^-_a(s) = (s, s\sqrt{a} - \sqrt{a}, a)$ be the characteristic curves. Note that $\omega^+_0$ and $\omega^-_0$ are the same curve. When projected onto the $(x,y)$ plane, the curves look as follows:
-\hop %TODO: insert image
+    \begin{center}
+      \includegraphics[width=4.2cm]{../images/sqrts.jpeg}
+    \end{center}
 The value of $u$ is constant and equal to $a$ along each curve. We see that in the region where $|t| > 1$, the curves either intersect or do no pass through at all. For the region $|t| < 1$, we can find a solution. Namely, we see that $t= s$ and $x = s\sqrt{a} \pm \sqrt{a}$, so we can solve to see that any $(x,t)$ where $t < 1$ and $x \ne 0$ can be uniquely expressed by setting 
 \[s= t, a = \begin{cases}
     \del{\frac{x}{t+1}}^2 &\text{ if } x\ge  0 \\
@@ -121,7 +124,9 @@ and $u \in C^1((0, T ) \times \RR) \cap C([0, T ] \times \RR)$.
     First, let us show that the characteristic curves don't intersect. We know the value of $u$ is constant along the characteristic curves. So, if two curves with parameters $a_1, a_2$ where $a_1 \ne a_2$ defined as in part (a) intersect, then $g(a_1) = g(a_2)$. However, we see that the slopes of the projection of both of these characteristic curves onto the $(t,x)$-plane are  $F'(g(a_1)) = F'(g(a_2))$. So, the projection curves cannot intersect without them being the same curve.
     \hop 
     Now, let's use the fact that the projection curves can't intersect to argue that every point is covered. Let $b$ be the slope of the characteristic projection starting at $(0,0)$. For an arbitrary point $(t,x) \in (0,T) \times \RR$ above that characteristic projection, consider the line going through $(t_0,x_0)$ and $(T,Tb)$. Let that line cross the $x$-axis at $(0,c)$. Now, intuitively, we see that the characteristic curve projection starting at $(0,c)$ cannot go underneath the point $(t_0,x_0)$ or else it will cross our first characteristic curve projection . More formally, let $(t,x(t))$ be the projection starting at $(0,c)$. We see that if the slope is less than $(Tb-x_0)/(T-t)$, then $x(T) < b$, so this curve intersects our initial curve. So, the slope is more than $(Tb-x_0)/(T-t)$ and thus $x(t_0) > x_0$. 
-    \hop 
+        \begin{center}
+          \includegraphics[width=3.5cm]{../images/roof}
+        \end{center}
     Consider the map $f(a) = a + F'(g(r))t_0$. This is the map that gives the $x$-value of the characteristic projection with parameter $a$ at $t_0$. We see that $f(0) = t_0b < x_0$ and $f(c) \ge x_0$. Since $f$ is continuous, by the intermediate value theorem, there is a $d$ such that $f(d) = x_0$. This means that the characteristic curve projection starting at $(0,d)$ passes through $(t_0,x_0)$, as we wanted. 
     \hop 
     For points $(t_0, x_0)$ below the initial curve, we can define $c$ and $x(t)$ in the exact same way. We see that $x(t_0)$ must be no more than $x_0$, so $f(0) = t_0b > x_0$ and $f(c) \le x_0$. Again by the intermediate value theorem, there is some $d$ such that $f(d) = x_0$. This means that the characteristic curve projection starting at $(0,d)$ passes through $(t_0,x_0)$. 
@@ -143,7 +148,9 @@ some $R$.
 \solution
 \begin{enumerate}[(a)]
     \item We see that $u$ is constant along the characteristic curves, so the value of $u$ is $0$ along any curve that starts at $(0,x)$ for $|x| > R$. We see that the slope of the projection onto the $(t,x)$-plane is $\frac{F'(g(a))}{1} = F'(g(a))$ for the curve that starts at $(0, a, g(a))$. Since $F'(g(a))$ is continuous on $[-R, R]$, we can let $C > \sup \{F'(g(a)) : |a| \le R \}$. Then, the projections of the characteristics starting at $(0,a)$ for $|a| \le R$ are limited to the region $\{(t,x): |x| \le R+Ct\}$. So, any point outside this region must be on a characteristic starting at  $(0,a)$ for $|a| > R$ and thus $u$ has a value of 0 there, which is what we wanted to prove. \qed 
-    % TODO: need image here.
+    \begin{center}
+        \includegraphics[height=6.3cm]{../images/death-zone.jpeg}
+    \end{center}
     \item This problem essentially explains why conservation laws are called conservation laws. The ``total mass of $u$'' (i.e. the integral) of stays constant over time, as explained in the notes (page 5 of chapter 4).
     \hop 
     For $t = 0$, we see that 
@@ -178,7 +185,9 @@ Let $h(t)$ be a border between two constant value regions and $a_+, a_-$ be the 
     1 &\text{ if }x > \frac{3}{4}y.
 \end{cases}\]
 We see that constant functions satisfy $u_t + uu_x=0$ and our function satisfies the jump condition, so it is indeed a weak solution. \qed
-%TODO: add image
+\begin{center}
+    \includegraphics[height=5cm]{../images/one-half}
+\end{center}
 \newpage
 \problem{7} Consider the conservation law $u_t+ (F (u))_x= 0, u(x, 0) = g(x)$, where $F \in
 C^2(\RR)$. Let $v(t, x) = F'(u(t, x))$.
