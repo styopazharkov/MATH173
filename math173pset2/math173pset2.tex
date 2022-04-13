@@ -180,7 +180,14 @@ Let $h(t)$ be a border between two constant value regions and $a_+, a_-$ be the 
 We see that constant functions satisfy $u_t + uu_x=0$ and our function satisfies the jump condition, so it is indeed a weak solution. \qed
 %TODO: add image
 \newpage
-\problem{7} TODO
+\problem{7} Consider the conservation law $u_t+ (F (u))_x= 0, u(x, 0) = g(x)$, where $F \in
+C^2(\RR)$. Let $v(t, x) = F'(u(t, x))$.
+\begin{enumerate}[(a)]
+    \item Show that if $u \in C^1$ then $v \in C^1$ and $v$ satisfies Burgers' equation.
+    \item Suppose that $u$ is a weak solution to the conservation law, $u$ has a jump discontinuity
+    along a curve, and is $C^1$ otherwise. Does this imply that $v = F '(u)$ is a weak solution to the
+    Burgers equation?
+\end{enumerate}\tri
 \hop
 \solution
 \begin{enumerate}[(a)]
