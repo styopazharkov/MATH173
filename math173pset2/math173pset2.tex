@@ -69,7 +69,25 @@ Finally, we can check that for any $T>1$, we encounter problems. The characteris
 \solution
 This problem is literally given to us by theorem 3.5 in the notes. However, we will elaborate a little on the proof of that theorem instead of writing ``true by theorem 3.5''. 
 \hop 
-
+Instead of thinking about this as a system of ODEs, let's think of it as one ODE 
+\[x'(t) = a(t,x(t)), x(t) = x_0(t)\]
+in a larger space, where $a(t,x(t)) = (a_1(t,x(t)), \dots, a_n(t,x(t))$. Let $t_0 < \frac{1}{nM}$. Consider the map $T: C^0((-t_0, t_0), \RR) \to  C^0((-t_0, t_0), \RR)$ where
+\[Tx(t) = x_0 + \int_0^ta(\tau,x(\tau))d\tau.\]
+We see that 
+\begin{align*}
+    d(Tx,Ty) &= \sup_{t \in (-t_0,t_0)}\cbr{\norm{\del{x_0 + \int_0^ta(\tau,x(\tau))d\tau}-\del{x_0 + \int_0^ta(\tau,y(\tau))d\tau}}}\\
+    &= \sup_{t \in (-t_0,t_0)}\cbr{\norm{\int_0^t\del{a(\tau,x(\tau))-a(\tau,y(\tau))}d\tau}}\\
+    &\le \sup_{t \in (-t_0,t_0)}\cbr{\int_0^t\norm{a(\tau,x(\tau))-a(\tau,y(\tau))}d\tau}\\
+    & \le  \sup_{t \in (-t_0,t_0)}\cbr{\int_0^tnM\norm{x(\tau)-y(\tau)}d\tau} \\
+    & \le  \sup_{t, s \in (-t_0,t_0)}\cbr{\int_0^tnM\norm{x(s)-y(s)}d\tau} \\
+    & \le  \sup_{t, s \in (-t_0,t_0)}nM\norm{x(s)-y(s)}\cbr{\int_0^t1d\tau} \\
+    & \le  \sup_{s \in (-t_0,t_0)}nM\norm{x(s)-y(s)}t_0\\
+    & \le nMd(x,y)t_0\\
+    & < d(d,x).
+\end{align*}
+Thus, $T$ is a contraction mapping over a complete space, so it has a unique fixed point $x$ such that 
+\[x(t) = x_0 + \int_0^ta(\tau,x(\tau))d\tau,\]
+so $x$ is the unique solution to $x'(t) = a(t,x(t)), x(t) = x_0(t)$ by the fundamental theorem of calculus. 
 \qed
 
 
