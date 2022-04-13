@@ -105,13 +105,31 @@ Let $h(t)$ be a border between two constant value regions and $a_+, a_-$ be the 
     1/2 &\text{ if } \frac{1}{4}y \le x \le  \frac{3}{4}y \\
     1/2 &\text{ if }x > \frac{3}{4}y.
 \end{cases}\]
-We see that constant functions satisfy $u_t + uu_x=0$ and our function satisfies the jump condition, so it is indeed a weak solution. \hop 
+We see that constant functions satisfy $u_t + uu_x=0$ and our function satisfies the jump condition, so it is indeed a weak solution. \qed
+%TODO: add image
 \newpage
 \problem{7} TODO
 \hop
 \solution
 \begin{enumerate}
-    \item TODO
-    \item TODO
+    \item Let $v(t,x) = F'(u(t,x))$. We see that since $u_t(t,x) + F'(u(t,x))u_x(t,x) = 0$, we know 
+    \begin{align*}
+        v_t + vv_x &= \d_tF'(u(t,x)) + F'(u(t,x))\d_xF'(u(t,x))\\
+        &= F''(u(t,x))u_t(t,x) + F'(u(t,x))F''(u(t,x))u_x(t,x) \\
+        &=F''(u(t,x))(u_t(t,x) + F'(u(t,x))u_x(t,x))\\
+        &= 0.
+    \end{align*}
+    So, by definition, $v$ satisfies Burgers' equation. \qed
+    \item No, the implication doesn't hold. Let $F(x) = x^3$. Then, the equation becomes $u_t + 3u^2u_x = 0$. Consider the function 
+    \[u(t,x) = \begin{cases}
+        0 \text{ if } x \le t \\
+        1 \text{ if } x > t.
+    \end{cases}\]
+    We see that the constants satisfy $u_t + 3u^2u_x = 0$. Also, on the boundary $h(t) = t$, we see that $(1-0)h'(t) = 1^3 - 0^3$, so the Rankine-Hugoniot condition is satisfied. Thus, $u$ is a weak solution. However, we see that 
+    \[v(x,t) = 3u^2(t,x) = \begin{cases}
+        0 \text{ if } x \le t \\
+        3 \text{ if } x > t.
+    \end{cases},\]
+    which does not satisfy the Rankine-Hugoniot condition for Burgers' function because for the boundary $h(t) = t$, we see $h'(t) = 1 \ne 3/2 = 3/2+0/2$. \qed 
 \end{enumerate}
 \end{document}
