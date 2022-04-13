@@ -78,7 +78,17 @@ TODO \qed
     \item We can approach this as we approached conservation laws in class. As always, let $(t(s), x(s), z(s))$ be a characteristic curve on the graph of $u$. From our derivation in class, we know that $t(s) = s, x(s)= F'(g(a))s + s$, and $z(s) = g(a)$ for the parameter $a$. So, all the characteristics are straight lines and $u$ is constant along them. Rearranging our expressions, we see that $s = t$ and $a = x - F'(g(a))t$. Plugging this in, we see that 
     \[u(t,x) = z(s) = g(a) = g(x - F'(g(a))t) = g(x - F'(u(t,x))t),\]
     as we wanted.  \qed
-    \item TODO
+    \item For this problem, we know that a solution $u$ exists, and we know that the equation from part (a) is satisfied on the characteristic curves on some solution, so it would suffice to show that the characteristic curves go through every point in $[0,T] \times \RR$ and that they don't intersect. 
+    \hop
+    First, let us show that the characteristic curves don't intersect. We know the value of $u$ is constant along the characteristic curves. So, if two curves with parameters $a_1, a_2$ where $a_1 \ne _a_2$ defined as in part (a) intersect, then $g(a_1) = g(a_2)$. However, we see that the slopes of the projection of both of these characteristic curves onto the $(t,x)$-plane are  $F'(g(a_1)) = F'(g(a_2))$. So, the projection curves cannot intersect without them being the same curve.
+    \hop 
+    Now, let's use the fact that the projection curves can't intersect to argue that every point is covered. Let $b$ be the slope of the characteristic projection starting at $(0,0)$. For an arbitrary point $(t,x) \in (0,T) \times \RR$ above that characteristic projection, consider the line going through $(t_0,x_0)$ and $(T,Tb)$. Let that line cross the $x$-axis at $(0,c)$. Now, intuitively, we see that the characteristic curve projection starting at $(0,c)$ cannot go underneath the point $(t_0,x_0)$ or else it will cross our first characteristic curve projection . More formally, let $(t,x(t))$ be the projection starting at $(0,c)$. We see that if the slope is less than $(Tb-x_0)/(T-t)$, then $x(T) < b$, so this curve intersects our initial curve. So, the slope is more than $(Tb-x_0)/(T-t)$ and thus $x(t_0) > x_0$. 
+    \hop 
+    Consider the map $f(a) = a + F'(g(r))t_0$. This is the map that gives the $x$-value of the characteristic projection with parameter $a$ at $t_0$. We see that $f(0) = t_0b < x_0$ and $f(c) \ge x_0$. Since $f$ is continuous, by the intermediate value theorem, there is a $d$ such that $f(d) = x_0$. This means that the characteristic curve projection starting at $(0,d)$ passes through $(t_0,x_0)$, as we wanted. 
+    \hop 
+    For points $(t_0, x_0)$ below the initial curve, we can define $c$ and $x(t)$ in the exact same way. We see that $x(t_0)$ must be no more than $x_0$, so $f(0) = t_0b > x_0$ and $f(c) \le x_0$. Again by the intermediate value theorem, there is some $d$ such that $f(d) = x_0$. This means that the characteristic curve projection starting at $(0,d)$ passes through $(t_0,x_0)$. 
+    \hop 
+    So, any point on the $(t,x)$-plane has a characteristic curve projection passing through it, so we can conclude that the equation from part (a) holds on all of $(0,T) \times \RR$. \qed
 \end{enumerate}
 
 
@@ -86,7 +96,7 @@ TODO \qed
 \problem{5} TODO
 \hop
 \solution
-\begin{enumerate}
+\begin{enumerate}[(a)]
     \item We see that $u$ is constant along the characteristic curves, so the value of $u$ is $0$ along any curve that starts at $(0,x)$ for $|x| > R$. We see that the slope of the projection onto the $(t,x)$-plane is $\frac{F'(g(a))}{1} = F'(g(a))$ for the curve that starts at $(0, a, g(a))$. Since $F'(g(a))$ is continuous on $[-R, R]$, we can let $C > \sup \{F'(g(a)) : |a| \le R \}$. Then, the projections of the characteristics starting at $(0,a)$ for $|a| \le R$ are limited to the region $\{(t,x): |x| \le R+Ct\}$. So, any point outside this region must be on a characteristic starting at  $(0,a)$ for $|a| > R$ and thus $u$ has a value of 0 there, which is what we wanted to prove. \qed 
     % TODO: need image here.
     \item TODO
@@ -103,7 +113,7 @@ Let $h(t)$ be a border between two constant value regions and $a_+, a_-$ be the 
 \[u(t,x)= \begin{cases}
     0 &\text{ if } x <  \frac{1}{4}y \\
     1/2 &\text{ if } \frac{1}{4}y \le x \le  \frac{3}{4}y \\
-    1/2 &\text{ if }x > \frac{3}{4}y.
+    1 &\text{ if }x > \frac{3}{4}y.
 \end{cases}\]
 We see that constant functions satisfy $u_t + uu_x=0$ and our function satisfies the jump condition, so it is indeed a weak solution. \qed
 %TODO: add image
@@ -111,7 +121,7 @@ We see that constant functions satisfy $u_t + uu_x=0$ and our function satisfies
 \problem{7} TODO
 \hop
 \solution
-\begin{enumerate}
+\begin{enumerate}[(a)]
     \item Let $v(t,x) = F'(u(t,x))$. We see that since $u_t(t,x) + F'(u(t,x))u_x(t,x) = 0$, we know 
     \begin{align*}
         v_t + vv_x &= \d_tF'(u(t,x)) + F'(u(t,x))\d_xF'(u(t,x))\\
