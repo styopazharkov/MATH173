@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.4.8)  13 APR 2022 09:43
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.4.8)  13 APR 2022 09:46
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -279,7 +279,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 67--72
  []
 
 [2] [3] [4]
-Overfull \hbox (51.35135pt too wide) detected at line 145
+Overfull \hbox (51.35135pt too wide) detected at line 152
 \OML/cmm/m/it/10 @[] [][] u\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 t; x\OT1/cmr/m/n/1
 0 )\OML/cmm/m/it/10 dx \OT1/cmr/m/n/10 = [][] \OML/cmm/m/it/10 u[]\OT1/cmr/m/n/
 10 (\OML/cmm/m/it/10 t; x\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 dx \OT1/cmr/m/n/10 =
@@ -297,7 +297,7 @@ x\OT1/cmr/m/n/10 ))) = \OMS/cmsy/m/n/10 ^^@\OML/cmm/m/it/10 F\OT1/cmr/m/n/10 (0
 Here is how much of TeX's memory you used:
  3858 strings out of 479719
  58573 string characters out of 5880575
- 360734 words of memory out of 5000000
+ 360725 words of memory out of 5000000
  21816 multiletter control sequences out of 15000+600000
  476870 words of font info for 58 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
@@ -319,7 +319,7 @@ usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb
 ></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/symbols/m
 sbm10.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/
 symbols/msbm7.pfb>
-Output written on math173pset2.pdf (7 pages, 174399 bytes).
+Output written on math173pset2.pdf (7 pages, 174688 bytes).
 PDF statistics:
  103 PDF objects out of 1000 (max. 8388607)
  63 compressed objects within 1 object stream
