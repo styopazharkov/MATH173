@@ -72,7 +72,10 @@ Finally, we can check that for any $T>1$, we encounter problems. The characteris
 
 
 \newpage
-\problem{3} TODO
+\problem{3} We consider a system of first order ODEs:
+\[x'_j(t) = a_j(t, x(t)), x(t) = (x_1(t), \dots, x_n(t)),\]
+with the initial condition $x(0) = x_0$. Suppose that $|a_j(t, x) - a_j(t, y)| \le M |x -y|$. Show that
+for some $t_0$ there is a unique solution $x : (-t_0, t_0) \to \RR^n$ to this equation in $C^1((-t_0, t_0), \RR^n)$. \tri
 \hop
 \solution
 This problem is literally given to us by theorem 3.5 in the notes. However, we will elaborate a little on the proof of that theorem instead of writing ``true by theorem 3.5''. 
@@ -100,7 +103,13 @@ so $x$ is the unique solution to $x'(t) = a(t,x(t)), x(t) = x_0(t)$ by the funda
 
 
 \newpage
-\problem{4} TODO
+\problem{4}Suppose that $u_t+ (F (u))_x= 0, u(0, x) = g(x)$, where $F \in C^2(\RR), g \in C^1(\RR)$
+and $u \in C^1((0, T ) \times \RR) \cap C([0, T ] \times \RR)$.
+\begin{enumerate}[(a)]
+    \item Show that the method of characteristic gives $u(t, x) = g(x - F'(u(t, x))t)$.
+    \item Show that the formula in part (a) holds for all $0 \le t \le T, x \in \RR$. 
+\end{enumerate}
+\tri
 \hop
 \solution
 \begin{enumerate}[(a)]
@@ -122,7 +131,14 @@ so $x$ is the unique solution to $x'(t) = a(t,x(t)), x(t) = x_0(t)$ by the funda
 
 
 \newpage
-\problem{5} TODO
+\problem{5}  Let $u$ and $g$ be as in Problem 4. Assume also that $g(x) = 0$ when $|x| > R$ for
+some $R$.
+\begin{enumerate}[(a)]
+    \item Prove that there exists a constant $C$ such that $u(t, x) = 0$ when $|x|> R + Ct$.
+    \item Prove the following conservation law:
+    \[\int_\RR u(t, x)dx = \int_\RR g(x)dx, 0 \le t \le T.\]
+\end{enumerate}
+\tri
 \hop
 \solution
 \begin{enumerate}[(a)]
