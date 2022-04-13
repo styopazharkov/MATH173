@@ -67,7 +67,10 @@ Finally, we can check that for any $T>1$, we encounter problems. The characteris
 \problem{3} TODO
 \hop
 \solution
-TODO \qed
+This problem is literally given to us by theorem 3.5 in the notes. However, we will elaborate a little on the proof of that theorem instead of writing ``true by theorem 3.5''. 
+\hop 
+
+\qed
 
 
 \newpage
@@ -99,7 +102,17 @@ TODO \qed
 \begin{enumerate}[(a)]
     \item We see that $u$ is constant along the characteristic curves, so the value of $u$ is $0$ along any curve that starts at $(0,x)$ for $|x| > R$. We see that the slope of the projection onto the $(t,x)$-plane is $\frac{F'(g(a))}{1} = F'(g(a))$ for the curve that starts at $(0, a, g(a))$. Since $F'(g(a))$ is continuous on $[-R, R]$, we can let $C > \sup \{F'(g(a)) : |a| \le R \}$. Then, the projections of the characteristics starting at $(0,a)$ for $|a| \le R$ are limited to the region $\{(t,x): |x| \le R+Ct\}$. So, any point outside this region must be on a characteristic starting at  $(0,a)$ for $|a| > R$ and thus $u$ has a value of 0 there, which is what we wanted to prove. \qed 
     % TODO: need image here.
-    \item TODO
+    \item This problem essentially explains why conservation laws are called conservation laws. The ``total mass of $u$'' (i.e. the integral) of stays constant over time, as explained in the notes (page 5 of chapter 4).
+    \hop 
+    For $t = 0$, we see that 
+    \[\int_\RR u(t,x)dx = \int_\RR g(x) dx\]
+    by definition. For $t \in (0,T)$, we see that since $u$ is $C^1$, 
+    \[\d_t\int_\RR u(t,x)dx = \int_\RR u_t(t,x)dx = -\int_\RR F(u(t,x))_x dx  =  -\lim_{x \to \infty}( F(u(t,x)) - F(u(t,-x)))= -F(0) +F(0) =0.\]
+    by the fundamental theorem of calculus and the fact that $u(t,x)$ vanishes for large enough $x$ by part (a). 
+    \hop
+    So, we see that $\int_\RR u(t,x)dx$ is indeed constant as a function of $t$. Since it is continuous, we can extend to the endpoint at $T$ as well and conclude that 
+    \[\int_\RR u(t,x)dx = \int_\RR g(x) dx\]
+    for all $t \in [0,T]$, as we wanted. \qed
 \end{enumerate}
 
 
