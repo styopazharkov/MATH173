@@ -66,7 +66,17 @@ TODO
 \problem{5} TODO \tri
 \hop
 \solution
-TODO
+We assume $t \ge 0$, as always. First, lets' consider the case $c =0$. Then, we have $u_{tt} = 0$, so $u_t(x,t)$ is constant along the line $\{(t,x_0)\}$ for any $x_0$. So, $u(t,x)$ has is a line of constant slope along any $\{(t,x_0)\}$. The starting point and the slope are defined by the initial conditions, so we see that 
+\[u(t,x) = \phi(x) + t\psi(x).\]
+This vanishes when $\phi(0) + t\psi =0$. Since $\phi, \psi$ are positive, $\phi$ must be $0$, so $|x| \ge 1$. Any point where $|x| \ge 1$ works. 
+\hop 
+We can also check that $u$ is linear (and thus $C^\infty$) everywhere except for the ``creases'' of $\phi$ and $\psi$. In other words $u$ is $C^\infty$ when $x \ne -1,0,1$. 
+\hop
+Now, let's look at the nonzero case. We know from the notes that the solution is 
+\[u(t,x) = \frac{1}{2}(\phi(x+ct) - \phi(x-ct)) + \frac{1}{2c}\int_{x-ct}^{x+ct}\psi(\sigma) d\sigma.\]
+Notice that we can assume $c > 0$ because $c < 0$ would also flip the integral, leading to the same solution. 
+\hop 
+tt
 \qed
 
 
