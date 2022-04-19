@@ -29,7 +29,7 @@
 curves. \tri
 \hop
 \solution
-This is a semilinear PDE and can be solved with the same methods as last week. Let 
+This is a semilinear PDE and can be solved with the same methods as last week.
 Let $(x(s), y(s))$ be a characteristic curve. We see that $x'(s) = 1, y'(s) = \cos$ with $x(0) = 0$. 
 \hop
 Solving this, we get that $x(s) = s, y(s) = \sin(s) + a$. Let $f_a(s) = (s, 
@@ -68,7 +68,7 @@ Note that since $\omega^+_0$ and $\omega^-_0$ are the same curve with $a=0$, we 
     \del{\frac{x}{t+1}}^2 &\text{ if } x\ge  0 \\
     \del{\frac{x}{t-1}}^2 &\text{ if } x\le 0.
 \end{cases}\]
-is our solution fo $|t|<1$. To finish answering part (b), we see that for $T=1$, our expression is continuously differentiable on $[0,T] \times \RR$. The only thing we have to check for this is that the derivatives near $x = 0$ match up, but we see that $u_x$ approaches $0$ from both sides, so we can continue.
+is our solution for $|t|<1$. To finish answering part (b), we see that for $T=1$, our expression is continuously differentiable on $[0,T] \times \RR$. The only thing we have to check for this is that the derivatives near $x = 0$ match up, but we see that $u_x$ approaches $0$ from both sides, so we can continue.
 \hop 
 Finally, we can check that for any $T>1$, we encounter problems. The characteristic curves $\omega_0^-$ and $\omega_1^-$ pass through the same point $1, 0$, but with different values of $a$, so any solution must be equal to both $0$ and $1$ at that point, which is impossible. Thus, $T=1$ is the largest choice we could have made. \qed
 \hop
@@ -81,7 +81,7 @@ with the initial condition $x(0) = x_0$. Suppose that $|a_j(t, x) - a_j(t, y)| \
 for some $t_0$ there is a unique solution $x : (-t_0, t_0) \to \RR^n$ to this equation in $C^1((-t_0, t_0), \RR^n)$. \tri
 \hop
 \solution
-This problem is literally given to us by theorem 3.5 in the notes. However, we will elaborate a little on the proof of that theorem instead of writing ``true by theorem 3.5''. 
+This problem is literally given to us by theorem 3.5 in the notes. However, we will still recite the proof of that theorem instead of writing ``true by theorem 3.5''. 
 \hop 
 Instead of thinking about this as a system of ODEs, let's think of it as one ODE 
 \[x'(t) = a(t,x(t)), x(t) = x_0(t)\]
@@ -106,7 +106,7 @@ so $x$ is the unique solution to $x'(t) = a(t,x(t)), x(t) = x_0(t)$ by the funda
 
 
 \newpage
-\problem{4}Suppose that $u_t+ (F (u))_x= 0, u(0, x) = g(x)$, where $F \in C^2(\RR), g \in C^1(\RR)$
+\problem{4} Suppose that $u_t+ (F (u))_x= 0, u(0, x) = g(x)$, where $F \in C^2(\RR), g \in C^1(\RR)$
 and $u \in C^1((0, T ) \times \RR) \cap C([0, T ] \times \RR)$.
 \begin{enumerate}[(a)]
     \item Show that the method of characteristic gives $u(t, x) = g(x - F'(u(t, x))t)$.
@@ -169,8 +169,8 @@ some $R$.
 \problem{6} Use the Rankine–Hugoniot condition to find a solution to the Burgers equation
 $u_t+ uu_x= 0$ with the initial condition
 \[u(0, x) = \begin{cases}
-    0, x &< 0,\\
-1, x &> 0
+    0, &x < 0,\\
+1, &x > 0
 \end{cases}\]
 which is piecewise constant and take values 0, 1/2, and 1.
 \tri
