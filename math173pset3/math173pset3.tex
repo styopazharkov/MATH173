@@ -28,8 +28,13 @@
 \problem{1} TODO \tri
 \hop
 \solution
-As the hint suggests, $u' = 0$ means by definition $u(\phi) = 0$ for any $\phi \in C_c^\infty(\RR)$. For any $\psi \in \Cc$, let $\phi_0\in \Cc$ be a bump function such that $\int_\RR \phi_0(x)dx = 1$. Let $\hat{\psi} = \psi - \phi_0\int_R\psi(x)dx$. We see that 
-\[\int_\RR \hat{\psi}(x)dx = \int_\RR \psi(x)dx -\int_R\psi(x)dx\cdot \int_\RR\phi_0(x)dx =  \]
+As the hint suggests, $u' = 0$ means by definition $u(\phi) = 0$ for any $\phi \in C_c^\infty(\RR)$. For any $\psi \in \Cc$, let $\phi_0\in \Cc$ be a bump function such that $\int_\RR \phi_0(x)dx = 1$. Let $\hat{\psi} = \psi - \phi_0\int_\RR\psi(x)dx$. We see that 
+\[\int_\RR \hat{\psi}(x)dx = \int_\RR \psi(x)dx -\int_R\psi(x)dx\cdot \int_\RR\phi_0(x)dx =\int_\RR \psi(x)dx-\int_\RR \psi(x)dx = 0.\]
+So, we can let 
+\[\phi(x) = \int_0^x \hat{\psi}(x) dx.\]
+We see $\hat{psi}$ has compact support (since it is the sum of two compact support functions). Since $\int_\RR \hat{\psi}(x)dx = 0$, we know $\phi$ must have compact support as well. Now, let $c = u(\phi_0)$. We see that by linearity of $u$,
+\[u(\psi) = u(\hat{\psi}) + u(\phi_0)\cdot \int_\RR\psi(x)dx = u(\phi') + c\int_\RR\psi(x)dx =0+  c\int_\RR\psi(x)dx=c\int_\RR\psi(x)dx, \]
+which is exactly what we wanted to prove. 
 \qed
 
 
