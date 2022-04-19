@@ -74,7 +74,15 @@ TODO
 \problem{6} TODO \tri
 \hop
 \solution
-TODO
+As the hint suggests, consider $v(x_0, x_n, t) = u(x_0, x_n, t) - u(x_0, -x_n, t)$. Notice that 
+\[v_{tt} - c^2\Delta_xv = u_{tt}(x_0, x_n, t) - u_{tt}(x_0, -x_n, t) - c^2\Delta_{x}u(x_0, x_n, t) + c^2\Delta_{x}u(x_0, -x_n, t)  = f(x_0, x_n, t) - f(x_0, -x_n, t) = 0.\]
+We also see that 
+\[v(x, x_n, 0) = u(x_0, x_n,0) - u(x_0, -x_n, 0) = \phi(x_0, x_n) - \phi(x_0, -x_n)\]
+and 
+\[v_t(x, x_n, 0) =u_t(x_0, x_n,0) - u_t(x_0, -x_n, 0) = \psi(x_0, x_n) - \psi(x_0, -x_n). \]
+So, $v$ solves the equation $v_{tt} - c^2\Delta_xv = 0$ with 0 initial conditions. We know that the only solution to this is $v=0$. Thus, we see that $u(x_0, x_n, t) - u(x_0, -x_n, t) = v(x_0, x_n, t) = 0$, so 
+\[u(x_0, x_n, t) = u(x_0, -x_n, t),\]
+and $u$ is even with respect to $x_n$, exactly as we wanted. \qed
 \qed
 
 

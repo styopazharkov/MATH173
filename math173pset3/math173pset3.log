@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.4.8)  19 APR 2022 09:40
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.4.8)  19 APR 2022 10:08
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -283,7 +283,23 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 {/usr/local/texlive/2022basic/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2
 ]
-[3] [4] [5] [6] [7] (./math173pset3.aux) ) 
+[3] [4] [5]
+Overfull \hbox (50.04533pt too wide) detected at line 78
+\OML/cmm/m/it/10 v[] \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 c[]\OT1/cmr/m/n/10 ^
+^A[]\OML/cmm/m/it/10 v \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 u[]\OT1/cmr/m/n/10 (\
+OML/cmm/m/it/10 x[]; x[]; t\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it
+/10 u[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x[]; \OMS/cmsy/m/n/10 ^^@\OML/cmm/m/it
+/10 x[]; t\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 c[]\OT1/cmr/m
+/n/10 ^^A[]\OML/cmm/m/it/10 u\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x[]; x[]; t\OT1/
+cmr/m/n/10 ) + \OML/cmm/m/it/10 c[]\OT1/cmr/m/n/10 ^^A[]\OML/cmm/m/it/10 u\OT1/
+cmr/m/n/10 (\OML/cmm/m/it/10 x[]; \OMS/cmsy/m/n/10 ^^@\OML/cmm/m/it/10 x[]; t\O
+T1/cmr/m/n/10 ) = \OML/cmm/m/it/10 f\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x[]; x[];
+ t\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 f\OT1/cmr/m/n/10 (\OM
+L/cmm/m/it/10 x[]; \OMS/cmsy/m/n/10 ^^@\OML/cmm/m/it/10 x[]; t\OT1/cmr/m/n/10 )
+ = 0\OML/cmm/m/it/10 :
+ []
+
+[6] [7] (./math173pset3.aux) ) 
 Here is how much of TeX's memory you used:
  3938 strings out of 479719
  59858 string characters out of 5880575
@@ -292,22 +308,22 @@ Here is how much of TeX's memory you used:
  476870 words of font info for 58 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
  55i,6n,62p,358b,219s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2022basic/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2022basic/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/local/texlive/2022bas
-ic/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/local/texlive/20
-22basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texliv
-e/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/te
-xlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local
-/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/lo
-cal/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr
-/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></u
-sr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
-></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.
-pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/symbol
-s/msbm10.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfon
-ts/symbols/msbm7.pfb>
-Output written on math173pset3.pdf (7 pages, 126978 bytes).
+</usr/local/texlive/2022basic/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2022basic/texmf-dist/font
+s/type1/public/amsfonts/cm/cmbxti10.pfb></usr/local/texlive/2022basic/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/local/texlive/2022basic/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2022basic/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2022ba
+sic/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/202
+2basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/
+2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texli
+ve/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/tex
+live/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local
+/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/lo
+cal/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb
+></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/symbols/m
+sbm7.pfb>
+Output written on math173pset3.pdf (7 pages, 128837 bytes).
 PDF statistics:
  93 PDF objects out of 1000 (max. 8388607)
  57 compressed objects within 1 object stream
