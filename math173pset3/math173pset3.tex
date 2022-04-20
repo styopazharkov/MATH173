@@ -31,7 +31,7 @@
 As the hint suggests, $u' = 0$ means by definition $u(\phi) = 0$ for any $\phi \in C_c^\infty(\RR)$. For any $\psi \in \Cc$, let $\phi_0\in \Cc$ be a bump function such that $\int_\RR \phi_0(x)dx = 1$. Let $\hat{\psi} = \psi - \phi_0\int_\RR\psi(x)dx$. We see that 
 \[\int_\RR \hat{\psi}(x)dx = \int_\RR \psi(x)dx -\int_R\psi(x)dx\cdot \int_\RR\phi_0(x)dx =\int_\RR \psi(x)dx-\int_\RR \psi(x)dx = 0.\]
 So, we can let 
-\[\phi(x) = \int_0^x \hat{\psi}(x) dx.\]
+\[\phi(x) = \int_{-\infty}^x \hat{\psi}(x) dx.\]
 We see $\hat{\psi}$ has compact support and is in $\Cc$ (since it is the sum of two compact support functions). Since $\int_\RR \hat{\psi}(x)dx = 0$, we know $\phi$ must have compact support as well and be in $\Cc$. Now, let $c = u(\phi_0)$. We see that by linearity of $u$,
 \[u(\psi) = u(\hat{\psi}) + u(\phi_0)\cdot \int_\RR\psi(x)dx = u(\phi') + c\int_\RR\psi(x)dx =0+  c\int_\RR\psi(x)dx=c\int_\RR\psi(x)dx, \]
 which is exactly what we wanted to prove. 
@@ -39,10 +39,31 @@ which is exactly what we wanted to prove.
 
 
 \newpage
-\problem{2} TODO \tri
+\problem{2}TODO
+\tri
 \hop
 \solution
-TODO
+First, let us define $f(x-ct)$ in a way that aligns with the case that $f$ is a nice function. We see that if $f$ were nice, then
+\begin{align*}
+    f(x-ct)(\phi)&= \int_{\RR^2}f(x-ct)\phi(t,x)dxdt \\
+    &= \int_{\RR^2}f(z)\phi(s,z+cs)dzds \\
+    &= \int_{\RR^2}f(z)\phi(s,z+cs)dsdz \\
+    & = \int_{z \in \RR} f(z) \int_{s \in \RR} \phi(s,z+cs)ds dz\\
+    &= f\del{\int_{t \in \RR}\phi(t,z+ct)dt}. 
+\end{align*}
+So, we see that $f(x-ct)(\phi) = f(\Phi)$ where $\Phi = \int_\RR \phi(s,z+cs)ds$. Note that $\Phi \in \Cc$ because the integral of a smooth function is smooth and $\phi$ is compactly supported. So, we can define $u = f(x-ct)$. 
+\hop 
+Now, we must show that $u$ satisfies the PDE. This is done by simply writing out our definition and using the linearity of $f$. More precisely, 
+\begin{align*}
+    (u_t + cu_x)(\phi) &= -f\del{\int_s \phi_t(s, z +cs) ds} -cf\del{\int_s \phi_x(s, z +cs) ds} \\
+    &= -f\del{\int_s \sbr{\phi_t(s, z +cs) +s\phi_x(s, z +cs)} ds} \\
+    & = -f\del{\int_s\d_s \phi(s,z+cs) ds)}\\
+    &= -f(0) \\
+    &= 0.
+\end{align*} 
+Note that we used the fundamental theorem of calculus, that $\phi$ has compact support, and that $f$ is linear in the above computation. 
+\hop 
+Thus, $u = f(x-ct)$ by definition and $u$ solves the PDE in the sense of distribution, as we wanted to show.
 \qed
 
 
@@ -70,14 +91,17 @@ We assume $t \ge 0$, as always. First, lets' consider the case $c =0$. Then, we 
 \[u(t,x) = \phi(x) + t\psi(x).\]
 This vanishes when $\phi(0) + t\psi =0$. Since $\phi, \psi$ are positive, $\phi$ must be $0$, so $|x| \ge 1$. Any point where $|x| \ge 1$ works. 
 \hop 
-We can also check that $u$ is linear (and thus $C^\infty$) everywhere except for the ``creases'' of $\phi$ and $\psi$. In other words $u$ is $C^\infty$ when $x \ne -1,0,1$. 
+We can also check that $u$ is linear (and thus $C^\infty$) everywhere except for the places where of $\phi$ and $\psi$ are not $C^\infty$. In other words $u$ is $C^\infty$ when $x \ne -1,0,1$. 
 \hop
 Now, let's look at the nonzero case. We know from the notes that the solution is 
-\[u(t,x) = \frac{1}{2}(\phi(x+ct) - \phi(x-ct)) + \frac{1}{2c}\int_{x-ct}^{x+ct}\psi(\sigma) d\sigma.\]
+\[u(t,x) = \frac{1}{2}(\phi(x+ct) + \phi(x-ct)) + \frac{1}{2c}\int_{x-ct}^{x+ct}\psi(\sigma) d\sigma.\]
 Notice that we can assume $c > 0$ because $c < 0$ would also flip the integral, leading to the same solution. 
 \hop 
-tt
-\qed
+We see that $\phi, \psi$ are non-negative, so this vanishes only when $\phi(x-ct)=0, \phi(x+c)=0$, and $\psi = 0$ on the interval $(x-ct,x+ct)$. For the analysis of when $u$ vanishes, we will only consider $c =1$.  Instead of writing out the cases, consider the following picture of where this is true:
+
+TODO: image
+
+We see that $u$ is $C^\infty$ everywhere but the discontinuities of $\phi, \psi$. In other words, $u$ is $C^\infty$ when $x+ct \ne -1, 0$, or 1. \qed
 
 
 \newpage
@@ -92,7 +116,7 @@ and
 \[v_t(x, x_n, 0) =u_t(x_0, x_n,0) - u_t(x_0, -x_n, 0) = \psi(x_0, x_n) - \psi(x_0, -x_n). \]
 So, $v$ solves the equation $v_{tt} - c^2\Delta_xv = 0$ with 0 initial conditions. We know that the only solution to this is $v=0$. Thus, we see that $u(x_0, x_n, t) - u(x_0, -x_n, t) = v(x_0, x_n, t) = 0$, so 
 \[u(x_0, x_n, t) = u(x_0, -x_n, t),\]
-and $u$ is even with respect to $x_n$, exactly as we wanted. \qed
+and $u$ is even with respect to $x_n$, exactly as we wanted. 
 \qed
 
 
