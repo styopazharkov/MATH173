@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.4.8)  19 APR 2022 23:35
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.4.8)  20 APR 2022 00:05
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -284,7 +284,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 {/usr/local/texlive/2022basic/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2
 ]
 [3] [4] [5] [6]
-Overfull \hbox (50.04533pt too wide) detected at line 153
+Overfull \hbox (50.04533pt too wide) detected at line 169
 \OML/cmm/m/it/10 v[] \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 c[]\OT1/cmr/m/n/10 ^
 ^A[]\OML/cmm/m/it/10 v \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 u[]\OT1/cmr/m/n/10 (\
 OML/cmm/m/it/10 x[]; x[]; t\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it
@@ -324,7 +324,7 @@ al/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/
 local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.p
 fb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/symbols
 /msbm7.pfb>
-Output written on math173pset3.pdf (8 pages, 150635 bytes).
+Output written on math173pset3.pdf (8 pages, 153297 bytes).
 PDF statistics:
  101 PDF objects out of 1000 (max. 8388607)
  62 compressed objects within 1 object stream

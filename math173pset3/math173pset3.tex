@@ -119,9 +119,25 @@ Thus, $u = f(x-ct)$ by definition and $u$ solves the PDE in the sense of distrib
 \newpage
 \problem{4} TODO \tri
 \hop
-\solution
-TODO
-\qed
+\solution This problem can be solved using the standard method for second order hyperbolic PDEs of two variables with constant coefficients that we saw in class. 
+\hop 
+First, we can factor 
+\[u_{xx} + 3u_{xy} -4u_{yy} = (\d_x - \d_y)(\d_x + 4\d_y)u.\]
+So, as we know, the general solution has the form 
+\[u(t,x) = f(4x - y)+ g(x+y).\]
+Now, we just need to use the initial conditions to find the specific $f$ and $g$. We see that 
+\[f(3x)+g(2x) = \sin x\]
+and that 
+\[4f'(3x) + g'(2x) = 0.\]
+Taking the derivative of the former gives us that 
+\[3f'(3x)+2g'(2x) = \cos x.\]
+Now, we have a system of linear equations, so we can solve to see that 
+\[3f'(3x) = - \frac{3}{5}\cos x \text{ and } g'(2x) = \frac{8}{5} \cos x .\]
+Since $f(3x) + g(2x) = \sin x$, the constant during integration must be the same, so we can assume it to vanish and
+\[f(x) = -\frac{3}{5}\sin(x/3) \text{ and } g(x) = \frac{8}{5}\sin(x/2).\]
+Plugging this back in, we see that 
+\[u(x,t) =  -\frac{3}{5}\sin\del{\frac{4x-y}{3}} + \frac{8}{5}\sin\del{\frac{x+y}{2}},\]
+which is the solution we were after. \qed
 
 
 \newpage
