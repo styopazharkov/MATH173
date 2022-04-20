@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.4.8)  20 APR 2022 09:13
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.4.8)  20 APR 2022 10:15
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -283,56 +283,48 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 {/usr/local/texlive/2022basic/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2
 ]
-[3] [4] [5] [6]
-Overfull \hbox (50.04533pt too wide) detected at line 175
-\OML/cmm/m/it/10 v[] \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 c[]\OT1/cmr/m/n/10 ^
-^A[]\OML/cmm/m/it/10 v \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 u[]\OT1/cmr/m/n/10 (\
-OML/cmm/m/it/10 x[]; x[]; t\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it
-/10 u[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x[]; \OMS/cmsy/m/n/10 ^^@\OML/cmm/m/it
-/10 x[]; t\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 c[]\OT1/cmr/m
-/n/10 ^^A[]\OML/cmm/m/it/10 u\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x[]; x[]; t\OT1/
-cmr/m/n/10 ) + \OML/cmm/m/it/10 c[]\OT1/cmr/m/n/10 ^^A[]\OML/cmm/m/it/10 u\OT1/
-cmr/m/n/10 (\OML/cmm/m/it/10 x[]; \OMS/cmsy/m/n/10 ^^@\OML/cmm/m/it/10 x[]; t\O
-T1/cmr/m/n/10 ) = \OML/cmm/m/it/10 f\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x[]; x[];
- t\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 f\OT1/cmr/m/n/10 (\OM
-L/cmm/m/it/10 x[]; \OMS/cmsy/m/n/10 ^^@\OML/cmm/m/it/10 x[]; t\OT1/cmr/m/n/10 )
- = 0\OML/cmm/m/it/10 :
- []
-
-[7]
-Overfull \hbox (55.63054pt too wide) detected at line 200
-[]
- []
-
-[8] [9] (./math173pset3.aux) ) 
+[3] [4] [5]
+<../images/0void1.jpeg, id=32, 1498.59875pt x 1462.46375pt>
+File: ../images/0void1.jpeg Graphic file (type jpg)
+<use ../images/0void1.jpeg>
+Package pdftex.def Info: ../images/0void1.jpeg  used on input line 178.
+(pdftex.def)             Requested size: 204.08571pt x 199.16928pt.
+ [6 <../images/0void1.jpeg>] [7] [8]
+<../images/0void2.jpeg, id=43, 1697.34125pt x 1444.39626pt>
+File: ../images/0void2.jpeg Graphic file (type jpg)
+<use ../images/0void2.jpeg>
+Package pdftex.def Info: ../images/0void2.jpeg  used on input line 269.
+(pdftex.def)             Requested size: 217.32109pt x 184.9429pt.
+ [9 <../images/0void2.jpeg>]
+[10] (./math173pset3.aux) ) 
 Here is how much of TeX's memory you used:
- 3941 strings out of 479719
- 59932 string characters out of 5880575
- 364406 words of memory out of 5000000
- 21895 multiletter control sequences out of 15000+600000
+ 3970 strings out of 479719
+ 60545 string characters out of 5880575
+ 361408 words of memory out of 5000000
+ 21917 multiletter control sequences out of 15000+600000
  476870 words of font info for 58 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
- 55i,12n,62p,390b,293s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2022basic/texmf-dist/fonts/ty
-pe1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2022basic/texmf-dist/font
-s/type1/public/amsfonts/cm/cmbxti10.pfb></usr/local/texlive/2022basic/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/local/texlive/2022basic/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2022basic/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2022ba
-sic/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/202
-2basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/
-2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texli
-ve/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/tex
-live/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/t
-exlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/loc
-al/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/
-local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.p
-fb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/symbols
-/msbm7.pfb>
-Output written on math173pset3.pdf (9 pages, 164289 bytes).
+ 55i,12n,62p,393b,319s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/local/texlive/2022basic/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmbxti10.pfb></usr/local/texlive/2022basic/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/local/texlive/2022basic/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2022basic/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2022basic
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2022ba
+sic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/202
+2basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/
+2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texliv
+e/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texl
+ive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/
+texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/loc
+al/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+</usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/symbols/ms
+bm7.pfb>
+Output written on math173pset3.pdf (10 pages, 1229746 bytes).
 PDF statistics:
- 104 PDF objects out of 1000 (max. 8388607)
- 64 compressed objects within 1 object stream
+ 109 PDF objects out of 1000 (max. 8388607)
+ 66 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 11 words of extra memory for PDF output out of 10000 (max. 10000000)
 

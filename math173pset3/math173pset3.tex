@@ -72,7 +72,7 @@ Thus, $u = f(x-ct)$ by definition and $u$ solves the PDE in the sense of distrib
     \item Find the general $C^2$ solution of the PDE $u_{xx} - u_{xt} - 6u_{tt} = 0$ by reducing it to a
     system of first order PDEs.
     \item Show that if $f,g \in \cal{D}'(RR)$, and we define new distributions $v,w \in \cal{D}'(\RR^2)$ similar to Problem 2,
-    such that formally $v(x,t) = f(3x+ t), w(x,t) = g(2x+ t)$, then $u = v + w$ solves the PDE in part (a).
+    such that formally $v(x,t) = f(3x+ t), w(x,t) = g(2x- t)$, then $u = v + w$ solves the PDE in part (a).
 \end{enumerate}
  \tri
 \hop
@@ -108,8 +108,8 @@ Thus, $u = f(x-ct)$ by definition and $u$ solves the PDE in the sense of distrib
         (\d_x - 3\d_t)(\d_t + 2\d_t)g(2x - t)(\phi) &= (\d_x - 3\d_t)(\d_t + 2\d_t)g\del{\frac{1}{2}\int_s \phi(s, (z+s)/2)ds} \\
         &=-(\d_t - 3\d_t)g\del{\int_s \sbr{\frac{1}{2}\phi_x(s, (z+s)/2) + \phi_t(s, (z-s)/2)}ds}\\
         &= -(\d_t - 3\d_t)g\del{\int_s \d_s \phi(s, (z+s)/2)ds} \\
-        &= -(\d_t + 2\d_t)f(0)\\
-        &= -(\d_t + 2\d_t)0\\
+        &= -(\d_t - 3\d_t)f(0)\\
+        &= -(\d_t -3\d_t)0\\
         &=0,
     \end{align*}
     where, again, we used the fundamental theorem of calculus along with the fact that $\phi$ must have compact support. 
@@ -162,7 +162,7 @@ Also describe where the solution vanishes and where it is $C^\infty$. You can as
 \tri
 \hop
 \solution
-We assume $t \ge 0$, as always. First, lets' consider the case $c =0$. Then, we have $u_{tt} = 0$, so $u_t(x,t)$ is constant along the line $\{(t,x_0)\}$ for any $x_0$. So, $u(t,x)$ has is a line of constant slope along any $\{(t,x_0)\}$. The starting point and the slope are defined by the initial conditions, so we see that 
+First, lets' consider the case $c =0$. Then, we have $u_{tt} = 0$, so $u_t(x,t)$ is constant along the line $\{(t,x_0)\}$ for any $x_0$. So, $u(t,x)$ has is a line of constant slope along any $\{(t,x_0)\}$. The starting point and the slope are defined by the initial conditions, so we see that 
 \[u(t,x) = \phi(x) + t\psi(x).\]
 This vanishes when $\phi(0) + t\psi =0$. Since $\phi, \psi$ are positive, $\phi$ must be $0$, so $|x| \ge 1$. Any point where $|x| \ge 1$ works. 
 \hop 
@@ -172,23 +172,34 @@ Now, let's look at the nonzero case. We know from the notes that the solution is
 \[u(t,x) = \frac{1}{2}(\phi(x+ct) + \phi(x-ct)) + \frac{1}{2c}\int_{x-ct}^{x+ct}\psi(\sigma) d\sigma.\]
 Notice that we can assume $c > 0$ because $c < 0$ would also flip the integral, leading to the same solution. 
 \hop 
-We see that $\phi, \psi$ are non-negative, so this vanishes only when $\phi(x-ct)=0, \phi(x+c)=0$, and $\psi = 0$ on the interval $(x-ct,x+ct)$. For the analysis of when $u$ vanishes, we will only consider $c =1$.  Instead of writing out the cases, consider the following picture of where this is true:
+We see that $\phi, \psi$ are non-negative, so this vanishes only when $\phi(x-ct)=0, \phi(x+ct)=0$, and $\psi = 0$ on the interval $(x-ct,x+ct)$. For the analysis of when $u$ vanishes, we will only consider $c =1$. We see that this is true when $[x-ct,x+ct] \cap (-1,1) = \varnothing$.  Instead of writing out the cases, consider the following picture of where this is true:
 
-TODO: image
+\begin{center}
+    \includegraphics[height=7cm]{../images/0void1.jpeg}
+\end{center}
 
 We see that $u$ is $C^\infty$ everywhere but the discontinuities of $\phi, \psi$. In other words, $u$ is $C^\infty$ when $x+ct \ne -1, 0$, or 1. \qed
 
 
 \newpage
-\problem{6} TODO \tri
+\problem{6} Consider the wave equation on $\RR^n: u_{tt} - c^2\D_xu = f, u(x,0) = \phi(x),u_t(x,0) = \psi(x)$, and
+write $x = (x_0,x_n)$ where $x_0 = (x_1,\dots,x_{n-1})$. Show that if $f(x_0,x_n,t) = f(x_0,- x_n,t), \phi(x_0,- x_n) =
+\phi(x_0,x_n)$, and $\psi(x_0,-x_n) = \psi(x_0,x_n)$ for all $x$ and $t$, then $u(x_0, x_n, t) = u(x_0, -x_n, t)$.
+\hop
+i.e. if $f, \phi$ and $\psi$, are all even functions of $x_n$,
+then $u$ is an even function of $x_n$ as well. \tri
 \hop
 \solution
 As the hint suggests, consider $v(x_0, x_n, t) = u(x_0, x_n, t) - u(x_0, -x_n, t)$. Notice that 
-\[v_{tt} - c^2\Delta_xv = u_{tt}(x_0, x_n, t) - u_{tt}(x_0, -x_n, t) - c^2\Delta_{x}u(x_0, x_n, t) + c^2\Delta_{x}u(x_0, -x_n, t)  = f(x_0, x_n, t) - f(x_0, -x_n, t) = 0.\]
+\begin{align*}
+    v_{tt} - c^2\Delta_xv &= u_{tt}(x_0, x_n, t) - u_{tt}(x_0, -x_n, t) - c^2\Delta_{x}u(x_0, x_n, t) + c^2\Delta_{x}u(x_0, -x_n, t)\\
+    & = f(x_0, x_n, t) - f(x_0, -x_n, t)\\
+    &= 0.
+\end{align*}
 We also see that 
-\[v(x, x_n, 0) = u(x_0, x_n,0) - u(x_0, -x_n, 0) = \phi(x_0, x_n) - \phi(x_0, -x_n)\]
+\[v(x, x_n, 0) = u(x_0, x_n,0) - u(x_0, -x_n, 0) = \phi(x_0, x_n) - \phi(x_0, -x_n)=0\]
 and 
-\[v_t(x, x_n, 0) =u_t(x_0, x_n,0) - u_t(x_0, -x_n, 0) = \psi(x_0, x_n) - \psi(x_0, -x_n). \]
+\[v_t(x, x_n, 0) =u_t(x_0, x_n,0) - u_t(x_0, -x_n, 0) = \psi(x_0, x_n) - \psi(x_0, -x_n)=0. \]
 So, $v$ solves the equation $v_{tt} - c^2\Delta_xv = 0$ with 0 initial conditions. By the uniqueness in the notes, we know that the only solution to this is $v=0$. Thus, we see that $u(x_0, x_n, t) - u(x_0, -x_n, t) = v(x_0, x_n, t) = 0$, so 
 \[u(x_0, x_n, t) = u(x_0, -x_n, t),\]
 and $u$ is even with respect to $x_n$, exactly as we wanted. 
@@ -196,7 +207,18 @@ and $u$ is even with respect to $x_n$, exactly as we wanted.
 
 
 \newpage
-\problem{7} TODO \tri
+\problem{7} In this problem we prove the finite speed of propagation for solutions of variable coefficient wave equation. Consider the PDE $u_{tt} - \D \cdot (c^2\D u) + qu = 0, u(x,0) = \phi(x), u_t(x,0) = \psi(x)$,
+where $c > 0$ and $q  \ge 0$ , depend on $x$ only, and $c$ is bounded between two positive constants, i.e., for
+some $c_1,c_2 > 0, c_1 \le c(x) \le c_2$ for all $x \in \RR^n$. Assume that $u$ is a $C^2$ solution. You can assume $n= 1$ for this problem.
+\begin{enumerate}[(a)]
+    \item  Fix $x_0 \in \RR^n$ and $R_0 > 0$, and for $t < R_0/c_2$ let
+    \[E(t) =\int_{\Omega(t)}(u_t^2 + c(x)^2|\D u |^2 + q(x)u^2) dx\]
+    Show that $E$ is non-increasing in $t$. 
+    \item Suppose that $\phi$ and $\psi$ satisfy $\phi(x) = \psi(x) = 0$ when $|x| > R$. Show that $u(t,x) = 0$ when
+    $|x|> R + c_2t$.
+    \item Prove that there is at most one $C^2$ solution in $[0,t_0] \times \RR^n$.
+\end{enumerate}
+\tri
 \hop
 \solution
 \begin{enumerate}[(a)]
@@ -207,7 +229,8 @@ and $u$ is even with respect to $x_n$, exactly as we wanted.
     \end{align*}
     Applying integration by parts, as we did in class, we see that 
     \begin{align*}
-        \int_{\Omega(t)}\d_t(u_t^2 + c(x)^2|\D u |^2 + q(x)u^2) dx &= \int_{\Omega(t)}(u_{tt} - \D\cdot (c(x)^2 \D u) + q(x)u)u_t dx + \int_{\d\Omega(t)}u_tc(x)^2\D_x u \cdot \hat{n}dS(x) \\ 
+        \int_{\Omega(t)}\d_t(u_t^2 + c(x)^2|\D u |^2 + q(x)u^2) dx &= \int_{\Omega(t)}(u_{tt} - \D\cdot (c(x)^2 \D u) + q(x)u)u_t dx \\
+        &+ \int_{\d\Omega(t)}u_tc(x)^2\D_x u \cdot \hat{n}dS(x) \\ 
         &=  0 + \int_{\d\Omega(t)}u_tc(x)^2\D_x u \cdot \hat{n}dS(x)
     \end{align*}
     where we used that $u$ is a solution to our PDE in the last step. Now, we can start bounding this value. We see that 
@@ -242,8 +265,9 @@ and $u$ is even with respect to $x_n$, exactly as we wanted.
     In a sense, we have shown that $u$ is 0 on a triangle outside of the region $|x| \le R + ct$. With our choice of $x_0, R_0$, this triangle covers the original arbitrary point. 
     \hop 
     More precisely, we see that $\hat{t} < (|\hat{x}| - R)/c_2$ and $|\hat{x} -x_0| < R$, so we can conclude that $u(\hat{x}, \hat{t})$. Since $(\hat{x},\hat{t})$ was arbitrary, we have shown what we wanted. \qed 
-
-    TODO: draw cone 
+    \begin{center}
+        \includegraphics[height=6.5cm]{../images/0void2}
+    \end{center}
 
     \item We have done this in class, but we can repeat the derivation. Let $t_0 < R_0/c_2$. Suppose $u, u'$ are two solutions to the PDE in $[0, t_0] \times \RR$. Note that the notation $u'$ is not to be confused with a derivative of $u$. Consider $v=u -u'$. We see that 
     \[v_{tt} - \D \cdot (c^2 \D v) +qv =  u_{tt} - \D \cdot (c^2 \D u) +qu - u'_{tt} + \D \cdot (c^2 \D u') -qu' = 0 - 0 = 0.\]
