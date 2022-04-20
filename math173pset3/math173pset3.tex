@@ -147,7 +147,19 @@ which is the solution we were after. \qed
 
 
 \newpage
-\problem{5} TODO \tri
+\problem{5} Solve the wave equation $u_{tt} -c^2u_{xx} = 0, u(x,0) = \phi(x), u_t(x,0) = \psi(x)$,
+\[\text{with } \phi(x) = \begin{cases}
+    0, x < -1, \\
+    1 + x, -1 < x < 0,\\
+    1 - x, 0 < x < 1,\\
+    0, x >1, 
+\end{cases} \text{ and } \psi(x) = \begin{cases}
+    0, x < -1, \\
+    2, -1 < x < 1,\\
+    0, x > 1.
+\end{cases}\]
+Also describe where the solution vanishes and where it is $C^\infty$. You can assume $c=1$ for this. 
+\tri
 \hop
 \solution
 We assume $t \ge 0$, as always. First, lets' consider the case $c =0$. Then, we have $u_{tt} = 0$, so $u_t(x,t)$ is constant along the line $\{(t,x_0)\}$ for any $x_0$. So, $u(t,x)$ has is a line of constant slope along any $\{(t,x_0)\}$. The starting point and the slope are defined by the initial conditions, so we see that 
