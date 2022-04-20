@@ -71,7 +71,7 @@ Thus, $u = f(x-ct)$ by definition and $u$ solves the PDE in the sense of distrib
 \problem{3} TODO \tri
 \hop
 \solution
-\begin{enumerate}
+\begin{enumerate}[(a)]
     \item This part follows directly from what we have done in class. We can factor 
     \[u_{xx}-u_{xt}-6u_{tt} = (\d_x - 3\d_t)(\d_t + 2\d_t)u,\]
     so the general $C^2$ solution is 
@@ -171,7 +171,7 @@ We also see that
 \[v(x, x_n, 0) = u(x_0, x_n,0) - u(x_0, -x_n, 0) = \phi(x_0, x_n) - \phi(x_0, -x_n)\]
 and 
 \[v_t(x, x_n, 0) =u_t(x_0, x_n,0) - u_t(x_0, -x_n, 0) = \psi(x_0, x_n) - \psi(x_0, -x_n). \]
-So, $v$ solves the equation $v_{tt} - c^2\Delta_xv = 0$ with 0 initial conditions. We know that the only solution to this is $v=0$. Thus, we see that $u(x_0, x_n, t) - u(x_0, -x_n, t) = v(x_0, x_n, t) = 0$, so 
+So, $v$ solves the equation $v_{tt} - c^2\Delta_xv = 0$ with 0 initial conditions. By the uniqueness in the notes, we know that the only solution to this is $v=0$. Thus, we see that $u(x_0, x_n, t) - u(x_0, -x_n, t) = v(x_0, x_n, t) = 0$, so 
 \[u(x_0, x_n, t) = u(x_0, -x_n, t),\]
 and $u$ is even with respect to $x_n$, exactly as we wanted. 
 \qed
@@ -181,16 +181,66 @@ and $u$ is even with respect to $x_n$, exactly as we wanted.
 \problem{7} TODO \tri
 \hop
 \solution
-\begin{enumerate}
+\begin{enumerate}[(a)]
     \item For this problem, we will show that the derivative of $E$ is never positive. Let $\Omega(t)$ be the region where $|x-x_0| < R_0 - c_t$. We see that the product rule gives us that 
     \begin{align*}
-        E'(t) = \d_t \int_{\Omega(t)}(u_t^2 + c(x)^2|\D u |^2 + q(x)u^2) 
+        E'(t) &= \d_t \int_{\Omega(t)}(u_t^2 + c(x)^2|\D u |^2 + q(x)u^2) dx \\
+        &= \int_{\Omega(t)}\d_t(u_t^2 + c(x)^2|\D u |^2 + q(x)u^2) dx+ (-c_2)\int_{\d\Omega(t)}(u_t^2 + c(x)^2|\D u |^2 + q(x)u^2) dS(x).
     \end{align*}
-    \item TODO
-    \item TODO
+    Applying integration by parts, as we did in class, we see that 
+    \begin{align*}
+        \int_{\Omega(t)}\d_t(u_t^2 + c(x)^2|\D u |^2 + q(x)u^2) dx &= \int_{\Omega(t)}(u_{tt} - \D\cdot (c(x)^2 \D u) + q(x)u)u_t dx + \int_{\d\Omega(t)}u_tc(x)^2\D_x u \cdot \hat{n}dS(x) \\ 
+        &=  0 + \int_{\d\Omega(t)}u_tc(x)^2\D_x u \cdot \hat{n}dS(x)
+    \end{align*}
+    where we used that $u$ is a solution to our PDE in the last step. Now, we can start bounding this value. We see that 
+    \begin{align*}
+        \int_{\Omega(t)}\d_t(u_t^2 + c(x)^2|\D u |^2 + q(x)u^2) dx &= \int_{\d\Omega(t)}u_tc(x)^2\D_x u \cdot \hat{n}dS(x)\\
+        &\le \int_{\d\Omega(t)}|u_t|c(x)^2|\D_x u| |\hat{n}|dS(x)\\
+        &= \int_{\d\Omega(t)}|u_t|c(x)^2|\D_x u|dS(x)\\
+        & \le c_2\int_{\d\Omega(t)}|u_t||c(x)||\D_x u|dS(x).
+    \end{align*}
+    In the last step, we used that $c(x) \le c_2$. Now, note that for non-negative real numbers $a,b$, we have 
+    \[ ab \le 2ab \le a^2 +b^2.\]
+    With this fact, we see that 
+    \begin{align*}
+        \int_{\Omega(t)}\d_t(u_t^2 + c(x)^2|\D u |^2 + q(x)u^2) dx &\le c_2\int_{\d\Omega(t)}|u_t||c(x)||\D_x u|dS(x)\\
+        &\le c_2\int_{\d\Omega(t)}(|u_t|^2 + |c(x)|^2|\D u |^2)dS(x)\\
+        &\le c_2\int_{\d\Omega(t)}(u_t^2 + c(x)^2|\D u |^2)dS(x)\\
+        &\le c_2\int_{\d\Omega(t)}(u_t^2 + c(x)^2|\D u |^2 + qu^2)dS(x)
+    \end{align*}
+    by the non-negativity of $q$. Now, plugging this back into the expression for $E'(t)$, we see that 
+    \begin{align*}
+        E'(t) &= \int_{\Omega(t)}\d_t(u_t^2 + c(x)^2|\D u |^2 + q(x)u^2) dx   -c_2\int_{\d\Omega(t)}(u_t^2 + c(x)^2|\D u |^2 + q(x)u^2) dS(x) \\
+        &\le c_2\int_{\d\Omega(t)}(u_t^2 + c(x)^2|\D u |^2 + q(x)u^2) dS(x)-c_2\int_{\d\Omega(t)}(u_t^2 + c(x)^2|\D u |^2 + q(x)u^2) dS(x)\\
+        &=  0.
+    \end{align*}
+    Thus, we can conclude that $E(t)$ is non-increasing in $t$. \qed
+    \item For this problem, we will use part (a). We mimic the derivation in the notes. 
+    \hop 
+    Let $(\hat{x},\hat{t})$ be a point such that $|\hat{x}| > R+c_2\hat{t}$. Let $x_0 = \hat{x}$ and let $R_0 = |x_0| - R$. We see that for $|x-x_0| < R_0$, we have $u(x,0) = \phi(x) = 0$. Also, $u_t(x,0) = \psi(x)  = 0$. So, this means that $E(0) = 0$ with the definition we had in part (a). 
+    \hop 
+    Since $E(t)$ is non-increasing and non-negative, we know $E(t) = 0$ for any $t < R_0/c_2$. Since all the terms in $E(t)$ are non-negative, and we know $c(x) >0$, we see $E(t) = 0$ implies that $u_t^2 = 0$ and $|\D u|^2 = 0$ where $|x_0 -x| < R_0 - c_2t$. Thus, $u_t =  \D u = 0$ on $|x -x_0| < R_0 - c_2t$. This means that in fact $u = 0$ on $|x -x_0| < R_0 - c_2t$. 
+    \hop 
+    In a sense, we have shown that $u$ is 0 on a triangle outside of the region $|x| \le R + ct$. With our choice of $x_0, R_0$, this triangle covers the original arbitrary point. 
+    \hop 
+    More precisely, we see that $\hat{t} < (|\hat{x}| - R)/c_2$ and $|\hat{x} -x_0| < R$, so we can conclude that $u(\hat{x}, \hat{t})$. Since $(\hat{x},\hat{t})$ was arbitrary, we have shown what we wanted. \qed 
+
+    TODO: draw cone 
+
+    \item We have done this in class, but we can repeat the derivation. Let $t_0 < R_0/c_2$. Suppose $u, u'$ are two solutions to the PDE in $[0, t_0] \times \RR$. Note that the notation $u'$ is not to be confused with a derivative of $u$. Consider $v=u -u'$. We see that 
+    \[v_{tt} - \D \cdot (c^2 \D v) +qv =  u_{tt} - \D \cdot (c^2 \D u) +qu - u'_{tt} + \D \cdot (c^2 \D u') -qu' = 0 - 0 = 0.\]
+    Moreover, 
+    \[v(x,0) = u(x,0) - u'(x,0)= \phi(x)- \phi(x)=0\]
+    and 
+    \[v_t(x,0) = u_t(x,0) - u'_t(x,0)= \psi(x)- \psi(x)=0.\]
+    So, we see that $v$ satisfies the same equation with 0 initial conditions. If we define $E$ as in part (a), but for $v$, we see that for any $x_0,$ the initial conditions give us 
+    \[E(0) = 0.\]
+    Since $E(t)$ is non-increasing and non-negative, we know that 
+    \[E(t) = 0\]
+    for all $t \in [0,t_0]$. As in part (b), this means that $v_x$ and $v_t$ vanish where $|x - x_0| < R_0-c_t$. So, $v$ vanishes on this region as well. For any $(t,x) \in [0,t_0] \times \RR$, we can select $x_0 = x$ and see that the point is in the region where $v =0$. Thus,  $v = 0$ on all of $[0,t_0] \times \RR$. 
+    \hop 
+    So, we can conclude that $u = u'$, and the solution is unique. \qed
+
 \end{enumerate}
-\qed
 
-
-\newpage
 \end{document}
