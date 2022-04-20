@@ -25,7 +25,7 @@
 \date{April 20, 2022}
 \begin{document}
 \maketitle
-\problem{1} TODO \tri
+\problem{1}Show that the only solution $u \in \cal{D}'(\RR)$ of $u' = 0$ is $u = c$, where $c$ is a constant function. \tri
 \hop
 \solution
 As the hint suggests, $u' = 0$ means by definition $u(\phi) = 0$ for any $\phi \in C_c^\infty(\RR)$. For any $\psi \in \Cc$, let $\phi_0\in \Cc$ be a bump function such that $\int_\RR \phi_0(x)dx = 1$. Let $\hat{\psi} = \psi - \phi_0\int_\RR\psi(x)dx$. We see that 
@@ -39,7 +39,7 @@ which is exactly what we wanted to prove.
 
 
 \newpage
-\problem{2}TODO
+\problem{2}Let $f \in \cal{D}'(\RR)$, define a solution $u \in \cal{D}'(\RR^2)$ such that $u_t +cu_x = 0$ and $u(t,x) = f(x-ct)$ in the sense of distributions.
 \tri
 \hop
 \solution
@@ -68,7 +68,13 @@ Thus, $u = f(x-ct)$ by definition and $u$ solves the PDE in the sense of distrib
 
 
 \newpage
-\problem{3} TODO \tri
+\problem{3} \begin{enumerate}[(a)]
+    \item Find the general $C^2$ solution of the PDE $u_{xx} - u_{xt} - 6u_{tt} = 0$ by reducing it to a
+    system of first order PDEs.
+    \item Show that if $f,g \in \cal{D}'(RR)$, and we define new distributions $v,w \in \cal{D}'(\RR^2)$ similar to Problem 2,
+    such that formally $v(x,t) = f(3x+ t), w(x,t) = g(2x+ t)$, then $u = v + w$ solves the PDE in part (a).
+\end{enumerate}
+ \tri
 \hop
 \solution
 \begin{enumerate}[(a)]
