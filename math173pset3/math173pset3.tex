@@ -49,7 +49,7 @@ First, let us define $f(x-ct)$ in a way that aligns with the case that $f$ is a 
     &= \int_{\RR^2}f(z)\phi(s,z+cs)dzds \\
     &= \int_{\RR^2}f(z)\phi(s,z+cs)dsdz \\
     & = \int_{z \in \RR} f(z) \int_{s \in \RR} \phi(s,z+cs)ds dz\\
-    &= f\del{\int_{t \in \RR}\phi(t,z+ct)dt}. 
+    &= f\del{\int_{s \in \RR}\phi(s,z+cs)ds}. 
 \end{align*}
 So, we see that $f(x-ct)(\phi) = f(\Phi)$ where $\Phi = \int_\RR \phi(s,z+cs)ds$. Note that $\Phi \in \Cc$ because the integral of a smooth function is smooth and $\phi$ is compactly supported. So, we can define $u = f(x-ct)$. 
 \hop 
@@ -181,7 +181,14 @@ and $u$ is even with respect to $x_n$, exactly as we wanted.
 \problem{7} TODO \tri
 \hop
 \solution
-TODO
+\begin{enumerate}
+    \item For this problem, we will show that the derivative of $E$ is never positive. Let $\Omega(t)$ be the region where $|x-x_0| < R_0 - c_t$. We see that the product rule gives us that 
+    \begin{align*}
+        E'(t) = \d_t \int_{\Omega(t)}(u_t^2 + c(x)^2|\D u |^2 + q(x)u^2) 
+    \end{align*}
+    \item TODO
+    \item TODO
+\end{enumerate}
 \qed
 
 
