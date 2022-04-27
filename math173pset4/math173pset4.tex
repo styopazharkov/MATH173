@@ -1,0 +1,102 @@
+
+\documentclass{article}
+\usepackage{amsmath, amsfonts, amssymb, amsthm} %packages for math-related
+\usepackage[margin=1.2in]{geometry}
+\usepackage[shortlabels]{enumitem}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx} % package for inserting images
+\usepackage{commath} % package for things like \del, \cbr, and \sbr. These handle parentheses well.
+\usepackage[mathscr]{euscript}%for \scr command 
+\usepackage{../commands} %package with all of the commands for this class
+\usepackage{url}
+\setlength{\parindent}{0em} % so paragraphs aren't indented
+\newcommand{\lcm}{\text{lcm}}
+\newcommand{\Hom}{\text{Hom}}
+\newcommand{\Ann}{\text{Ann}}
+\newcommand{\Cc}{{C_c^\infty(\RR)}}
+% ********************************************************** %
+%               THINGS TO EDIT BELOW THIS LINE               %
+% ********************************************************** %
+\newcommand{\D}{\nabla}
+\renewcommand{\d}{\partial}
+\usepackage{wrapfig}
+\title{\textsc{MATH 173 Problem Set 4}}
+\author{Stepan (Styopa) Zharkov}
+\date{April 27, 2022}
+\begin{document}
+\maketitle
+\problem{1} TODO \tri
+\hop
+\solution
+For this problem, we'll follow the first itinerary suggested by the hint. We know
+\[f(x) = \int_0^x f'(t)dt.\]
+Let $\chi_{[0,x]}$ be the characteristic function of $[0,x]$. We now see that by the Cauchy-Schwartz inequality,
+\begin{align*}
+    \int_0^1f(x)^2 dx &= \int_0^1\del{ \int_0^x f'(t)dt}dx \\
+    &= \int_0^1\del{ \int_0^1 \chi_{[0,x]}f'(t)dt}^2dx \\
+    & \le  \int_0^1\del{ \int_0^1 \chi_{[0,x]}^2dt}\del{ \int_0^1 f'(t)^2dt}dx \\
+    &= \del{ \int_0^1 f'(t)^2dt} \int_0^1\del{ \int_0^1 \chi_{[0,x]}^2dt}dx \\
+    &=  \del{ \int_0^1 f'(t)^2dt} \int_0^1 xdx \\
+    &=\frac{1}{2}   \int_0^1 f'(t)^2dt.
+\end{align*}
+So, an absolute constant of $C = 1/2$ works. \qed
+
+\newpage
+\problem{2} TODO \tri
+\hop
+\solution
+\begin{enumerate}[(a)]
+    \item First, we see that for any $\eps > 0$, there exists an $R$ such that $|u(0,R)| \le \eps$. So, 
+    \[\sup_{x \in \RR^n, t \in [0,t]}u(t,x) \ge -\eps\]
+    and thus 
+    \[\sup_{x \in \RR^n, t \in [0,t]}u(t,x) \ge 0.\]
+    Also,
+    \[\sup_{x \in \RR^n, t \in [0,t]}u(t,x) \ge \sup_{x \in \RR^n}u(0,x)\]
+    so 
+    \[\sup_{x \in \RR^n, t \in [0,t]}u(t,x) \ge \max\{0, \sup_{x \in \RR^n}u(0,x)\}.\]
+    The other direction is more involved. Let
+    \[C = \sup_{x \in \RR^n, t \in [0,t]}u(t,x).\]
+    If $C = 0$, then we are done so let $C>0$.
+    For any $\eps > 0$ such that $\eps < C$, let $x_0, t_0$ be such that $u(x_0, t_0) > C - \eps$. We know there exists an $R$ such that 
+    \[\sup_{|x| > R, t \in [0,t]}u(t,x) < C - \eps.\]
+    Let $R_0 > \max{t_0, R}$. We then see by the maximum principle on the hypercylinder with the $R_0$-bal as the base that $u$ achieves its supremum in the cylinder either on the base $\{(0,x): |x| \le R_0\}$ or on the wall $\{(x,t) : t \in [0,T], |x| = R_0\}$. However we saw that the supremum on the wall is less than $C-\eps < u(t_0, x_0)$, which is inside the cylinder. So, the supremum is attained on the base and there exits an $x$ such that $u(0,x) \ge u(t_0, x_0) \ge C- \eps$. Since $\eps$ was arbitrarily small, we have shown that RHS is at least $C$, so we can conclude that 
+    \[\sup_{x \in \RR^n, t \in [0,t]}u(t,x) = \max\{0, \sup_{x \in \RR^n}u(0,x)\},\]
+    as we wanted. \qed
+\end{enumerate}
+
+
+\newpage
+\problem{3} TODO \tri
+\hop
+\solution
+TODO
+
+
+\newpage
+\problem{4} TODO \tri
+\hop
+\solution
+TODO
+
+
+\newpage
+\problem{5} TODO \tri
+\hop
+\solution
+TODO
+
+
+\newpage
+\problem{6} TODO \tri
+\hop
+\solution
+TODO
+
+
+\newpage
+\problem{7} TODO \tri
+\hop
+\solution
+TODO
+
+\end{document}
