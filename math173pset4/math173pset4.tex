@@ -70,7 +70,31 @@ So, an absolute constant of $C = 1/2$ works. \qed
 \problem{3} TODO \tri
 \hop
 \solution
-TODO
+\begin{enumerate}[(a)]
+    \item This problem is just computation. By the product of sines formula, 
+    \[\sin(n\pi x)\sin(n\pi x) = \frac{1}{2}(\cos((n-m)\pi x) - \cos((n+m)\pi x)).\]
+    So, if $m \ne n$, then 
+    \begin{align*}
+        \int_0^1 \sin n\pi x \sin m \pi x dx&= \frac{1}{2}\sbr{\frac{1}{(n-m)\pi}\sin((n-m)\pi x)}_0^1+\frac{1}{2}\sbr{\frac{1}{(n+m)\pi}\sin((n+m)\pi x)}_0^1\\
+        &= \frac{1}{2}(0+0)\\
+        &= 0.
+    \end{align*}
+    For the other case, if $m = n$, then
+    \begin{align*}
+        \int_0^1 \sin n\pi x \sin m \pi x dx&=  \frac{1}{2}\int_0^1(\cos((0)\pi x) - \cos((2n)\pi x)) dx \\
+        &= \frac{1}{2}\sbr{\cos(0) - \frac{1}{2n\pi}\cos(2n\pi x)}_0^1 \\
+        &= \frac{1}{2}(1-0) \\
+        &= \frac{1}{2}.
+    \end{align*}
+    So, we have shown the equality we wanted to show. \qed
+    \item This problem can be solved by heavy computation and using part (a). Instead, we'll use what we have seen in class. Fix $s$ and $y$. We know 
+    \[u(t,x)=\int_0^1K(t,x,r)K(s,r,y)dr\]
+    gives a solution for $u_t = u_{xx}$ with initial conditions $u(0,x) = K(s,x,y)$. We also know that the heat kernel satisfies the heat equation for $t>0$. Note that this means
+    \[u'(t,x) = K(t+s, x, y)\]
+    satisfies $u'_t = u'_{yy}$. Also note that we can check that $u(0,x) = K(s,x,y)$, so the initial conditions are the same as above. Since the solution with the same initial conditions is unique, our two solutions must be the same, so 
+    \[\int_0^1K(t,x,r)K(s,r,y)dr=K(t+s, x, y),\]
+    as we wanted. \qed
+\end{enumerate}
 
 
 \newpage

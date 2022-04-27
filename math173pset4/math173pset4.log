@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.4.8)  26 APR 2022 18:11
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.4.8)  26 APR 2022 18:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -287,11 +287,11 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 Here is how much of TeX's memory you used:
  3941 strings out of 479719
  59932 string characters out of 5880575
- 354406 words of memory out of 5000000
+ 358406 words of memory out of 5000000
  21895 multiletter control sequences out of 15000+600000
  476870 words of font info for 58 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
- 55i,10n,62p,615b,219s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 55i,10n,62p,615b,268s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2022basic/texmf-d
 ist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2022basic/tex
 mf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/local/texlive/2022bas
@@ -307,7 +307,7 @@ usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb>
 pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cms
 y7.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/sym
 bols/msbm7.pfb>
-Output written on math173pset4.pdf (7 pages, 137502 bytes).
+Output written on math173pset4.pdf (7 pages, 143465 bytes).
 PDF statistics:
  93 PDF objects out of 1000 (max. 8388607)
  57 compressed objects within 1 object stream
