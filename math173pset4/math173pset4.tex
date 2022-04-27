@@ -62,6 +62,7 @@ So, an absolute constant of $C = 1/2$ works. \qed
     Let $R_0 > \max{t_0, R}$. We then see by the maximum principle on the hypercylinder with the $R_0$-bal as the base that $u$ achieves its supremum in the cylinder either on the base $\{(0,x): |x| \le R_0\}$ or on the wall $\{(x,t) : t \in [0,T], |x| = R_0\}$. However we saw that the supremum on the wall is less than $C-\eps < u(t_0, x_0)$, which is inside the cylinder. So, the supremum is attained on the base and there exits an $x$ such that $u(0,x) \ge u(t_0, x_0) \ge C- \eps$. Since $\eps$ was arbitrarily small, we have shown that RHS is at least $C$, so we can conclude that 
     \[\sup_{x \in \RR^n, t \in [0,t]}u(t,x) = \max\{0, \sup_{x \in \RR^n}u(0,x)\},\]
     as we wanted. \qed
+    \item If $u$ and $u'$ are solutions that go to 0 at infinity uniformly, then consider $v = u - u'$. We see that $v(0,x) = 0$ and that $v \to 0$ at infinity uniformly as well, so by part (a), we know $v \le 0$. By a similar reasoning $-v = u' - u \le 0$ as well. So, $v = 0$ and thus $u = u'$. Thus, the solution in the given class of functions must be unique.\qed 
 \end{enumerate}
 
 
