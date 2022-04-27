@@ -197,6 +197,18 @@ is our solution. \qed
 \problem{7} TODO \tri
 \hop
 \solution
-TODO
+\begin{enumerate}
+    \item For this problem, we can follow the standard uniqueness proof using the maximum principle. Suppose $u$ and $u'$ are two solutions to the equation. $v = u - u'$. We see that $v$ solves $v_t - v_{xx} = 0$ and $v(x,0) = 0$ and $v(0,t) = v(1,t) = 0$. Thus, by the maximum principle on inhomogenous heat equations, $v \le 0$. We see that $-v = u' - u$ solves the same equation with the same properties, so $-v \le 0$. Thus, $v= 0$. This means that $ u = u'$ and the solution is unique. \qed
+    \item  We know that the solution has the form 
+    \item \begin{align*}
+        u(t,x) &= \int_0^1K(t,x,y)f(y)dy + \int_0^t\int_0^1 K(t-s,x,y)e^{-t}\sin 3\pi y dy ds \\
+        &= \int_0^1K(t,x,y)y\sin \pi x dy + \int_0^t\int_0^1 K(t-s,x,y)e^{-t}\sin 3\pi y dy ds
+    \end{align*}
+    where 
+    \begin{align*}
+        K(t,x,y) = 2 \sum_{n=1}^\infty e^{-(\pi n)^2 t}\sin(n \pi x) \sin(n \pi y)
+    \end{align*}
+    is the heat kernel. \qed
+\end{enumerate}
 
 \end{document}
