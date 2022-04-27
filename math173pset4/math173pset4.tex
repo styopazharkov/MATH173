@@ -101,21 +101,95 @@ So, an absolute constant of $C = 1/2$ works. \qed
 \problem{4} TODO \tri
 \hop
 \solution
-TODO
+This problem is similar to the use of Poincar\'e's inequality in class, but with a positive-definite matrix in place of the $c^2$ constant.
+\hop 
+Let us define 
+\[E= \int_\Omega (A(x)\D u \cdot \D u + qu^2)dx.\]
+Notice that all parts in the integral are non-negative, so $E$ is also non-negative. By the same integration by parts that we've done in class, we see that the dirichlet boundary conditions give us
+\begin{align*}
+    E &= 0 - \int_\Omega (\D \cdot (A(x) \D u) - qu)u dx \\
+    &= -\int_\Omega fu dx.
+\end{align*}
+Applying the Cauchy-Schwartz inequality, then the AMGM inequality, then the Poincar\'e inequality, we know there exists a $C > 0$ such that 
+\begin{align*}
+    E = |E| &= \abs{\int_\Omega fu dx} \\
+    &\le \del{\int_\Omega f^2 dx}^{1/2} \del{\int_\Omega u^2 dx}^{1/2} \\
+    &= \del{\frac{C}{c_o}\int_\Omega f^2 dx}^{1/2} \del{\frac{c_0}{C}\int_\Omega u^2 dx}^{1/2} \\
+    &\le \frac{1}{2}\frac{C}{c_0}\int_\Omega f^2 dx + \frac{1}{2}\frac{c_0}{C}\int_\Omega u^2 dx \\ 
+    & \le \frac{C}{2c_0}\int_\Omega f^2 dx + \frac{C}{2}\frac{c_0}{C}\int_\Omega \abs{\D u}^2 dx \\
+    &=  \frac{C}{2c_0}\int_\Omega f^2 dx +\frac{c_0}{2}\int_\Omega \abs{\D u}^2 dx.
+\end{align*}
+We also know that 
+\begin{align*}
+    E&= \int_\Omega (A(x)\D u \cdot \D u + qu^2)dx\\
+    &\ge \int_\Omega (A(x)\D u \cdot \D u)dx\\
+    &\ge \int_\Omega (c_0\abs{\D u}^2 \cdot \D u)dx.
+\end{align*}
+Thus, 
+\[ \int_\Omega (c_0\abs{\D u}^2 \cdot \D u)dx \le \frac{C}{2c_0}\int_\Omega f^2 dx +\frac{c_0}{2}\int_\Omega \abs{\D u}^2 dx,\]
+so, subtracting, we get 
+\[ \int_\Omega \frac{c_0}{2} \abs{\D u}^2 dx \le \frac{C}{2c_0}\int_\Omega f^2 dx.\]
+Also, by Poincar\'e's inequality, 
+\[\int_\Omega \frac{c_0}{2}u^2 dx \le C \int_\Omega\frac{c_0}{2} \abs{\D u}^2dx \le \frac{C^2}{2c_0}\int_\Omega f^2 dx.\]
+Adding the previous two results together and dividing by $c_0/2$, we have 
+\[\int_\Omega \del{\abs{\D u}^2  + u^2}dx \le \frac{C+C^2}{c_0^2}\int_\Omega f^2 dx.\]
+So, a constant of $\frac{C+C^2}{c_0^2}$ works, and we are done. \qed
 
 
 \newpage
 \problem{5} TODO \tri
 \hop
 \solution
-TODO
+This problem is solved the same as our familiar quasilinear PDEs, but the system of ODEs is a little more annoying than usual. Let $f(s) = (x(s), y(s),z(s))$ be a characteristic curve. The initial conditions give us that $y(0) = 1$ and $z(0) = 1 + x(0)$. Let $r = x(0)$ be the variable parameter for the characteristic curve. 
+\hop 
+We see that 
+\begin{align*}
+    x' &= y + z \\
+    y' &= y\\
+    z' &= x - y.
+\end{align*}
+So, we can immediately deduce from the initial conditions that $y(s) = e^s$. We also see that $(x+z)' = x'+z' = x+z$, and we know $x(0)+z(0) = 2r +1$, so \[x+z = (2r+1)e^s.\] 
+Plugging this back in, we have 
+\begin{align*}
+    & x' = y+z = e^s+(2r+1)e^s - x \\ 
+    \implies & x' + x = e^s + (2r+1)e^s \\
+    \implies & (xe^{s})' = e^s(x' + x) = e^{2s} + (2r+1)e^{2s}= 2(r+1)e^{2s} \\
+    \implies & xe^s = (r+1)e^{2s} + C\\
+\end{align*}
+for some constant $C$. Since $x(0) = r$, we know $x(0)e^0 = r$, so $C = -1$. Thus, 
+\begin{align*}
+    x &= (r+1)e^s - e^{-s}\\
+    z &= re^s + e^{-s}.
+\end{align*}
+So, we can see that for $y > 0$, we can pick $r$ such that 
+\[u(x,y) = z(s) = x - y + \frac{2}{y}.\]
+This is the solution we were after. \qed
 
 
 \newpage
 \problem{6} TODO \tri
 \hop
 \solution
-TODO
+We can factor the equation to see that 
+\[(\d_x+8\d_y)(\d_x-2\d_y)u = 0.\]
+So, we know the solution is of the form 
+\[u(x,y) = f(8x-y) + g(2x+y).\]
+Now, we can use the initial conditions to solve for $f$ and $g$. We know 
+\begin{align*}
+    f(-10x)+g(0) &= x\\
+    f(8x) + g(2x) &= \sin x.
+\end{align*}
+So, 
+\begin{align*}
+    f(40x) + g(0) &= -4x \\
+    g(10x) - g(0) &= 4x + \sin 5x.
+\end{align*}
+We can conclude that 
+\begin{align*}
+    u(x,y) &= f(8x - y) + g(2x + y) \\
+    &= \frac{8x-y}{-10} - g(0) + 4\del{\frac{2x+y}{10}} + \sin \del{\frac{2x+y}{2}} + g(0)\\
+    &= \frac{y}{2} + \sin\del{x+ \frac{y}{2}}.
+\end{align*}
 
 
 \newpage
