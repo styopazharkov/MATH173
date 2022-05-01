@@ -25,7 +25,7 @@
 \date{April 27, 2022}
 \begin{document}
 \maketitle
-\problem{1} TODO \tri
+\problem{1}  \tri
 \hop
 \solution
 For this problem, we'll follow the first itinerary suggested by the hint. We know
@@ -42,7 +42,7 @@ Let $\chi_{[0,x]}$ be the characteristic function of $[0,x]$. We now see that by
 So, an absolute constant of $C = 1/2$ works. \qed
 
 \newpage
-\problem{2} TODO \tri
+\problem{2} \tri
 \hop
 \solution
 \begin{enumerate}[(a)]
@@ -67,7 +67,7 @@ So, an absolute constant of $C = 1/2$ works. \qed
 
 
 \newpage
-\problem{3} TODO \tri
+\problem{3}  \tri
 \hop
 \solution
 \begin{enumerate}[(a)]
@@ -98,7 +98,7 @@ So, an absolute constant of $C = 1/2$ works. \qed
 
 
 \newpage
-\problem{4} TODO \tri
+\problem{4} \tri
 \hop
 \solution
 This problem is similar to the use of Poincar\'e's inequality in class, but with a positive-definite matrix in place of the $c^2$ constant.
@@ -137,7 +137,7 @@ So, a constant of $\frac{C+C^2}{c_0^2}$ works, and we are done. \qed
 
 
 \newpage
-\problem{5} TODO \tri
+\problem{5}  \tri
 \hop
 \solution
 This problem is solved the same as our familiar quasilinear PDEs, but the system of ODEs is a little more annoying than usual. Let $f(s) = (x(s), y(s),z(s))$ be a characteristic curve. The initial conditions give us that $y(0) = 1$ and $z(0) = 1 + x(0)$. Let $r = x(0)$ be the variable parameter for the characteristic curve. 
@@ -167,7 +167,7 @@ This is the solution we were after. \qed
 
 
 \newpage
-\problem{6} TODO \tri
+\problem{6}  \tri
 \hop
 \solution
 We can factor the equation to see that 
@@ -194,13 +194,13 @@ is our solution. \qed
 
 
 \newpage
-\problem{7} TODO \tri
+\problem{7}  \tri
 \hop
 \solution
-\begin{enumerate}
+\begin{enumerate}[(a)]
     \item For this problem, we can follow the standard uniqueness proof using the maximum principle. Suppose $u$ and $u'$ are two solutions to the equation. $v = u - u'$. We see that $v$ solves $v_t - v_{xx} = 0$ and $v(x,0) = 0$ and $v(0,t) = v(1,t) = 0$. Thus, by the maximum principle on inhomogenous heat equations, $v \le 0$. We see that $-v = u' - u$ solves the same equation with the same properties, so $-v \le 0$. Thus, $v= 0$. This means that $ u = u'$ and the solution is unique. \qed
-    \item  We know that the solution has the form 
-    \item \begin{align*}
+    \item  We know from lecture notes that the solution in 
+    \begin{align*}
         u(t,x) &= \int_0^1K(t,x,y)f(y)dy + \int_0^t\int_0^1 K(t-s,x,y)e^{-t}\sin 3\pi y dy ds \\
         &= \int_0^1K(t,x,y)y\sin \pi x dy + \int_0^t\int_0^1 K(t-s,x,y)e^{-t}\sin 3\pi y dy ds
     \end{align*}
@@ -208,7 +208,7 @@ is our solution. \qed
     \begin{align*}
         K(t,x,y) = 2 \sum_{n=1}^\infty e^{-(\pi n)^2 t}\sin(n \pi x) \sin(n \pi y)
     \end{align*}
-    is the heat kernel. \qed
+    is the heat kernel. It is possible to simplify the latter part of the expression by writing out $K$ and using the ideas in problem 3. However, this can only get us so far. The first part of the expression is not nice because of that extra $x$ in the definition of $f$. \qed
 \end{enumerate}
 
 \end{document}
