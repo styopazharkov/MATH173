@@ -1,0 +1,85 @@
+
+\documentclass{article}
+\usepackage{amsmath, amsfonts, amssymb, amsthm} %packages for math-related
+\usepackage[margin=1.2in]{geometry}
+\usepackage[shortlabels]{enumitem}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx} % package for inserting images
+\usepackage{commath} % package for things like \del, \cbr, and \sbr. These handle parentheses well.
+\usepackage[mathscr]{euscript}%for \scr command 
+\usepackage{../commands} %package with all of the commands for this class
+\usepackage{url}
+\setlength{\parindent}{0em} % so paragraphs aren't indented
+\newcommand{\lcm}{\text{lcm}}
+\newcommand{\Hom}{\text{Hom}}
+\newcommand{\Ann}{\text{Ann}}
+\newcommand{\Cc}{{C_c^\infty(\RR)}}
+% ********************************************************** %
+%               THINGS TO EDIT BELOW THIS LINE               %
+% ********************************************************** %
+\newcommand{\D}{\nabla}
+\renewcommand{\d}{\partial}
+\usepackage{wrapfig}
+\title{\textsc{MATH 173 Problem Set 4}}
+\author{Stepan (Styopa) Zharkov}
+\date{April 27, 2022}
+\begin{document}
+\maketitle
+\problem{1} TODO  \tri
+\hop 
+\solution
+\begin{enumerate}[(a)]
+    \item This problem is a simple computation. We see that, with a change of variables $z = x-a$, we have
+    \begin{align*}
+        \hat{f_a}(y) &= \cal{F}(f(x-a))(y) \\
+        &= \int e^{-ixy}f(x-a)dx \\
+        &= \int e^{-i(z+a)y}f(z)dx \\
+        &= e^{iay}\int e^{-izy}f(z)dx \\
+        &= e^{iay}\hat{f}(y),
+    \end{align*}
+    as we wanted. \qed
+    \item 
+\end{enumerate}
+
+
+\newpage
+\problem{2} TODO  \tri
+\hop 
+\solution
+TODO
+
+
+\newpage
+\problem{3} TODO  \tri
+\hop 
+\solution
+TODO
+
+
+\newpage
+\problem{4} TODO  \tri
+\hop 
+\solution
+TODO
+
+
+\newpage
+\problem{5} TODO  \tri
+\hop 
+\solution
+TODO
+
+
+\newpage
+\problem{6} TODO  \tri
+\hop 
+\solution
+TODO
+
+
+\newpage
+\problem{7} TODO  \tri
+\hop 
+\solution
+TODO
+\end{document}
