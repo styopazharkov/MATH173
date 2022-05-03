@@ -121,29 +121,63 @@
     \end{align*}
     This is real valued because $ e^{ixy}+ e^{-ixy} \in \RR$ and $f(x) \in \RR$. 
     \hop 
-    The idea is the same when $f$ is odd. By the 
+    The idea is the same when $f$ is odd. By a similar computation,
+    \begin{align*}
+        \hat{f}(y) &= \int_{-\infty}^\infty e^{-ixy}f(x)dx \\
+        &= \int_{-\infty}^0 e^{-ixy}f(x)dx + \int_{0}^\infty e^{-ixy}f(x)dx\\
+        &= \int_{0}^\infty e^{ixy}f(-x)dx + \int_{0}^\infty e^{-ixy}f(x)dx\\
+        &= \int_{0}^\infty -e^{ixy}f(x)dx + \int_{0}^\infty e^{-ixy}f(x)dx\\
+        &= \int_{0}^\infty\del{ -e^{ixy}+ e^{-ixy}}f(x)dx\\
+    \end{align*}
+    We see that this integral has no real part because $-e^{ixy}+ e^{-ixy}$ has no real part and $f(x)\in \RR$. \qed
+    %TODO: cartoon of adding two vectors
 \end{enumerate}
 
 
 \newpage
-\problem{4} TODO  \tri
+\problem{4} TODO \tri
 \hop 
 \solution
-TODO
-
+This proof follows by induction. From class we know that 
+\[\hat{h_0}(y)=\sqrt{2\pi}e^{-y^2/2} = \sqrt{2\pi}h_0(y).\] 
+So, the base case holds. Now, suppose the statement is true up to $h_n$. Then, we see that by linearity of $\cal{F}$ and the properties we have seen in class,
+\begin{align*}
+    \cal{F}(h_{n+1}) &= \cal{F}(xh_n)-\cal{F}(h_n')\\
+    &= i(\cal{F}h_n)' - iy(\cal{F}h_n) \\
+    &= -i(y\sqrt{2\pi}(-i)^n h_n - (\sqrt{2\pi}(-i)^n h_n)') \\
+    &= (-i)^{n+1}\sqrt{2\pi}(yh_n - h_n')\\
+    &= (-i)^{n+1}\sqrt{2\pi}h_{n+1}.
+\end{align*}
+So, by induction, the statement holds for all $n$. \qed
 
 \newpage
 \problem{5} TODO  \tri
 \hop 
 \solution
-TODO
+We will follow the hint. Let us compute the Fourier coefficients of the RHS. We get that with a change of variables,
+\begin{align*}
+    c_n  &= \frac{1}{2\pi} \int_{-\pi}^\pi e^{inx}\sum_{m \in \ZZ}\hat{f}(x+2\pi m) dx \\
+    &= \frac{1}{2\pi} \sum_{m \in \ZZ} \int_{-\pi}^\pi e^{inx}\hat{f}(x+2\pi m) dx \\
+    &= \frac{1}{2\pi} \sum_{m \in \ZZ} \int_{-\pi+2\pi m}^{\pi+2\pi m} e^{in(z - 2\pi m)}\hat{f}(z) dz \\
+    &= \frac{1}{2\pi} \sum_{m \in \ZZ} \int_{-\pi+2\pi m}^{\pi+2\pi m} e^{inz}\hat{f}(z) dz \\
+    &= \frac{1}{2\pi} \int e^{inz}\hat{f}(z) dz \\
+    &= \cal{F}\inv(\hat{f})(n) \\
+    &= f(n).
+\end{align*}
+So, assuming that the Fourier series converges to the function, 
+\begin{align*}
+    \sum_{m \in \ZZ}\hat{f}(x+2\pi m) &=  \sum_{n \in \ZZ}c_ne^{-inx}\\
+    &= \sum_{n \in \ZZ}f(n)e^{-inx},
+\end{align*}
+which is what we wanted to prove. \qed
+%TODO: fourier people cartoon. 
 
 
 \newpage
 \problem{6} TODO  \tri
 \hop 
 \solution
-TODO
+Since $\supp(\hat{f}) \sse [-\pi, \pi]$
 
 
 \newpage
