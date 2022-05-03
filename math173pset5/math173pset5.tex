@@ -189,8 +189,11 @@ Note that we saw that a finite number of points do not change the fourier transf
     &=\sum_{n\in \ZZ} f(n) \frac{1}{2\pi}\int_{-\pi}^\pi e^{ixy}e^{-inx}dx \\
     &=\sum_{n\in \ZZ} f(n) \frac{1}{2\pi}\int_{-\pi}^\pi e^{ix(y-n)}dx \\
     &=\sum_{n\in \ZZ} f(n) \frac{1}{2\pi}\sbr{\frac{1}{i(y-n)}e^{ix(y-n)}}_{-\pi}^\pi dx \\
-    &=\sum_{n\in \ZZ} f(n) \del{\frac{e^{i\pi(y-n)}-e^{-i\pi(y-n)}}{2\pi i(y-n)}} dx
+    &=\sum_{n\in \ZZ} f(n) \del{\frac{e^{i\pi(y-n)}-e^{-i\pi(y-n)}}{2\pi i(y-n)}} dx\\
+    &=\sum_{n\in \ZZ} f(n) \del{\frac{\sin(\pi(y-n))}{\pi (y-n)}} dx\\
+    &=\sum_{n\in \ZZ} f(n) \text{sinc}(\pi(y-n)),\\
 \end{align*}
+exactly as we wanted.\qed
 
 
 
