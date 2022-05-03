@@ -179,8 +179,19 @@ which is what we wanted to prove. \qed
 \solution
 Since $\supp(\hat{f}) \sse [-\pi, \pi]$, we see that for $x \in (-\pi,\pi)$, by problem 5,
 \begin{align*}
-    \sum_{n \in \ZZ}f(n) e^{-inx} = \sum_{m \in \ZZ} \hat{f}(x + 2\pi m) = \hat{f}(x)
+    \sum_{n \in \ZZ}f(n) e^{-inx} = \sum_{m \in \ZZ} \hat{f}(x + 2\pi m) = \hat{f}(x).
 \end{align*}
+Note that we saw that a finite number of points do not change the fourier transform, so the points $-\pi, \pi$ are not a problem. Assuming that the inverse of the Fourier transform reverts the action of the Fourier transform, as in problem 5, we see that 
+\begin{align*}
+    f(y) &= \cal{F}\inv(\hat{f})(y) \\
+    &= \frac{1}{2\pi}\int e^{inx}\sum_{n\in \ZZ} f(n)e^{-ixy}dx \\
+    &= \frac{1}{2\pi}\int_{-\pi}^\pi e^{ixy}\sum_{n\in \ZZ} f(n)e^{-inx}dx \\
+    &=\sum_{n\in \ZZ} f(n) \frac{1}{2\pi}\int_{-\pi}^\pi e^{ixy}e^{-inx}dx \\
+    &=\sum_{n\in \ZZ} f(n) \frac{1}{2\pi}\int_{-\pi}^\pi e^{ix(y-n)}dx \\
+    &=\sum_{n\in \ZZ} f(n) \frac{1}{2\pi}\sbr{\frac{1}{i(y-n)}e^{ix(y-n)}}_{-\pi}^\pi dx \\
+    &=\sum_{n\in \ZZ} f(n) \del{\frac{e^{i\pi(y-n)}-e^{-i\pi(y-n)}}{2\pi i(y-n)}} dx
+\end{align*}
+
 
 
 \newpage
