@@ -63,8 +63,28 @@
             2a &\text{ if } y =0
         \end{cases}
     \end{align*}
-    \item  Note that since $y \in \RR$ and $a > 0$, we know $iy - a \ne 0$ and $iy+a \ne 0$. So, 
-    \item 
+    \qed
+    \item  Note that since $y \in \RR$ and $a > 0$, we know $iy - a \ne 0$ and $iy+a \ne 0$ so we can divide by them. So, 
+    \begin{align*}
+        (\cal{F}(e^{-a|x|})(y) &= \int_{-\infty}^{\infty}e^{-ixy}e^{a|x|}dx\\
+        &= \int_{0}^{\infty}e^{-x(iy+a)}dx+\int_{-\infty}^{0}e^{-x(iy-a)}dx \\
+        &= \sbr{-\frac{1}{iy+a}e^{-x(iy+a)}}_0^\infty+\sbr{-\frac{1}{iy-a}e^{-x(iy-a)}}_{-\infty}^0\\
+        &= \frac{1}{iy+a} - \frac{1}{iy-a}
+    \end{align*}
+    because $a>0$. \qed
+    \item In this problem, we will use repeated integration by parts. We see that executing integration by parts, we have
+    \begin{align*}
+        \cal{F}(|x|^ne^{-a|x|})(y) &= \int_{-\infty}^\infty |x|^ne^{-ixy-a|x|} dx\\
+        &=  \int_{-\infty}^0 (-x)^ne^{-ixy+ax} dx+   \int_0^\infty x^ne^{-ixy-ax}dx\\
+        &=  \int_{-\infty}^0 (-x)^ne^{-ix(y-a)} dx+   \int_0^\infty x^ne^{-ix(y+a)}dx \\
+        &=  \frac{-n}{yi-a}\int_{-\infty}^0 (-x)^{n-1}e^{-ix(y-a)} dx+  \frac{n}{yi+a} \int_0^\infty x^{n-1}e^{-ix(y+a)}dx.
+    \end{align*}
+    Note that the boundary terms vanish in the integration by parts. Repeating integration by parts $n$ times, we see that
+    \begin{align*}
+        \cal{F}(|x|^ne^{-a|x|})(y) &= (-1)^n\frac{n!}{(yi-a)^n}\int_{-\infty}^0 e^{-ix(y-a)} dx+  \frac{n!}{(yi+a)^n} \int_0^\infty e^{-ix(y+a)}dx\\
+        &=  (-1)^{n+1}\frac{n!}{(yi-a)^{n+1}}+  \frac{n!}{(yi+a)^{n+1}},
+    \end{align*}
+    and $yi\pm a$ does not vanish because $a>0$. \qed
 \end{enumerate}
 
 
@@ -73,7 +93,36 @@
 \problem{3} TODO  \tri
 \hop 
 \solution
-TODO
+\begin{enumerate}
+    \item The solution to this is straightforward. As Tadashi Tokieda would say, ``follow your nose''. First, let $f(x)= f(-x)$. Then, letting $z=-x$ power a change of variables, we see that 
+    \begin{align*}
+        \hat{f}(y) &= \int_{-\infty}^\infty e^{-ixy}f(x)dx\\
+        &=  \int_{\infty}^{-\infty} -e^{izy}f(-z)dz\\
+        &=  \int_{-\infty}^{\infty} e^{izy}f(-z)dz\\
+        &=  \int_{-\infty}^{\infty} e^{-iz(-y)}f(z)dz\\
+        &= \hat{f}(-y).
+    \end{align*}
+    Similarly, now let $f(x)= -f(-x)$. Then, 
+    \begin{align*}
+        \hat{f}(y) &= \int_{-\infty}^\infty e^{-ixy}f(x)dx\\
+        &=  \int_{\infty}^{-\infty} -e^{izy}f(-z)dz\\
+        &=  \int_{-\infty}^{\infty} e^{izy}f(-z)dz\\
+        &=  \int_{-\infty}^{\infty}- e^{-iz(-y)}f(z)dz\\
+        &= -\hat{f}(-y).
+    \end{align*}
+    So, the fourier transform preserves evenness and oddness. \qed
+    \item Let $f$ be even. Then, 
+    \begin{align*}
+        \hat{f}(y) &= \int_{-\infty}^\infty e^{-ixy}f(x)dx \\
+        &= \int_{-\infty}^0 e^{-ixy}f(x)dx + \int_{0}^\infty e^{-ixy}f(x)dx\\
+        &= \int_{0}^\infty e^{ixy}f(-x)dx + \int_{0}^\infty e^{-ixy}f(x)dx\\
+        &= \int_{0}^\infty e^{ixy}f(x)dx + \int_{0}^\infty e^{-ixy}f(x)dx\\
+        &= \int_{0}^\infty\del{ e^{ixy}+ e^{-ixy}}f(x)dx\\
+    \end{align*}
+    This is real valued because $ e^{ixy}+ e^{-ixy} \in \RR$ and $f(x) \in \RR$. 
+    \hop 
+    The idea is the same when $f$ is odd. By the 
+\end{enumerate}
 
 
 \newpage
