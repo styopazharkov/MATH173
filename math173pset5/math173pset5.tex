@@ -25,7 +25,13 @@
 \date{April 27, 2022}
 \begin{document}
 \maketitle
-\problem{1} TODO  \tri
+\problem{1} Suppose that $f : \RR \to \CC$ is continuous with $(1 + |x|)^Nf(x)$ bounded for some $N > 1$ (or
+indeed simply that $f \in L^1(\RR))$ and $a \in R$:
+\begin{enumerate}[(a)]
+    \item Let $f_a(x) = f(x - a)$. Show that $\hat{f}_a(y) = e^{-iay} \hat{f}(y)$.
+\item Let $g_a(x) = e^{ixa}f(x)$. Show that $\hat{g}_a(y) = \hat{f}(y - a)$. 
+\end{enumerate}
+ \tri
 \hop 
 \solution
 \begin{enumerate}[(a)]
@@ -50,8 +56,12 @@
 
 
 \newpage
-\problem{2} TODO  \tri
-\hop 
+\problem{2} Compute the Fourier transform of the following functions:
+\begin{enumerate}[(a)]
+    \item $\chi_{(-a,a)}$
+    \item $f(x) = e^{a|x|}, a > 0$
+    \item $g(x) = |x|^ne^{-a|x|}, a>0, n \in \NN$. \tri
+\end{enumerate} 
 \solution
 \begin{enumerate}[(a)]
     \item This problem is also computation.
@@ -90,10 +100,16 @@
 
 
 \newpage
-\problem{3} TODO  \tri
+\problem{3} 
+\begin{enumerate}[(a)]
+    \item Show that if $f$ is even (or odd) then so is its Fourier transform.
+    \item Suppose that $f$ is even and real valued. Show that $\hat{f}$ is also real valued. What can you say about
+    $\hat{f}$ when $f$ is odd and real valued.
+\end{enumerate}
+\tri
 \hop 
 \solution
-\begin{enumerate}
+\begin{enumerate}[(a)]
     \item The solution to this is straightforward. As Tadashi Tokieda would say, ``follow your nose''. First, let $f(x)= f(-x)$. Then, letting $z=-x$ power a change of variables, we see that 
     \begin{align*}
         \hat{f}(y) &= \int_{-\infty}^\infty e^{-ixy}f(x)dx\\
@@ -135,7 +151,10 @@
 
 
 \newpage
-\problem{4} TODO \tri
+\problem{4} Define the Hermite functions by $h_n = (x - d
+dx
+)^n e^{-x^2/2}$, such that $h_0 = e^{-x^2/2}$ and
+$h_{n+1}(x) = xh_n(x) - h'_n(x)$. Show that $\hat{h}_n = (-i)^n\sqrt{2\pi} h_n$. \tri
 \hop 
 \solution
 This proof follows by induction. From class we know that 
@@ -151,7 +170,12 @@ So, the base case holds. Now, suppose the statement is true up to $h_n$. Then, w
 So, by induction, the statement holds for all $n$. \qed
 
 \newpage
-\problem{5} TODO  \tri
+\problem{5} Prove the Poisson summation formula
+\[\sum_
+{n\in\ZZ}
+f(n)e^{-i\pi n} = \sum_
+{m\in \ZZ}\hat{f}(x + 2\pi m),\]
+where $f$ satisfies $|f(x)|+ |\hat{f}(x)|\le C(1 + |x|)^{-a}$ for some $a > 1$.  \tri
 \hop 
 \solution
 We will follow the hint. Let us compute the Fourier coefficients of the RHS. We get that with a change of variables,
@@ -174,7 +198,10 @@ which is what we wanted to prove. \qed
 
 
 \newpage
-\problem{6} TODO  \tri
+\problem{6} Prove the Whittaker–Shannon interpolation formula
+\[f(x) = \sum_{n\in \ZZ}
+f(n)\text{sinc}(\pi(x -n))\]
+provided $\supp(\hat{f}) \sse [-\pi,\pi]$ and $|f(x)|\le C(1 + |x|)^{-a}$. Here $\text{sinc}(x) = \sin(x)/x$.  \tri
 \hop 
 \solution
 Since $\supp(\hat{f}) \sse [-\pi, \pi]$, we see that for $x \in (-\pi,\pi)$, by problem 5,
