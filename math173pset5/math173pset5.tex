@@ -20,9 +20,9 @@
 \newcommand{\D}{\nabla}
 \renewcommand{\d}{\partial}
 \usepackage{wrapfig}
-\title{\textsc{MATH 173 Problem Set 4}}
+\title{\textsc{MATH 173 Problem Set 5}}
 \author{Stepan (Styopa) Zharkov}
-\date{April 27, 2022}
+\date{May 4, 2022}
 \begin{document}
 \maketitle
 \problem{1} Suppose that $f : \RR \to \CC$ is continuous with $(1 + |x|)^Nf(x)$ bounded for some $N > 1$ (or
@@ -227,7 +227,7 @@ exactly as we wanted.\qed
 \newpage
 \problem{7} 
 \begin{enumerate}[(a)]
-    \item Use the Fourier transform to solve the following free Schr\" odinger equation $iut = -uxx$,
+    \item Use the Fourier transform to solve the following free Schr\" odinger equation $iu_t = -u_{xx}$,
     with the initial condition $u(0,x) = g(x)$, where $u : \RR\times \RR \to \CC$ and $g \in \cal{S}(\RR)$ is a given Schwarz function.
     You may leave your solution as the inverse Fourier transform of a Schwartz function (you do not need
     to evaluate it explicitly).
@@ -239,5 +239,12 @@ exactly as we wanted.\qed
 \tri
 \hop 
 \solution
-TODO
+\begin{enumerate}[(a)]
+    \item Let $s = it$. Then, our equation becomes 
+    \item \[iu_t = u_s = -u_{xx}.\]
+    This is the heat equation, which we already know how to solve from class. We know 
+    \begin{align*}
+        u(t,x) = \del{\frac{1}{\sqrt{4\pi s}}e^{-\frac{z^2}{4s}}* g(z)}(x) =\del{\frac{1}{\sqrt{4\pi i t}}e^{-\frac{z^2}{4it}}* g(z)}(x)
+    \end{align*}
+\end{enumerate}
 \end{document}
