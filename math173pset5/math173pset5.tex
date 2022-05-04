@@ -146,7 +146,6 @@ indeed simply that $f \in L^1(\RR))$ and $a \in R$:
         &= \int_{0}^\infty\del{ -e^{ixy}+ e^{-ixy}}f(x)dx\\
     \end{align*}
     We see that this integral has no real part because $-e^{ixy}+ e^{-ixy}$ has no real part and $f(x)\in \RR$. \qed
-    %TODO: cartoon of adding two vectors
 \end{enumerate}
 
 
@@ -188,14 +187,15 @@ We will follow the hint. Let us compute the Fourier coefficients of the RHS. We 
     &= \cal{F}\inv(\hat{f})(n) \\
     &= f(n).
 \end{align*}
-So, assuming that the Fourier series converges to the function, 
+Here we also used that the Fourier transform reverts the action of the Fourier transform given these conditions, as given in the notes. So, assuming that the Fourier series converges to the function, 
 \begin{align*}
     \sum_{m \in \ZZ}\hat{f}(x+2\pi m) &=  \sum_{n \in \ZZ}c_ne^{-inx}\\
     &= \sum_{n \in \ZZ}f(n)e^{-inx},
 \end{align*}
 which is what we wanted to prove. \qed
-%TODO: fourier people cartoon. 
-
+\begin{center}
+    \includegraphics[height=3cm]{../images/fourier-people}
+\end{center}
 
 \newpage
 \problem{6} Prove the Whittaker–Shannon interpolation formula
@@ -241,10 +241,34 @@ exactly as we wanted.\qed
 \solution
 \begin{enumerate}[(a)]
     \item Let $s = it$. Then, our equation becomes 
-    \item \[iu_t = u_s = -u_{xx}.\]
+    \[iu_t = u_s = -u_{xx}.\]
     This is the heat equation, which we already know how to solve from class. We know 
     \begin{align*}
-        u(t,x) = \del{\frac{1}{\sqrt{4\pi s}}e^{-\frac{z^2}{4s}}* g(z)}(x) =\del{\frac{1}{\sqrt{4\pi i t}}e^{-\frac{z^2}{4it}}* g(z)}(x)
+        u(t,x) = \del{\frac{1}{\sqrt{4\pi s}}e^{-\frac{z^2}{4s}}* g(z)}(x) =\del{\frac{1}{\sqrt{4\pi i t}}e^{-\frac{z^2}{4it}}* g(z)}(x).
     \end{align*}
+    This is the answer we are looking for.\qed
+    \item This problem is simply bashing out the convolution. Plugging in $g(z) = \frac{1}{\pi^{1/4}}e^{-\frac{z^2}{2}}$, we get that 
+    \begin{align*}
+        u(t,x) &= \del{\frac{1}{\sqrt{4\pi i t}}e^{-\frac{z^2}{4it}}* \frac{1}{\pi^{1/4}}e^{-\frac{z^2}{2}}}(x) \\
+        &= \frac{1}{\pi^{1/4}\sqrt{4\pi i t}} \del{e^{-\frac{z^2}{4it}}* e^{-\frac{z^2}{2}}}(x) \\
+        &=  \frac{1}{\pi^{1/4}\sqrt{4\pi i t}} \int \exp\del{ -\frac{(x-y)^2}{4ti} - \frac{y^2}{2}}dy\\
+        &=  \frac{1}{\pi^{1/4}\sqrt{4\pi i t}} \int \exp\del{ -\frac{x^2-2xy+y^2+2tiy^2}{4ti}}dy\\
+        &=  \frac{1}{\pi^{1/4}\sqrt{4\pi i t}} \int \exp\del{ -\frac{\del{\sqrt{2ti+1}y + \frac{1}{\sqrt{2ti+1}x}}^2}{4ti}}\exp\del{\frac{itx^2}{4t^2+1} - \frac{x^2}{8t^2+2}}dy\\
+        &=  \frac{1}{\pi^{1/4}\sqrt{4\pi i t}}\exp\del{\frac{itx^2}{4t^2+1} - \frac{x^2}{8t^2+2}} \int \exp\del{ -\frac{\del{\sqrt{2ti+1}y + \frac{1}{\sqrt{2ti+1}x}}^2}{4ti}}dy\\
+        &= \frac{1}{i\pi^{1/4}}\sqrt{\frac{1-2it}{1+4t^2}} \exp\del{\frac{itx^2}{4t^2+1} - \frac{x^2}{8t^2+2}}.
+    \end{align*}
+    Note that we solved this by completing the square to bring it to a form where we can use the Gaussian integral. 
+    \hop
+    For the second part of the problem, we will again use the Gaussian integral. Note that $e^{is}$ has absolute value 1 for real $s$, so we see that 
+    \begin{align*}
+        \int \abs{u(t,x)}^2 dx&=  \int \abs{\frac{1}{i\pi^{1/4}}\sqrt{\frac{1-2it}{1+4t^2}} \exp\del{\frac{itx^2}{4t^2+1} - \frac{x^2}{8t^2+2}}}^2dx \\
+        &= \frac{1}{\pi^{1/2}}\abs{\frac{1-2it}{1+4t^2}}\int \abs{ \exp\del{\frac{itx^2}{4t^2+1} - \frac{x^2}{8t^2+2}}}^2dx \\
+        &= \frac{1}{\pi^{1/2}}\abs{\frac{1-2it}{1+4t^2}}\int \abs{ \exp\del{\frac{x^2}{8t^2+2}}}^2dx \\
+        &= \frac{1}{\pi^{1/2}}\abs{\frac{1-2it}{1+4t^2}}\int \exp\del{\frac{x^2}{4t^2+1}}dx \\
+        &= \frac{1}{\pi^{1/2}}\frac{\sqrt{1+4t^2}}{1+4t^2}\int \exp\del{\frac{x^2}{4t^2+1}}dx\\
+        &= \frac{1}{\pi^{1/2}}\frac{\sqrt{1+4t^2}}{1+4t^2}\sqrt{\pi (4t^2 + 1)}\\
+        &= 1,
+    \end{align*}
+    exactly as we wanted. \qed
 \end{enumerate}
 \end{document}
