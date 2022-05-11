@@ -110,6 +110,19 @@
         &= \lim_{h\to^- 0} \frac{\tu(t,h)-\tu(t,0)}{h}.\\
     \end{align*}
     Thus, the derivative from both sides matches up. We see that $\tu_t(t,0) = 0$. Since $u$ is continuously differentiable on the border, both components of the derivative are continuous, so $u$ is differentiable on $(0, +\infty) \times \RR$. 
+    \hop 
+    Making a similar assumption, we see that this time 
+    Writing this out, we have 
+    \begin{align*}
+        \tu(t,x) &= (K_t * \tilde{g})(x)\\
+        &= \int(4\pi t)^{1/2} e^{-\frac{|x-y|^2}{4t}} \tilde{g}(y)dy\\
+        &= \sqrt{4\pi t}\int_{0}^\infty  e^{-\frac{|x-y|^2}{4t}} \tilde{g}(y)dy+\sqrt{4\pi t}\int_{-\infty}^0  e^{-\frac{|x-y|^2}{4t}} \tilde{g}(y)dy\\
+        &= \sqrt{4\pi t}\int_{0}^\infty  e^{-\frac{(x-y)^2}{4t}} g(y)dy+\sqrt{4\pi t}\int_{0}^\infty  e^{-\frac{(x+y)^2}{4t}} g(y)dy\\
+        &= \sqrt{4\pi t}\int_{0}^\infty  g(y)\del{ e^{-\frac{(x-y)^2}{4t}} + e^{-\frac{(x+y)^2}{4t}}}dy.\\
+    \end{align*} 
+    Restricting to to half, we see that 
+    \[u(t,x) =\sqrt{4\pi t}\int_{0}^\infty  g(y)\del{ e^{-\frac{(x-y)^2}{4t}} - e^{-\frac{(x+y)^2}{4t}}}dy.\]
+    We can verify that the boundary condition matches. \qed
 \end{enumerate}
 
 
