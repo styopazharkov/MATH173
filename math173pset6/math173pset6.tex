@@ -259,6 +259,12 @@ the constants $C$ and $m$ must exist. \qed
     This certainly converges to 0. There are only a finite number of terms like this (because there are only so many options for what derivatives to take given that $|\gamma|, |\omega| < |\beta|$). So, we can conclude that 
     \[\sup_x\abs{x^\alpha \d^\beta \del{\sum^N_{k=1} |I_k|f(x)e^{-i x \cdot y_k}\phi(y_k) - \int f(x)e^{-ix \cdot y} \phi(y)dy}} \to 0.\]
     This means that the Riemann sum does indeed converge to the integral as Schwartz functions. So, by continuity of $U$, 
+    \begin{align*}
+        \int_\Rn g(y)\phi(y)dy &=  \lim_{N \to \infty}  U\del{\sum^N_{k=1} |I_k| f(x)e^{-i x \cdot y_k}\phi(y_k)} \\
+        &= U\del{\lim_{N \to \infty} \sum^N_{k=1} |I_k| f(x)e^{-i x \cdot y_k}\phi(y_k)} \\
+        &= U\del{\int f(x)e^{-i x \cdot y}\phi(y) dy} \\
+
+    \end{align*}
     \item TODO
 \end{enumerate}
 
