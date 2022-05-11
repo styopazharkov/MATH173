@@ -190,15 +190,36 @@ which is not exactly what we wanted, but I suspect there is a typo in the proble
  \tri
 \hop 
 \solution
-TODO 
-
+To solve this, we take the partial Fourier transform of 
+\[u_{tt} = u_{xx} - m^2u\]
+to get 
+\[\hat{u}_tt = -y^2 \hat{u} - m^2 \hat{u}\]
+with conditions 
+\[\hat{u}(0,y) = \hat{g}(y), \ \hat{u}_t(0,y) = \hat{h}(y).\]
+Solving this ODE, we have that 
+\[\hat{u} = \cos{\sqrt{y^2 + m^2}yt}\hat{g}(y) + \frac{\sin(\sqrt{y^2+m^2}yt)}{\sqrt{y^2+m^2}}\hat{h}(y).\]
+This is the solution we were looking for. \qed
 
 \newpage
 \problem{6} TODO
  \tri
 \hop 
 \solution
-TODO 
+The hint unlocks the secret to this problem. Suppose no such $C, m$ exist. In particular, no constant $C = m = j \in \NN$ works. Let $\phi_j \in \cal{S}(\Rn)$ be the counterexample that gives $\abs{U(\phi_j)} > j||\phi_j||_j$. Now, let's define 
+\[\psi_j = j\inv||\phi_j||_j\inv\phi_j.\]
+Since $\phi_j$ are Schwartz, for any multi-indices $\alpha, \beta$,  $x^\alpha \d^\beta \phi_j$ are bounded. For any $\eps > 0$, select $j > \max(\eps \inv, |\alpha| , |\beta|)$. Then, 
+\begin{align*}
+    \sup_x\abs{x^\alpha \d^\beta \psi_j} &= \sup_x \abs{x^\alpha \d^\beta j\inv \del{\sum_{|{\sf{a}}|, |{\sf{b}}| < j} \sup_{y} \abs{y^{\sf a} \d^{\sf b} \phi_j(y)}}\inv \phi_j(x)}\\
+    &= j\inv \frac{ \sup_x \abs{x^\alpha \d^\beta \inv \phi_j(x)}}{\sum_{|{\sf{a}}|, |{\sf{b}}| < j} \sup_{y} \abs{y^{\sf a} \d^{\sf b} \phi_j(y)}} \\
+    &\le j\inv \\
+    &< \eps.
+\end{align*}
+Thus, by definition, $\psi_j \to 0$ as a Schwartz function. 
+\hop 
+However, we see that by linearity of $U$, 
+\begin{align*}
+    \abs{U(\psi_j)} &= \abs{U(j\inv||\phi_j||_j\inv\phi_j}
+\end{align*}
 
 
 \newpage
