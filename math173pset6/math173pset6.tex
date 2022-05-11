@@ -151,11 +151,11 @@ Now, using the hint, we can change variables and apply integration by parts to s
 \begin{align*}
     v(t,x) &=  \int_0^t \frac{-2a'(s)}{\sqrt{4\pi (t-s)}}\int_0^{x(4(t-s))^{-1/2}} e^{-z^2}dz ds\\
     &=  \int_0^t \frac{-2a(s)}{\sqrt{\pi}} e^{\frac{-x^2}{4(t-s)}} \del{-(t-s)^{-3/2} \cdot \frac{1}{4}} ds\\
-    &=  \frac{x^2}{\sqrt{4\pi}}\int_0^t (t-s)^{-3/2} e^{\frac{-x^2}{4(t-s)}}a(s) ds\\
-    &=  \frac{x^2}{\sqrt{4\pi}}\int_0^t (s)^{-3/2} e^{\frac{-x^2}{4(s)}}a(t-s) ds.
+    &=  \frac{x}{\sqrt{4\pi}}\int_0^t (t-s)^{-3/2} e^{\frac{-x^2}{4(t-s)}}a(s) ds\\
+    &=  \frac{x}{\sqrt{4\pi}}\int_0^t (s)^{-3/2} e^{\frac{-x^2}{4(s)}}a(t-s) ds.
 \end{align*}
 Thus, we can conclude that 
-\[u(t,x)= a(t) + \frac{x^2}{\sqrt{4\pi}}\int_0^t (s)^{-3/2} e^{\frac{-x^2}{4(s)}}a(t-s) ds,\]
+\[u(t,x)= a(t) + \frac{x}{\sqrt{4\pi}}\int_0^t (s)^{-3/2} e^{\frac{-x^2}{4(s)}}a(t-s) ds,\]
 which is not exactly what we wanted, but I suspect there is a typo in the problem. \qed
 \newpage
 \problem{4} TODO
