@@ -263,9 +263,38 @@ the constants $C$ and $m$ must exist. \qed
         \int_\Rn g(y)\phi(y)dy &=  \lim_{N \to \infty}  U\del{\sum^N_{k=1} |I_k| f(x)e^{-i x \cdot y_k}\phi(y_k)} \\
         &= U\del{\lim_{N \to \infty} \sum^N_{k=1} |I_k| f(x)e^{-i x \cdot y_k}\phi(y_k)} \\
         &= U\del{\int f(x)e^{-i x \cdot y}\phi(y) dy} \\
-
+        &= U(\cal{F}(\phi)) \\
+        &=\F(U)(\phi).
     \end{align*}
-    \item TODO
+    With this, we are done. 
+    \item Since $U$ is linear and continuous, 
+    \[U(\d^\alpha f(x)e^{-ix \cdot y}) = \d^\alpha U(f(x)e^{-ix \cdot y})\]
+    where the derivative is with respect to $y$ as long as $\d^\alpha f(x)e^{-ix \cdot y}$ is Schwartz in $x$. 
+    \hop 
+    We see that 
+    \[\d^\alpha f(x)e^{-ix \cdot y}= f(x)\d^\alpha e^{ix \cdot y} = f(x)(ix)^\alpha e^{ix \cdot y}\]
+    is indeed Schwartz because $f$ has compact support and is $C^\infty$. Thus, we can conclude that $g \in C^\infty$. 
+    \hop 
+    To show the second part, we use problem 6. We know there exist $C_0, m$ such that $|U(\phi)| \le C_0||\phi||_{m}$ for all $\phi$. This means that 
+    \begin{align*}
+        |g(y)| &= |U(f(x)e^{-ix \cdot y})| \\
+        & \le C_0 || f(x)e^{ix \cdot y}||_{m} \\
+        &= C_0 \sum_{|\alpha|,|\beta| < m}\sup_x \abs{x^\alpha \d^\beta f(x)e^{ix \cdot y}}.
+    \end{align*}
+    When we expand out the derivatives, each term in the sum inside the $\sup$ will be of the form 
+    \[x^\alpha (iy)^\gamma e^{ix \cdot y} \d^\omega f(x)\]
+    where $|\omega|, |\gamma| < m$ Since $f$ has compact support, this is only nonzero for $x < R$ for some constant $R > 1$. Also, this means each derivative of $f$ is bounded. Let $F$ be a constant that bounds all derivatives of $f$ up to $m$. Thus, 
+    \begin{align*}
+        \abs{x^\alpha (iy)^\gamma e^{ix \cdot y} \d^\omega f(x)} &\le R^m \abs{ (iy)^\gamma e^{ix \cdot y} \d^\omega f(x)}\\
+        &\le R^m \abs{ (iy)^\gamma\d^\omega f(x)}\\
+        &\le R^m F \abs{ (iy)^\gamma}\\
+        &\le R^m F (\abs{y}+1)^m.
+    \end{align*}
+    Now, there is a finite number of terms in that sup. Call that number $S$. Then, by triangle inequality,
+    \[\sup_x \abs{x^\alpha \d^\beta f(x)e^{ix \cdot y}} \le S R^m F (\abs{y}+1)^m.\]
+    There are also finitely many options for $\alpha, \beta$. Call the number of options $M$. Then, we see that 
+    \[|g(y)| \le C_0 M S R^m F (\abs{y}+1)^m .\]
+    So, letting $C = C_0 M S R^m F$, we get the desired bound. \qed
 \end{enumerate}
 
 \end{document}
