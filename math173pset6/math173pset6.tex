@@ -79,13 +79,13 @@
     We can now assume that $\tu = K_t * \tilde{g}$. Writing this out, we have 
     \begin{align*}
         \tu(t,x) &= (K_t * \tilde{g})(x)\\
-        &= \int(4\pi t)^{1/2} e^{-\frac{|x-y|^2}{4t}} \tilde{g}(y)dy\\
-        &= \sqrt{4\pi t}\int_{0}^\infty  e^{-\frac{|x-y|^2}{4t}} \tilde{g}(y)dy+\sqrt{4\pi t}\int_{-\infty}^0  e^{-\frac{|x-y|^2}{4t}} \tilde{g}(y)dy\\
-        &= \sqrt{4\pi t}\int_{0}^\infty  e^{-\frac{(x-y)^2}{4t}} g(y)dy-\sqrt{4\pi t}\int_{0}^\infty  e^{-\frac{(x+y)^2}{4t}} g(y)dy\\
-        &= \sqrt{4\pi t}\int_{0}^\infty  g(y)\del{ e^{-\frac{(x-y)^2}{4t}} - e^{-\frac{(x+y)^2}{4t}}}dy.\\
+        &= \int(4\pi t)^{-1/2} e^{-\frac{|x-y|^2}{4t}} \tilde{g}(y)dy\\
+        &=  \frac{1}{\sqrt{4\pi t}}\int_{0}^\infty  e^{-\frac{|x-y|^2}{4t}} \tilde{g}(y)dy+ \frac{1}{\sqrt{4\pi t}}\int_{-\infty}^0  e^{-\frac{|x-y|^2}{4t}} \tilde{g}(y)dy\\
+        &=  \frac{1}{\sqrt{4\pi t}}\int_{0}^\infty  e^{-\frac{(x-y)^2}{4t}} g(y)dy- \frac{1}{\sqrt{4\pi t}}\int_{0}^\infty  e^{-\frac{(x+y)^2}{4t}} g(y)dy\\
+        &=  \frac{1}{\sqrt{4\pi t}}\int_{0}^\infty  g(y)\del{ e^{-\frac{(x-y)^2}{4t}} - e^{-\frac{(x+y)^2}{4t}}}dy.\\
     \end{align*} 
     Restricting to to half, we see that 
-    \[u(t,x) =\sqrt{4\pi t}\int_{0}^\infty  g(y)\del{ e^{-\frac{(x-y)^2}{4t}} - e^{-\frac{(x+y)^2}{4t}}}dy.\]
+    \[u(t,x) = \frac{1}{\sqrt{4\pi t}}\int_{0}^\infty  g(y)\del{ e^{-\frac{(x-y)^2}{4t}} - e^{-\frac{(x+y)^2}{4t}}}dy.\]
     We can verify that the boundary conditions match. \qed
     \item This is very similar to part (a), but this time let us define 
     \[\tu(t,x) = \begin{cases}
@@ -112,16 +112,15 @@
     Thus, the derivative from both sides matches up. We see that $\tu_t(t,0) = 0$. Since $u$ is continuously differentiable on the border, both components of the derivative are continuous, so $u$ is differentiable on $(0, +\infty) \times \RR$. 
     \hop 
     Making a similar assumption, we see that this time 
-    Writing this out, we have 
     \begin{align*}
         \tu(t,x) &= (K_t * \tilde{g})(x)\\
-        &= \int(4\pi t)^{1/2} e^{-\frac{|x-y|^2}{4t}} \tilde{g}(y)dy\\
-        &= \sqrt{4\pi t}\int_{0}^\infty  e^{-\frac{|x-y|^2}{4t}} \tilde{g}(y)dy+\sqrt{4\pi t}\int_{-\infty}^0  e^{-\frac{|x-y|^2}{4t}} \tilde{g}(y)dy\\
-        &= \sqrt{4\pi t}\int_{0}^\infty  e^{-\frac{(x-y)^2}{4t}} g(y)dy+\sqrt{4\pi t}\int_{0}^\infty  e^{-\frac{(x+y)^2}{4t}} g(y)dy\\
-        &= \sqrt{4\pi t}\int_{0}^\infty  g(y)\del{ e^{-\frac{(x-y)^2}{4t}} + e^{-\frac{(x+y)^2}{4t}}}dy.\\
+        &= \int(4\pi t)^{-1/2} e^{-\frac{|x-y|^2}{4t}} \tilde{g}(y)dy\\
+        &=  \frac{1}{\sqrt{4\pi t}}\int_{0}^\infty  e^{-\frac{|x-y|^2}{4t}} \tilde{g}(y)dy+ \frac{1}{\sqrt{4\pi t}}\int_{-\infty}^0  e^{-\frac{|x-y|^2}{4t}} \tilde{g}(y)dy\\
+        &=  \frac{1}{\sqrt{4\pi t}}\int_{0}^\infty  e^{-\frac{(x-y)^2}{4t}} g(y)dy+ \frac{1}{\sqrt{4\pi t}}\int_{0}^\infty  e^{-\frac{(x+y)^2}{4t}} g(y)dy\\
+        &=  \frac{1}{\sqrt{4\pi t}}\int_{0}^\infty  g(y)\del{ e^{-\frac{(x-y)^2}{4t}} + e^{-\frac{(x+y)^2}{4t}}}dy.\\
     \end{align*} 
     Restricting to to half, we see that 
-    \[u(t,x) =\sqrt{4\pi t}\int_{0}^\infty  g(y)\del{ e^{-\frac{(x-y)^2}{4t}} - e^{-\frac{(x+y)^2}{4t}}}dy.\]
+    \[u(t,x) = \frac{1}{\sqrt{4\pi t}}\int_{0}^\infty  g(y)\del{ e^{-\frac{(x-y)^2}{4t}} - e^{-\frac{(x+y)^2}{4t}}}dy.\]
     We can verify that the boundary condition matches. \qed
 \end{enumerate}
 
@@ -131,15 +130,56 @@
  \tri
 \hop 
 \solution
-TODO 
-
-
+This problem is full of tricks and surprises. First, consider $v(t,x) = u(t,x) - a(t)$. This means that 
+\[v_t = u_t - a'(t) = u_{xx} - a'(t)= v_xx - a'(t).\]
+So, 
+\[v_t - v_{xx} = -a'(t)\]
+with $v(t,0)= 0$ and $v(0,x) = 0$. Also, $a(0)= 0$. So, we have an inhomogeneous heat equation.
+\hop 
+Let $S_t(\phi)$ be the operator in problem 2. More precisely, let 
+\[S_t(\phi)(x) = \frac{1}{\sqrt{4\pi t}} \int_0^\infty \phi(y)\del{e^{-\frac{(x-y)^2}{4t}} - e^{-\frac{(x+y)^2}{4t}}}dy.\] 
+Then, by Duhamel's principle, 
+\[v(t,x) = \int_0^tS_{t-s}(f(s, \cdot))ds\]
+where $f(t,x) = -a'(t)$. Expanding, and changing variables, we have 
+\begin{align*}
+    v(t,x) &= \int_0^t \frac{1}{\sqrt{4\pi (t-s)}} \int_0^\infty -a'(s)\del{e^{-\frac{(x-y)^2}{4(t-s)}} - e^{-\frac{(x+y)^2}{4(t-s)}}}dy ds \\
+    &= \int_0^t \frac{-a'(s)}{\sqrt{4\pi (t-s)}} \sbr{\int_0^x e^{-\frac{(y)^2}{4(t-s)}}dy+\int_0^\infty e^{-\frac{(y)^2}{4(t-s)}}dy-\int_x^\infty e^{-\frac{(y)^2}{4(t-s)}}dy} ds\\
+    &= \int_0^t \frac{-a'(s)}{\sqrt{4\pi (t-s)}} \sbr{\int_0^x e^{-\frac{(y)^2}{4(t-s)}}dy+\int_0^x e^{-\frac{(y)^2}{4(t-s)}}dy} ds\\
+    &= \int_0^t \frac{-2a'(s)}{\sqrt{4\pi (t-s)}}\int_0^x e^{-\frac{(y)^2}{4(t-s)}}dy ds
+\end{align*}
+Now, using the hint, we can change variables and apply integration by parts to see that 
+\begin{align*}
+    v(t,x) &=  \int_0^t \frac{-2a'(s)}{\sqrt{4\pi (t-s)}}\int_0^{x(4(t-s))^{-1/2}} e^{-z^2}dz ds\\
+    &=  \int_0^t \frac{-2a(s)}{\sqrt{\pi}} e^{\frac{-x^2}{4(t-s)}} \del{-(t-s)^{-3/2} \cdot \frac{1}{4}} ds\\
+    &=  \frac{x^2}{\sqrt{4\pi}}\int_0^t (t-s)^{-3/2} e^{\frac{-x^2}{4(t-s)}}a(s) ds\\
+    &=  \frac{x^2}{\sqrt{4\pi}}\int_0^t (s)^{-3/2} e^{\frac{-x^2}{4(s)}}a(t-s) ds.
+\end{align*}
+Thus, we can conclude that 
+\[u(t,x)= a(t) + \frac{x^2}{\sqrt{4\pi}}\int_0^t (s)^{-3/2} e^{\frac{-x^2}{4(s)}}a(t-s) ds,\]
+which is not exactly what we wanted, but I suspect there is a typo in the problem. \qed
 \newpage
 \problem{4} TODO
  \tri
 \hop 
 \solution
-TODO 
+\begin{enumerate}[(a)]
+    \item By d'Alembert's formula, we know 
+    \begin{align*}
+        u(x,t) &= \frac{1}{2}(\phi(x+ct)+\phi(x-ct)) + \frac{1}{2c}\int_{x-ct}^{x+ct} \psi(\sigma) d \sigma\\
+        &= \frac{1}{2}((x+ct)^2+(x-ct)^2) + \frac{1}{2c}\int_{x-ct}^{x+ct} 1 d \sigma\\
+        &= x^2 + (ct)^2 + t^2.
+    \end{align*}
+    \qed
+    \item For this problem, we can repeatedly use the fundamental theorem of calculus. We assume that $u_x$ vanishes at infinity. We see 
+    \begin{align*}
+        \int u(t,x) dx &= \int \del{u(0,x) + \int_0^t u_t(\tau, x)d\tau} dx \\
+        &= \int \del{u(0,x) + \int_0^t \del{u_t(0, x) +\int_0^\tau u_{tt}(s,x)ds}d\tau} dx\\
+        &= \int \del{u(0,x) + \int_0^t \del{u_t(0, x) +\int_0^\tau c^2u_{xx}(s,x)ds}d\tau} dx\\
+        &= \int u(0,x) dx  +\int \int_0^t u_t(0, x) d\tau dx+\int \int_0^t \int_0^\tau c^2u_{xx}(s,x)dsd\tau dx\\
+        &= \int \phi(x) dx  +\int \int_0^t \psi(x) d\tau dx+\int \int_0^t \int_0^\tau c^2u_{xx}(s,x)dsd\tau dx\\
+        &= \int \phi(x) dx  +t\int \psi(x) d\tau dx+\int \int_0^t \int_0^\tau c^2u_{xx}(s,x)dsd\tau dx\\
+    \end{align*}
+\end{enumerate}
 
 
 \newpage
