@@ -78,7 +78,10 @@
     \hop 
     We can now assume that $\tu = K_t * \tilde{g}$. Writing this out, we have 
     \begin{align*}
-        \tu = K_t
+        \tu(t,x) &= (K_t * \tilde{g})(x)\\
+        &= \int(4\pi t)^{1/2} e^{-\frac{|x-y|^2}{4t}} \tilde{g}(y)dy\\
+        &= \sqrt{4\pi t}\int_{0}^\infty  e^{-\frac{|x-y|^2}{4t}} \tilde{g}(y)dy+\sqrt{4\pi t}\int_{-\infty}^0  e^{-\frac{|x-y|^2}{4t}} \tilde{g}(y)dy\\
+        &= \sqrt{4\pi t}\int_{0}^\infty  e^{-\frac{|x-y|^2}{4t}} \tilde{g}(y)dy+\sqrt{4\pi t}\int_{-\infty}^0  e^{-\frac{|x-y|^2}{4t}} \tilde{g}(y)dy\\
     \end{align*} 
     \item TODO
 \end{enumerate}
