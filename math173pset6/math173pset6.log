@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.4.8)  10 MAY 2022 17:14
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.4.8)  10 MAY 2022 19:10
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -285,13 +285,13 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ]
 [3] [4] [5] [6] [7] (./math173pset6.aux) ) 
 Here is how much of TeX's memory you used:
- 3943 strings out of 479719
- 59938 string characters out of 5880575
- 350426 words of memory out of 5000000
- 21897 multiletter control sequences out of 15000+600000
+ 3944 strings out of 479719
+ 59940 string characters out of 5880575
+ 357426 words of memory out of 5000000
+ 21898 multiletter control sequences out of 15000+600000
  476870 words of font info for 58 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
- 55i,11n,62p,358b,242s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 55i,13n,62p,358b,300s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2022basic/texmf-d
 ist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2022basic/tex
 mf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/local/texlive/2022bas
@@ -302,14 +302,18 @@ xlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local
 /texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/lo
 cal/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr
 /local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></
-usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pf
-b></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7
-.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/symbo
-ls/msbm7.pfb>
-Output written on math173pset6.pdf (7 pages, 116854 bytes).
+usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb>
+</usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pf
+b></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy1
+0.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/c
+msy5.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmsy7.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfont
+s/symbols/msbm10.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/publi
+c/amsfonts/symbols/msbm7.pfb>
+Output written on math173pset6.pdf (7 pages, 156327 bytes).
 PDF statistics:
- 88 PDF objects out of 1000 (max. 8388607)
- 54 compressed objects within 1 object stream
+ 108 PDF objects out of 1000 (max. 8388607)
+ 66 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

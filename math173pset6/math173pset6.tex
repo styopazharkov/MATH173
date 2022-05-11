@@ -36,10 +36,20 @@
         &= \int_\Rn \ol {e^{-ix \cdot y}\phi(x)}dx \\
         &= \int_\Rn e^{ix \cdot y}\ol{\phi(x)}dx \\
         &= (2\pi)^n(2\pi)^{-n}\int_\Rn e^{ix \cdot y}\ol{\phi(x)}dx \\
-        &= (2\pi)^n\F\inv\ol{\phi}(y) \\
+        &= (2\pi)^n\F\inv\ol{\phi}(y) 
     \end{align*}
-
-    \item TODO
+    This is what we wanted to show. \qed 
+    \item We know the Fourier inversion formula holds for Schwartz functions. By part (a) and the equation about interchanging fourier transform under the integral that we saw in class, we know 
+    \begin{align*}
+        (2\pi)^{-n}\int_\Rn \hat{\phi}\bar{\hat{\psi}} &= \int_\Rn \hat{\phi}\check{\bar{\psi}}  \\
+        (2\pi)^{-n}\int_\Rn \hat{\phi}\bar{\hat{\psi}} &= \int_\Rn \check{\hat{\phi}}\hat{\check{\bar{\psi}}}  \\
+        (2\pi)^{-n}\int_\Rn \hat{\phi}\bar{\hat{\psi}} &= \int_\Rn \phi\bar{\psi}.
+    \end{align*}
+    Setting $\psi = \phi$, we see that 
+    \begin{align*}
+        \int_\Rn \abs{\hat{\phi}}^2 = (2\pi)^2\int_\Rn \abs{{\phi}}^2,
+    \end{align*}
+    as we wanted. \qed
 \end{enumerate}
 
 
@@ -49,7 +59,29 @@
  \tri
 \hop 
 \solution
-TODO 
+\newcommand{\tu}{\tilde{u}}
+\begin{enumerate}[(a)]
+    \item Let $\tilde{u}(t,x)$ be defined as in the problem. On $(0, +\infty) \times (0, +\infty)$, $\tilde{u}$ is the same as $u$, so it satisfies the equation $\tu_t = \tu_{xx}$. On $(0, +\infty) \times (-\infty, 0)$, we see that 
+    \[\tu_t(t,x) = -u_t(t, -x) = -u_{xx}(t, -x) = \tu_{xx}(t,x).\]
+    So, $\tu_t = \tu_{xx}$ on all of  $(0, +\infty) \times (0, +\infty)  \cup (0, +\infty) \times (-\infty, 0)$ and is $C^2$ there. Now, consider the points along $x=0$. We can define $\tu(t,0)= 0$. We see that 
+    \[\lim_{x \to 0} u(t,x) = u(t,0) = 0,\]
+    and thus $\lim_{x \to 0} \tu(t,x) = 0$ from both sides, and is equal to $\tu(t,0)$. So, $\tu$ is continuous in $[0,+\infty)\times \RR$. 
+    \hop 
+    Now, let's consider differentiability. Let $t > 0$. We see that 
+    \begin{align*}
+        \lim_{h\to^+ 0} \frac{\tu(t,h)- \tu(t,0)}{h} &=  \lim_{h\to^+ 0} \frac{\tu(t,h)}{h} \\
+        &= \lim_{h\to^+ 0} \frac{u(t,h)}{h}\\
+        &= \lim_{h\to^- 0} \frac{u(t,-h)}{-h}\\
+        &= \lim_{h\to^- 0} \frac{\tu(t,h)}{h}.\\
+    \end{align*}
+    Thus, the derivative from both sides matches up. We see that $\tu_t(t,0) = 0$. Since $u$ is continuously differentiable on the border, both components of the derivative are continuous, so $u$ is differentiable on $(0, +\infty) \times \RR$. 
+    \hop 
+    We can now assume that $\tu = K_t * \tilde{g}$. Writing this out, we have 
+    \begin{align*}
+        \tu = K_t
+    \end{align*} 
+    \item TODO
+\end{enumerate}
 
 
 \newpage
