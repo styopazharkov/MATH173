@@ -219,8 +219,11 @@ Thus, by definition, $\psi_j \to 0$ as a Schwartz function.
 However, we see that by linearity of $U$, 
 \begin{align*}
     \abs{U(\psi_j)} &= \abs{U(j\inv||\phi_j||_j\inv\phi_j)}\\
-    &= \abs{U(\phi_j)}j\inv||\phi_j||_j\inv
+    &= \abs{U(\phi_j)}j\inv||\phi_j||_j\inv \\
+    &> 1
 \end{align*}
+by our choice of $\phi_j$. But $U(0)=0$, so $U$ is not continuous and we have a contradiction. Thus, 
+the constants $C$ and $m$ must exist. \qed 
 
 
 \newpage
@@ -228,6 +231,35 @@ However, we see that by linearity of $U$,
  \tri
 \hop 
 \solution
-TODO 
+\begin{enumerate}[(a)]
+    \item For this problem, we must go back to the definition of an integral through Riemann sums. First, notice that 
+    \begin{align*}
+        \int_\Rn g(y)\phi(y)dy &= \int_\Rn U(f(x)e^{-i x \cdot y})\phi(y) dy \\
+        &= \int_\Rn U(f(x)e^{-i x \cdot y}\phi(y)) dy \\
+        &= \lim_{N \to \infty} \sum^N_{k=1} |I_k| U(f(x)e^{-i x \cdot y_k}\phi(y_k))\\
+        &= \lim_{N \to \infty}  U\del{\sum^N_{k=1} |I_k| f(x)e^{-i x \cdot y_k}\phi(y_k)}
+    \end{align*}
+    where $y_k$ is some point in the Riemann cube $I_k$ and the limit notation denotes taking smaller and smaller intervals and covering more and more of space. 
+    \hop 
+    We want to be able to move the integral inside of $U$, but we can't do that directly. We can move the finite sum inside by linearity of $U$, and continuity gives us that we can move the limit inside as long as the inside converges as Schwartz functions. So, let us show that 
+    \[\sum^N_{k=1} |I_k|f(x)e^{-i x \cdot y_k}\phi(y_k) \to \int f(x)e^{-ix \cdot y} \phi(y)dy\]
+    in the Schwartz sense. First, we know $f$ has compact support, so we can assume $x$ is bounded by some constant $R$. Let $\alpha, \beta$ be multi-indices. We need to check that 
+    \[\sup_x\abs{x^\alpha \d^\beta \del{\sum^N_{k=1} |I_k|f(x)e^{-i x \cdot y_k}\phi(y_k) - \int f(x)e^{-ix \cdot y} \phi(y)dy}}\]
+    converges to 0 as $N \to \infty$. When we expand out the derivatives, each term in the massive sum will be of the form 
+    \[x^\alpha  \del{\sum_{k=1}^N |I_k|\d^\gamma f(x)(-iy_k)^\omega e^{-ix \cdot y_k} \phi(y_k) - \int \d^\gamma f(x) (-iy)^\omega  e^{-ix \cdot y}\phi(y) dy}\]
+    where $\gamma$ and $\omega$ are some multi-indices such that $|\gamma|, |\omega| \le |\beta|$. Since $\phi$ is a Schwartz function, $(iy)^\omega \phi(y)$ is bounded. By definition of an integral, the expression inside the parentheses converges to 0 pointwise (for a set $x$). The expression is continuous and has compact support (because $\d^\gamma$ has compact support). We know that poinwise convergence of continuous functions on compact support implies uniform convergence. So, there is some sequence $M_N$ such that $M_N \to 0$ and 
+    \[\sum_{k=1}^N |I_k|\d^\gamma f(x)(-iy_k)^\omega e^{-ix \cdot y_k} \phi(y_k) - \int \d^\gamma f(x) (-iy)^\omega e^{-ix \cdot y}\phi(y) dy < M_N.\]
+    Thus we see that 
+    \begin{align*}
+        &\sup_{x} \abs{x^\alpha \del{\sum_{k=1}^N |I_k|\d^\gamma f(x)(-iy_k)^\omega e^{-ix \cdot y_k} \phi(y_k) - \int \d^\gamma f(x) (-iy)^\omega e^{-ix \cdot y}\phi(y) dy}} \\
+        =&\sup_{x<R} \abs{x^\alpha \del{\sum_{k=1}^N |I_k|\d^\gamma f(x)(-iy_k)^\omega e^{-ix \cdot y_k} \phi(y_k) - \int \d^\gamma f(x) (-iy)^\omega e^{-ix \cdot y}\phi(y) dy}} \\
+        \le & \sup_{x < R} \abs{x^\alpha M_N}\\
+        \le & R^{|\alpha|}M_N
+    \end{align*}
+    This certainly converges to 0. There are only a finite number of terms like this (because there are only so many options for what derivatives to take given that $|\gamma|, |\omega| < |\beta|$). So, we can conclude that 
+    \[\sup_x\abs{x^\alpha \d^\beta \del{\sum^N_{k=1} |I_k|f(x)e^{-i x \cdot y_k}\phi(y_k) - \int f(x)e^{-ix \cdot y} \phi(y)dy}} \to 0.\]
+    This means that the Riemann sum does indeed converge to the integral as Schwartz functions. So, by continuity of $U$, 
+    \item TODO
+\end{enumerate}
 
 \end{document}
