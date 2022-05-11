@@ -25,7 +25,7 @@
 \date{May 11, 2022}
 \begin{document}
 \maketitle
-\problem{1} TODO
+\problem{1} 
  \tri
 \hop 
 \solution
@@ -52,10 +52,12 @@
     as we wanted. \qed
 \end{enumerate}
 
-
+\begin{center}
+    \includegraphics[height=2cm]{../images/fbar}
+\end{center}
 
 \newpage
-\problem{2} TODO
+\problem{2} 
  \tri
 \hop 
 \solution
@@ -74,7 +76,7 @@
         &= \lim_{h\to^- 0} \frac{u(t,-h)}{-h}\\
         &= \lim_{h\to^- 0} \frac{\tu(t,h)}{h}.\\
     \end{align*}
-    Thus, the derivative from both sides matches up. We see that $\tu_t(t,0) = 0$. Since $u$ is continuously differentiable on the border, both components of the derivative are continuous, so $u$ is differentiable on $(0, +\infty) \times \RR$. 
+    Thus, the derivative from both sides matches up. We see that $\tu_t(t,0) = 0$. Since $u$ is continuously differentiable on the border, both components of the derivative are continuous, so $\tu$ is differentiable on $(0, +\infty) \times \RR$. 
     \hop 
     We can now assume that $\tu = K_t * \tilde{g}$. Writing this out, we have 
     \begin{align*}
@@ -109,7 +111,7 @@
         &= \lim_{h\to^- 0} -\frac{u(t,-h) - u(t,0)}{h}\\
         &= \lim_{h\to^- 0} \frac{\tu(t,h)-\tu(t,0)}{h}.\\
     \end{align*}
-    Thus, the derivative from both sides matches up. We see that $\tu_t(t,0) = 0$. Since $u$ is continuously differentiable on the border, both components of the derivative are continuous, so $u$ is differentiable on $(0, +\infty) \times \RR$. 
+    Thus, the derivative from both sides matches up. We see that $\tu_t(t,0) = 0$. Since $u$ is continuously differentiable on the border, both components of the derivative are continuous, so $\tu$ is differentiable on $(0, +\infty) \times \RR$. 
     \hop 
     Making a similar assumption, we see that this time 
     \begin{align*}
@@ -126,7 +128,7 @@
 
 
 \newpage
-\problem{3} TODO
+\problem{3} 
  \tri
 \hop 
 \solution
@@ -149,16 +151,16 @@ where $f(t,x) = -a'(t)$. Expanding, and changing variables, we have
 \end{align*}
 Now, using the hint, we can change variables and apply integration by parts to see that 
 \begin{align*}
-    v(t,x) &=  \int_0^t \frac{-2a'(s)}{\sqrt{4\pi (t-s)}}\int_0^{x(4(t-s))^{-1/2}} e^{-z^2}dz ds\\
-    &=  \int_0^t \frac{-2a(s)}{\sqrt{\pi}} e^{\frac{-x^2}{4(t-s)}} \del{-(t-s)^{-3/2} \cdot \frac{1}{4}} ds\\
-    &=  \frac{x}{\sqrt{4\pi}}\int_0^t (t-s)^{-3/2} e^{\frac{-x^2}{4(t-s)}}a(s) ds\\
-    &=  \frac{x}{\sqrt{4\pi}}\int_0^t (s)^{-3/2} e^{\frac{-x^2}{4(s)}}a(t-s) ds.
+    v(t,x) &=  \int_0^t \frac{-2a'(s)}{\sqrt{\pi}}\int_0^{x(4(t-s))^{-1/2}} e^{-z^2}dz ds\\
+    &= \frac{-2a(t)}{\sqrt{\pi}} \cdot \frac{\sqrt{\pi}}{2}+   \int_0^t \frac{-2a(s)}{\sqrt{\pi}} e^{\frac{-x^2}{4(t-s)}} \del{-(t-s)^{-3/2} \cdot \frac{1}{4}} ds\\
+    &= - a(t)+ \frac{x}{\sqrt{4\pi}}\int_0^t (t-s)^{-3/2} e^{\frac{-x^2}{4(t-s)}}a(s) ds\\
+    &=  - a(t)+\frac{x}{\sqrt{4\pi}}\int_0^t s^{-3/2} e^{\frac{-x^2}{4(s)}}a(t-s) ds.
 \end{align*}
 Thus, we can conclude that 
-\[u(t,x)= a(t) + \frac{x}{\sqrt{4\pi}}\int_0^t (s)^{-3/2} e^{\frac{-x^2}{4(s)}}a(t-s) ds,\]
-which is not exactly what we wanted, but I suspect there is a typo in the problem. \qed
+\[u(t,x)=\frac{x}{\sqrt{4\pi}}\int_0^t s^{-3/2} e^{\frac{-x^2}{4(s)}}a(t-s) ds,\]
+which is what we wanted. Note that the integral is only converges for $x> 0$, so we can add on that $u(t,0) = a(t)$.  \qed
 \newpage
-\problem{4} TODO
+\problem{4} 
  \tri
 \hop 
 \solution
@@ -186,7 +188,7 @@ which is not exactly what we wanted, but I suspect there is a typo in the proble
 
 
 \newpage
-\problem{5} TODO
+\problem{5} 
  \tri
 \hop 
 \solution
@@ -201,7 +203,7 @@ Solving this ODE, we have that
 This is the solution we were looking for. \qed
 
 \newpage
-\problem{6} TODO
+\problem{6} 
  \tri
 \hop 
 \solution
@@ -227,7 +229,7 @@ the constants $C$ and $m$ must exist. \qed
 
 
 \newpage
-\problem{7} TODO
+\problem{7} 
  \tri
 \hop 
 \solution
@@ -296,5 +298,7 @@ the constants $C$ and $m$ must exist. \qed
     \[|g(y)| \le C_0 M S R^m F (\abs{y}+1)^m .\]
     So, letting $C = C_0 M S R^m F$, we get the desired bound. \qed
 \end{enumerate}
-
+\begin{center}
+    \includegraphics[height=3cm]{../images/suppf}
+\end{center}
 \end{document}
