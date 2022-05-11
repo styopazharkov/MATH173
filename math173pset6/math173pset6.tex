@@ -81,9 +81,35 @@
         \tu(t,x) &= (K_t * \tilde{g})(x)\\
         &= \int(4\pi t)^{1/2} e^{-\frac{|x-y|^2}{4t}} \tilde{g}(y)dy\\
         &= \sqrt{4\pi t}\int_{0}^\infty  e^{-\frac{|x-y|^2}{4t}} \tilde{g}(y)dy+\sqrt{4\pi t}\int_{-\infty}^0  e^{-\frac{|x-y|^2}{4t}} \tilde{g}(y)dy\\
-        &= \sqrt{4\pi t}\int_{0}^\infty  e^{-\frac{|x-y|^2}{4t}} \tilde{g}(y)dy+\sqrt{4\pi t}\int_{-\infty}^0  e^{-\frac{|x-y|^2}{4t}} \tilde{g}(y)dy\\
+        &= \sqrt{4\pi t}\int_{0}^\infty  e^{-\frac{(x-y)^2}{4t}} g(y)dy-\sqrt{4\pi t}\int_{0}^\infty  e^{-\frac{(x+y)^2}{4t}} g(y)dy\\
+        &= \sqrt{4\pi t}\int_{0}^\infty  g(y)\del{ e^{-\frac{(x-y)^2}{4t}} - e^{-\frac{(x+y)^2}{4t}}}dy.\\
     \end{align*} 
-    \item TODO
+    Restricting to to half, we see that 
+    \[u(t,x) =\sqrt{4\pi t}\int_{0}^\infty  g(y)\del{ e^{-\frac{(x-y)^2}{4t}} - e^{-\frac{(x+y)^2}{4t}}}dy.\]
+    We can verify that the boundary conditions match. \qed
+    \item This is very similar to part (a), but this time let us define 
+    \[\tu(t,x) = \begin{cases}
+        u(t,x) &\text{ if } x \ge 0 \\
+        u(t,-x) &\text{ if } x \ge 0 \\
+    \end{cases}\]
+    to be the even extension. 
+    \hop 
+    We know $\tu$ is $C^2$ and satisfies the equation on  $(0, +\infty) \times (0, +\infty)  \cup (0, +\infty) \times (-\infty, 0)$ for the same reason as in part (a). 
+    \hop 
+    We see that 
+    \[\lim_{x \to 0} u(t,x) = u(t,0),\]
+    and thus $\lim_{x \to 0} \tu(t,x) = u(t,0)$ from both sides, and is equal to $\tu(t,0)$. So, $\tu$ is continuous in $[0,+\infty)\times \RR$. 
+    \hop 
+    Now, we notice that 
+    \begin{align*}
+        \lim_{h\to^+ 0} \frac{\tu(t,h)- \tu(t,0)}{h}
+        &= \lim_{h\to^+ 0} \frac{u(t,h) - u(t,0)}{h}\\
+        &= 0 \\
+        &= \lim_{h\to^+ 0} -\frac{u(t,h) - u(t,0)}{h}\\
+        &= \lim_{h\to^- 0} -\frac{u(t,-h) - u(t,0)}{h}\\
+        &= \lim_{h\to^- 0} \frac{\tu(t,h)-\tu(t,0)}{h}.\\
+    \end{align*}
+    Thus, the derivative from both sides matches up. We see that $\tu_t(t,0) = 0$. Since $u$ is continuously differentiable on the border, both components of the derivative are continuous, so $u$ is differentiable on $(0, +\infty) \times \RR$. 
 \end{enumerate}
 
 
