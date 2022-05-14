@@ -54,7 +54,19 @@ Thus, we can conclude that $u(y) \ge u(x)$. By an identical argument, we also kn
 \hop 
 \solution
 \begin{enumerate}[(a)]
-    \item By the linearity properties of $\ang{\cdot, \cdot}$.
+    \item By the linearity properties of $\ang{\cdot, \cdot}$, we know 
+    \begin{align*}
+        ||v+w||^2 + ||v - w||^2 &= \ang{v+w, v+w} + \ang{v-w, v-w} \\
+        &= \ang{v,v} + \ang{v,w} + \ang{w,v} + \ang{w,w} +\ang{v,v}-\ang{v,w} - \ang{w,v} + \ang{w,w} \\
+        &= 2\ang{v,v} + 2 \ang{w,w}\\
+        &= 2(||v||^2 + ||w||^2)
+    \end{align*}
+    for any $v,w$. \qed
+    \item Let $\Omega_1, \Omega_2 \sse \Omega$ be nonempty oben balls where $\Omega_1 \cap \Omega_2 = \varnothing$. Let $f$ be a bump function such that $\supp{f} \sse \Omega_1$ and $f \ge 0$ and $f$ achieves its maximum of 1 in $\Omega_1$. Similarly, let $g$ be a bump function such that $\supp{g} \sse \Omega_2$ and $g \ge 0$ and $g$ achieves its maximum of 1 in $\Omega_2$.
+    \hop 
+    We see that 
+    \[||f-g||^2 + ||f+g||^2 = 1+1 \ne 2(1+1) = 2(||f||^2 + ||g||^2).\]
+    So the parallelogram law does not hold. By part (a), this means this norm cannot be induced by an inner product. \qed
 \end{enumerate}
 
 
