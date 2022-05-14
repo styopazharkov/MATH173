@@ -33,7 +33,7 @@ For a harmonic function, we know the average over the surface of any ball is equ
 
 TODO: img 
 
-Now, consider $B_x := B(x,R)$ and $B_y := B(y, R+d)$ where $d = |x - y|$, as the hint suggests. Then, we see that $B_x \sse B_y$. 
+Let $x$ and $y$ be two arbitrary points. Now, consider $B_x := B(x,R)$ and $B_y := B(y, R+d)$ where $d = |x - y|$, as the hint suggests. Then, we see that $B_x \sse B_y$. 
 
 TODO: img 
 
@@ -41,8 +41,11 @@ Let $\text{Avg}(\Omega)$ denote the average of $u$ over the region $\Omega$. Let
 \newcommand{\Avg}{\text{Avg}}
 \begin{align*}
     \Avg(B_y) &= \Avg(B_x)\frac{|B_x|}{|B_y|} + \Avg(B_y\setminus B_x)\frac{|B_y \setminus B_x|}{|B_y|} \\
-    & \ge \Avg(B_x)\frac{|B_x|}{|B_y|} + \Avg(B_y\setminus B_x)
+    & \ge \Avg(B_x)\frac{|B_x|}{|B_y|}.
 \end{align*}
+In the second step, we used that $u$ is non-negative. Note that $\lim_{R \to \infty} \frac{|B_x|}{|B_y|} = 1$, so for any $\eps$, we can find $R$ large enough that
+\[u(y) = \Avg(B_y) \ge  \Avg(B_x)\frac{|B_x|}{|B_y|} \ge \Avg(B_x)(1-\eps) = u(x)(1-\eps).\] 
+Thus, we can conclude that $u(y) \ge u(x)$. By an identical argument, we also know $u(y) \le u(x)$. Since $x$ and $y$ were arbitrary, $u$ must be the constant function. \qed 
 
 
 \newpage
