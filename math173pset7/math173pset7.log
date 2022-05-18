@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.4.8)  17 MAY 2022 21:47
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.4.8)  17 MAY 2022 21:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -298,7 +298,7 @@ Here is how much of TeX's memory you used:
  21898 multiletter control sequences out of 15000+600000
  476870 words of font info for 58 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
- 55i,11n,62p,414b,268s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 55i,11n,62p,414b,274s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2022basic/texmf-dist/font
 s/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2022basic/texmf-dist/
 fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/local/texlive/2022basic/texmf
@@ -316,11 +316,12 @@ b></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy1
 0.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/c
 msy5.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/c
 m/cmsy7.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfont
-s/symbols/msbm10.pfb>
-Output written on math173pset7.pdf (8 pages, 184544 bytes).
+s/symbols/msbm10.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/publi
+c/amsfonts/symbols/msbm7.pfb>
+Output written on math173pset7.pdf (8 pages, 190524 bytes).
 PDF statistics:
- 111 PDF objects out of 1000 (max. 8388607)
- 68 compressed objects within 1 object stream
+ 116 PDF objects out of 1000 (max. 8388607)
+ 71 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

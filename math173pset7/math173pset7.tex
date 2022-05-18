@@ -221,6 +221,14 @@ However, this isn't continuous, so we have a contradiction. So, this sequence is
     Thus, $f$ is harmonic. So, $P_r$ is the sum of harmonic functions, so it is harmonic. Thus,
     \[\mathring{\Delta}u = \mathring{\Delta}\frac{1}{2\pi}\int_0^{2\pi} P_r(\theta - \phi)h(\phi)d\phi =\frac{1}{2\pi}\int_0^{2\pi}  \mathring{\Delta} P_r(\theta - \phi)h(\phi)d\phi = 0,\]
     where $\mathring{\Delta}$ denotes the polar Laplacian. So, we can conclude that $\Delta v = 0$.
+    \hop 
+    A nicer way to show the above is to notice that setting $z = re^{i\theta}$, we have $P_r(\theta) = \text{Re}\del{\frac{1+z}{1-z}}$ and then use the fact that the real part of a holomorphic function is harmonic. However, we do not know this fact.
+    \hop 
+    For the last part, we must show continuity on the border. Let $h_n$ be the fourier coefficients of $h$. We see 
+    \begin{align*}
+        u(r, \theta) &= \frac{1}{2\pi}\int_0^{2\pi} P_r(\theta-\phi) \del{\sum_{n\in\ZZ}h_ne^{in\phi}}d\phi\\
+        &= \frac{1}{2\pi}\int_0^{2\pi} \del{\sum_{n\in\ZZ}r^{|n|}e^{in(\theta - \phi)}} \del{\sum_{n\in\ZZ}h_ne^{in\phi}}d\phi
+    \end{align*}
 \end{enumerate}
 
 
