@@ -234,7 +234,10 @@ However, this isn't continuous, so we have a contradiction. So, this sequence is
         &= \sum_{n,m\in\ZZ}r^{|n|}h_me^{in\theta}\frac{1}{2\pi}\int_0^{2\pi} e^{i\phi(m -n)}d\phi.\\
     \end{align*}
     For $n\ne m$, the term is 0, so 
-    \[u(r,\theta) = \sum_{n\in\ZZ}r^{|n|}h_ne^{in\theta}\frac{1}{2\pi}\int_0^{2\pi}1d\phi = \sum_{n\in\ZZ}r^{|n|}h_ne^{in\theta}\]
+    \[u(r,\theta) = \sum_{n\in\ZZ}r^{|n|}h_ne^{in\theta}\frac{1}{2\pi}\int_0^{2\pi}1d\phi = \sum_{n\in\ZZ}r^{|n|}h_ne^{in\theta}.\]
+    We see that 
+    \[\lim_{r \to 1}\sum_{n\in\ZZ}r^{|n|}h_ne^{in\theta} =\sum_{n\in\ZZ}h_ne^{in\theta} = h(\theta), \]
+    so continuity on the border holds. \qed
 \end{enumerate}
 
 
