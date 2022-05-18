@@ -77,9 +77,9 @@ Thus, we can conclude that $u(y) \ge u(x)$. By an identical argument, we also kn
 \solution
 Let $\ang{f,g} = \int_{-\pi}^\pi f\bar{g}$. We know from class that this is an inner product and we see that it induces the given norm. We saw that the functions $1, \cos(x), \sin(x), \cos(2x), \sin(2x)$ are orthogonal. So, by the best approximation lemma, we can take the inner products to find the coefficients. This gives 
 \begin{align*}
-    a_0 &= \frac{\ang{|x|, 1}}{\ang{1,1}} = \frac{1}{2}\\
-    a_1 &= \frac{\ang{|x|, \cos x}}{\ang{\cos x, \cos x} = \frac{2\int_0^\pi x \cos x dx}{\int_{-\pi}^\pi}\cos^2 x dx} = -\frac{2}{\pi} \\
-    a_2 &= \frac{\ang{|x|, \cos 2x}}{\ang{\cos 2x, \cos 2x}} = \frac{2\int_0^\pi x \cos 2x dx}{\int_{-\pi}^\pi\cos^2 2x dx} = -\frac{1}{\pi} \\
+    a_0 &= \frac{\ang{|x|, 1}}{\ang{1,1}} = \frac{\pi}{2}\\
+    a_1 &= \frac{\ang{|x|, \cos x}}{\ang{\cos x, \cos x} = \frac{2\int_0^\pi x \cos x dx}{\int_{-\pi}^\pi}\cos^2 x dx} = -\frac{4}{\pi} \\
+    a_2 &= \frac{\ang{|x|, \cos 2x}}{\ang{\cos 2x, \cos 2x}} = \frac{2\int_0^\pi x \cos 2x dx}{\int_{-\pi}^\pi\cos^2 2x dx} = 0
     b_1 &= \frac{\ang{|x|, \sin x}}{\ang{\sin x, \sin x}} = 0 \\
     b_2&= \frac{\ang{|x|, \sin 2x}}{\ang{\sin 2x, \sin 2x}} = 0.
 \end{align*}
@@ -174,7 +174,7 @@ So, the sequence is Cauchy.
 Now let's show that there is no limit. Suppose for contradiction that there is some $f$ such that $f_n \to f$. Let $x > 1/2$. Now, let $\eps = x - 1/2 > 0$. Suppose $f(x) \ne 1$. Then, define 
 \[c = \int_x^1 |f-1|^2.\]
 Note that $c >0$. We see that for $n>1/\eps$, we have 
-\[||f_n - f|| = \int_0^1|f-f_n|^2 \ge \int_x^1|f-f_n|^2 =int_x^1|f-1|^2 = c.\]
+\[||f_n - f|| = \int_0^1|f-f_n|^2 \ge \int_x^1|f-f_n|^2 =\int_x^1|f-1|^2 = c.\]
 Since $||f_n -f|| \to 0$, this is not possible. So, it must be that $f(x) = 1$. 
 \hop 
 By a similar argument, let $x \le 1/2$. Suppose $f(x) \ne 0$. Define 
