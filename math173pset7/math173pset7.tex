@@ -137,12 +137,19 @@ Note that the last two are 0 because $|x|$ is an even function and $sin(kx)$ is 
      \[f(x) = a \cosh(\gamma x) + b\sinh(\gamma x) + c \cos(\gamma x) +d \sin(\gamma x).\]
     This means 
     \[f'(x) = \gamma(a\sinh(\gamma x)+b\cosh(\gamma x) - c \sin(\gamma x) + d \cos(\gamma x)).\]
-    Now, employing the boundary conditions, 
+    Now, employing the boundary conditions, and assuming $\gamma > 0$,
     \begin{align*}
         f(0) = 0 &\implies &c+a &= 0\\
         f'(0) = 0 &\implies &b+d &= 0\\
         f(\ell) = 0 &\implies &a(\cosh(\gamma\ell)-\cos(\gamma\ell)) + b(\sinh(\gamma\ell)-\sin(\gamma\ell)) &= 0\\
-        f'(\ell) = 0 &\implies &a(\cosh(\gamma\ell)-\cos(\gamma\ell)) + b(\sinh(\gamma\ell)-\sin(\gamma\ell)) &= 0\\
+        f'(\ell) = 0 &\implies &a(\sinh(\gamma\ell)+\sin(\gamma\ell)) + b(\cosh(\gamma\ell)-\cos(\gamma\ell)) &= 0
+    \end{align*}
+    So, 
+    \begin{align*}
+        &\frac{\sinh(\gamma\ell)-\sin(\gamma\ell)}{\cosh(\gamma\ell)-\cos(\gamma\ell)} = -\frac{a}{b} = \frac{\cosh(\gamma\ell)-\cos(\gamma\ell)}{\sinh(\gamma\ell)+\sin(\gamma\ell)} \\
+        \implies& \sinh(\gamma\ell)^2 -\sin(\gamma\ell)^2 = \cosh(\gamma\ell)^2 - 2 \cos(\gamma\ell)\cosh(\gamma\ell) + \cos(\gamma\ell)^2 \\
+        \implies& 0 = 2 - 2\cos(\gamma\ell)\cosh(\gamma\ell) \\
+        \implies& \cos(\gamma\ell) \cosh(\gamma\ell) - 1 = 0.
     \end{align*}
 \end{enumerate}
 

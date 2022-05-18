@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.4.8)  17 MAY 2022 19:00
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.4.8)  17 MAY 2022 19:05
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -283,37 +283,37 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 {/usr/local/texlive/2022basic/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2
 ]
-[3] [4] [5] [6] [7] (./math173pset7.aux) ) 
+[3] [4] [5] [6] [7] [8] (./math173pset7.aux) ) 
 Here is how much of TeX's memory you used:
  3944 strings out of 479719
  59941 string characters out of 5880575
- 362426 words of memory out of 5000000
+ 363426 words of memory out of 5000000
  21898 multiletter control sequences out of 15000+600000
  476870 words of font info for 58 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
  55i,11n,62p,414b,268s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2022basic/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2022basic/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/local/texlive/2022bas
-ic/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/local/texlive/20
-22basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texliv
-e/2022basic/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb></usr/loca
-l/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/
-local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></u
-sr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb>
-</usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.p
-fb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr1
-2.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/c
-mr5.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmr7.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/
-cm/cmsy10.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmsy5.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmsy7.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public
-/amsfonts/symbols/msbm10.pfb>
-Output written on math173pset7.pdf (7 pages, 176089 bytes).
+</usr/local/texlive/2022basic/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2022basic
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/local/texlive/202
+2basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/local/texliv
+e/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/te
+xlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb></usr/
+local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></
+usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb
+></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.
+pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr
+10.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmr12.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmr5.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmr7.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmsy10.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmsy5.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/pu
+blic/amsfonts/symbols/msbm10.pfb>
+Output written on math173pset7.pdf (8 pages, 177016 bytes).
 PDF statistics:
- 108 PDF objects out of 1000 (max. 8388607)
- 66 compressed objects within 1 object stream
+ 111 PDF objects out of 1000 (max. 8388607)
+ 68 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
