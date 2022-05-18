@@ -227,7 +227,8 @@ However, this isn't continuous, so we have a contradiction. So, this sequence is
     For the last part, we must show continuity on the border. Let $h_n$ be the fourier coefficients of $h$. We see 
     \begin{align*}
         u(r, \theta) &= \frac{1}{2\pi}\int_0^{2\pi} P_r(\theta-\phi) \del{\sum_{n\in\ZZ}h_ne^{in\phi}}d\phi\\
-        &= \frac{1}{2\pi}\int_0^{2\pi} \del{\sum_{n\in\ZZ}r^{|n|}e^{in(\theta - \phi)}} \del{\sum_{n\in\ZZ}h_ne^{in\phi}}d\phi
+        &= \frac{1}{2\pi}\int_0^{2\pi} \del{\sum_{n\in\ZZ}r^{|n|}e^{in(\theta - \phi)}} \del{\sum_{n\in\ZZ}h_ne^{in\phi}}d\phi \\
+        &= \sum_{n,m\in\ZZ}\frac{1}{2\pi}\int_0^{2\pi} \del{r^{|n|}e^{in(\theta - \phi)}} \del{h_me^{im\phi}}d\phi \\
     \end{align*}
 \end{enumerate}
 
