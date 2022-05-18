@@ -83,7 +83,7 @@ Let $\ang{f,g} = \int_{-\pi}^\pi f\bar{g}$. We know from class that this is an i
     b_1 &= \frac{\ang{|x|, \sin x}}{\ang{\sin x, \sin x}} = 0 \\
     b_2&= \frac{\ang{|x|, \sin 2x}}{\ang{\sin 2x, \sin 2x}} = 0.
 \end{align*}
-Note that the last two are 0 because $|x|$ is an even function and $sin(kx)$ is odd, s' they are orthogonal. Thus, we have found the coefficients. \qed
+Note that the last two are 0 because $|x|$ is an even function and $sin(kx)$ is odd, so they are orthogonal. Thus, we have found the coefficients. \qed
 
 
 \newpage
@@ -103,8 +103,13 @@ Note that the last two are 0 because $|x|$ is an even function and $sin(kx)$ is 
     \end{align*}
     So, $A$ is positive. 
     \hop
-    Now, we will find its eigenvalues.
-    TODO: finish 
+    Now, we will find its eigenvalues. We know by part (a) that eigenvalues are non-negative. Constant functions give the 0 eigenvalues, so we can consider eigenvalues $\lambda^2 >0$. Then, we have $-f'' = \lambda^2 f$. The general solution to this is 
+    \[f(x) = a\sin(\lambda x) + b \cos(\lambda x).\]
+    As we've seen in class, the boundary conditions give us that $f$ is of the form
+    \[f(x) = a\sin\del{\frac{2\pi}{\ell}nx}+b\cos\del{\frac{2\pi}{\ell}nx}.\]
+    Thus the eigenvalues are 
+    \[\cbr{\frac{4\pi^2}{\ell^2}n^2: n \in \ZZ}.\]
+    \qed
 \end{enumerate}
 
 
