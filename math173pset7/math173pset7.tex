@@ -200,6 +200,13 @@ However, this isn't continuous, so we have a contradiction. So, this sequence is
     \[\sum_{n=0}^\infty r^n e^{in\theta} = \sum_{n=0}^\infty (re^{i\theta})^n = \frac{1}{1-re^{i\theta}}\]
     and
     \[\sum_{n=1}^\infty r^n e^{-in\theta} = \sum_{n=1}^\infty (re^{-i\theta})^n = \frac{re^{-i\theta}}{1-re^{-i\theta}}.\]
+    So,
+    \begin{align*}
+        P_r(\theta) &= \frac{1}{1-re^{i\theta}}+\frac{re^{-i\theta}}{1-re^{-i\theta}} \\
+        &= \frac{1-re^{-i\theta}+re^{-i\theta} - r^2}{1-r(e^{i\theta} + e^{-i\theta}) + r^2} \\
+        &= \frac{1-r^2}{1-2r\cos(\theta) + r^2},
+    \end{align*}
+    as we wanted. \qed
     \item TODO
 \end{enumerate}
 
