@@ -294,7 +294,7 @@ m/it/10 ^^M`\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ^^@
 Here is how much of TeX's memory you used:
  3944 strings out of 479719
  59941 string characters out of 5880575
- 363426 words of memory out of 5000000
+ 364426 words of memory out of 5000000
  21898 multiletter control sequences out of 15000+600000
  476870 words of font info for 58 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
@@ -317,7 +317,7 @@ b></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy1
 msy5.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/c
 m/cmsy7.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfont
 s/symbols/msbm10.pfb>
-Output written on math173pset7.pdf (8 pages, 180327 bytes).
+Output written on math173pset7.pdf (8 pages, 180343 bytes).
 PDF statistics:
  111 PDF objects out of 1000 (max. 8388607)
  68 compressed objects within 1 object stream
