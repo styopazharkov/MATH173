@@ -215,11 +215,12 @@ However, this isn't continuous, so we have a contradiction. So, this sequence is
         &= \frac{1-r^2}{1-2r\cos(\theta) + r^2},
     \end{align*}
     as we wanted. \qed
-    \item First, we know $P_r$ is a $C^2$ function in the disk. We know convolution preserves this property, so $u$ is $C^2$ on the disk. Thus, (formally, by the inverse function theorem), $v$ is also $C^2$ on the disk. 
+    \item For this problem, I will add a factor of $1/(2\pi)$ to the expression because otherwise I couldn't get it to work. First, we know $P_r$ is a $C^2$ function in the disk. We know convolution preserves this property, so $u$ is $C^2$ on the disk. Thus, (formally, by the inverse function theorem), $v$ is also $C^2$ on the disk. 
     \hop Now, let's check the Laplacian. Let $f(r \theta) = r^{|n|}e^{in\theta}$. For $|n| \ge 2$, we have $f_{rr} = r^{|n| - 2}(|n|-1)|n|e^{in\theta}$ and $f_{\theta\theta} = -r^{|n|}|n|^2e^{in\theta}$ and $f_r = |n|r^{|n|-1}e^{in\theta}$. We can check that 
     \[f_{rr}+\frac{1}{r^2}f_{\theta\theta} + \frac{1}{r}f_r = 0.\]
     Thus, $f$ is harmonic. So, $P_r$ is the sum of harmonic functions, so it is harmonic. Thus,
-    \[\mathring{\Delta}\]
+    \[\mathring{\Delta}u = \mathring{\Delta}\frac{1}{2\pi}\int_0^{2\pi} P_r(\theta - \phi)h(\phi)d\phi =\frac{1}{2\pi}\int_0^{2\pi}  \mathring{\Delta} P_r(\theta - \phi)h(\phi)d\phi = 0,\]
+    where $\mathring{\Delta}$ denotes the polar Laplacian. So, we can conclude that $\D v = 0$.
 \end{enumerate}
 
 
