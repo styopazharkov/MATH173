@@ -79,9 +79,9 @@ Let $\ang{f,g} = \int_{-\pi}^\pi f\bar{g}$. We know from class that this is an i
 \begin{align*}
     a_0 &= \frac{\ang{|x|, 1}}{\ang{1,1}} = \frac{1}{2}\\
     a_1 &= \frac{\ang{|x|, \cos x}}{\ang{\cos x, \cos x} = \frac{2\int_0^\pi x \cos x dx}{\int_{-\pi}^\pi}\cos^2 x dx} = -\frac{2}{\pi} \\
-    a_2 = \frac{\ang{|x|, \cos 2x}}{\ang{\cos 2x, \cos 2x}} = \frac{2\int_0^\pi x \cos 2x dx}{\int_{-\pi}^\pi}\cos^2 2x dx} = -\frac{1}{\pi} \\
-    b_1 = \frac{\ang{|x|, \sin x}}{\ang{\sin x, \sin x}} = 0 
-    b_2 = \frac{\ang{|x|, \sin 2x}}{\ang{\sin 2x, \sin 2x}} = 0.
+    a_2 &= \frac{\ang{|x|, \cos 2x}}{\ang{\cos 2x, \cos 2x}} = \frac{2\int_0^\pi x \cos 2x dx}{\int_{-\pi}^\pi\cos^2 2x dx} = -\frac{1}{\pi} \\
+    b_1 &= \frac{\ang{|x|, \sin x}}{\ang{\sin x, \sin x}} = 0 \\
+    b_2&= \frac{\ang{|x|, \sin 2x}}{\ang{\sin 2x, \sin 2x}} = 0.
 \end{align*}
 Note that the last two are 0 because $|x|$ is an even function and $sin(kx)$ is odd, s' they are orthogonal. Thus, we have found the coefficients. \qed
 
@@ -91,7 +91,21 @@ Note that the last two are 0 because $|x|$ is an even function and $sin(kx)$ is 
  \tri
 \hop 
 \solution
-TODO
+\begin{enumerate}[(a)]
+    \item Let $v \in \cal{D}$ where $v \ne 0$ be an eigenvector with an eigenvalue $\lambda$. So, $Av = \lambda v$. Then, we see 
+    \[\lambda \ang{v,v} = \ang{\lambda v, v} = \ang{Av, v} \ge 0.\]
+    Since $\ang{v,v} >0$ we can divide both sides by it to see that $\lambda \ge 0$. Thus, all eigenvalues are non-negative. \qed
+    \item We see that the boundary conditions give us a vanishing boundary term as 
+    \begin{align*}
+        \ang{Af, f} &= \int_0^\ell -f''\bar{f} \\
+        &=  \int_0^\ell f'\bar{f}'\\
+        &\ge 0.
+    \end{align*}
+    So, $A$ is positive. 
+    \hop
+    Now, we will find its eigenvalues.
+    TODO: finish 
+\end{enumerate}
 
 
 \newpage
@@ -99,7 +113,38 @@ TODO
  \tri
 \hop 
 \solution
-TODO
+\begin{enumerate}[(a)]
+    \item We see that the boundary conditions give us 
+    \begin{align*}
+        \ang{Af, g} &= \int_0^\ell f^{(4)}\bar{g}\\
+        &= \sbr{f^{(3)}\bar{g}}_0^\ell - \int_0^\ell f^{(3)}\bar{g}' \\
+        &=  - \int_0^\ell f^{(3)}\bar{g}' \\
+        &= \sbr{f''\bar{g}'}_0^\ell + \int_0^\ell f''\bar{g}'' \\
+        &= \int_0^\ell f''\bar{g}'' \\
+        &= \sbr{f'\bar{g}''}_0^\ell - \int_0^\ell f'\bar{g}^{(3)} \\
+        &= - \int_0^\ell f'\bar{g}^{(3)} \\
+        &=  \sbr{f\bar{g}^{(3)}}_0^\ell + \int_0^\ell f\bar{g}^{(4)} \\
+        &= \int_0^\ell f\bar{g}^{(4)} \\
+        &= \ang{f, Ag}
+    \end{align*}
+    So, $A$ is symmetric. Now, we also see by the above computation that 
+    \begin{align*}
+        \ang{Af,f} = \int_0^\ell f''\bar{f}'' \ge 0 
+    \end{align*}
+    So $A$ is positive. \qed
+    \item By part (a) and by problem 4, we know all eigenvalues are nonnegative. We see that any constant function gives the 0 eigenvalue, so we can search for positive eigenvalues from now on. Let $\gamma^4$ be an eigenvalue (note any positive number can be written like this). %TODO: can these be complex?
+     So, $f^{(4)} = \gamma f$. As the hint says, the general solution to this has form 
+     \[f(x) = a \cosh(\gamma x) + b\sinh(\gamma x) + c \cos(\gamma x) +d \sin(\gamma x).\]
+    This means 
+    \[f'(x) = \gamma(a\sinh(\gamma x)+b\cosh(\gamma x) - c \sin(\gamma x) + d \cos(\gamma x)).\]
+    Now, employing the boundary conditions, 
+    \begin{align*}
+        f(0) = 0 &\implies c+a &= 0\\
+        f'(0) = 0 &\implies b+d &= 0\\
+        f(\ell) = 0 &\implies a(\cosh(\gamma\ell)-\cos(\gamma\ell)) + b(\sinh(\gamma\ell)-\sin(\gamma\ell)) &= 0\\
+        f'(\ell) = 0 &\implies a(\cosh(\gamma\ell)-\cos(\gamma\ell)) + b(\sinh(\gamma\ell)-\sin(\gamma\ell)) &= 0\\
+    \end{align*}
+\end{enumerate}
 
 
 \newpage
@@ -107,8 +152,32 @@ TODO
  \tri
 \hop 
 \solution
-TODO
-
+First, we show that the sequence is Cauchy. For any $\eps$, let $N >1/\eps$. We see that for any $n, m > N$, we have
+\begin{align*}
+    ||f_n - f_m|| &= \int_0^1|f_n-f_m|^2 \\
+    &= \int_{1/2}^{1/2+1/N}|f_n-f_m|^2 \\
+    &\le \int_{1/2}^{1/2+1/N}1 \\
+    &= \frac{1}{N} \\
+    &\le \eps.
+\end{align*}
+So, the sequence is Cauchy.
+\hop 
+Now let's show that there is no limit. Suppose for contradiction that there is some $f$ such that $f_n \to f$. Let $x > 1/2$. Now, let $\eps = x - 1/2 > 0$. Suppose $f(x) \ne 1$. Then, define 
+\[c = \int_x^1 |f-1|^2.\]
+Note that $c >0$. We see that for $n>1/\eps$, we have 
+\[||f_n - f|| = \int_0^1|f-f_n|^2 \ge \int_x^1|f-f_n|^2 =int_x^1|f-1|^2 = c.\]
+Since $||f_n -f|| \to 0$, this is not possible. So, it must be that $f(x) = 1$. 
+\hop 
+By a similar argument, let $x \le 1/2$. Suppose $f(x) \ne 0$. Define 
+\[c = \int_0^x |f|^2.\]
+We see that for any $n$,
+\[||f_n - f|| = \int_0^1|f-f_n|^2 \ge \int_0^x|f-f_n|^2  = \int_0^x|f|^2 = c. \]
+This also can't be. Thus, $f(x) = 0$. So, it must be that 
+\[f(x) = \begin{cases}
+    1 &\text{ if } x > 1/2\\
+    0 &\text{ if } x \le 1/2
+\end{cases}.\]
+However, this isn't continuous, so we have a contradiction. So, this sequence is Cauchy but not convergent and our space is not complete. \qed
 
 \newpage
 \problem{7} TODO
