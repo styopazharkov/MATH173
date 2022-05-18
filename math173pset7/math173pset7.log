@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.4.8)  17 MAY 2022 21:35
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.4.8)  17 MAY 2022 21:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -284,7 +284,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 {/usr/local/texlive/2022basic/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2
 ]
 [3] [4] [5]
-Overfull \hbox (1.11893pt too wide) in paragraph at lines 161--163
+Overfull \hbox (1.11893pt too wide) in paragraph at lines 161--164
 \OT1/cmr/m/n/10 Note that $[]$ is non-negative and grows in both di-rec-tion an
 d $[]$ os-cil-lates, so $[](\OML/cmm/m/it/10 ^^M`\OT1/cmr/m/n/10 ) [](\OML/cmm/
 m/it/10 ^^M`\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ^^@
@@ -317,7 +317,7 @@ b></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy1
 msy5.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/c
 m/cmsy7.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfont
 s/symbols/msbm10.pfb>
-Output written on math173pset7.pdf (8 pages, 182611 bytes).
+Output written on math173pset7.pdf (8 pages, 183241 bytes).
 PDF statistics:
  111 PDF objects out of 1000 (max. 8388607)
  68 compressed objects within 1 object stream

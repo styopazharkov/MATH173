@@ -160,6 +160,7 @@ Note that the last two are 0 because $|x|$ is an even function and $sin(kx)$ is 
     \hop
     We see that $\gamma = 0$ also fits this equation, so we can say eigenvalues are \[\{\gamma^4:  \cos(\gamma\ell) \cosh(\gamma\ell) - 1 = 0\}.\]
     Note that $\cosh$ is non-negative and grows in both direction and $\cos$ oscillates, so $\cos(\gamma\ell) \cosh(\gamma\ell) - 1$ must have infinite roots by the intermediate value theorem. Thus, there are indeed infinite eigenvalues. \qed
+    TODO: img
 \end{enumerate}
 
 
@@ -214,7 +215,8 @@ However, this isn't continuous, so we have a contradiction. So, this sequence is
         &= \frac{1-r^2}{1-2r\cos(\theta) + r^2},
     \end{align*}
     as we wanted. \qed
-    \item First, we know $P_r$ is a $C^2$ function in the disk. We know convolution preserves this pro TODO
+    \item First, we know $P_r$ is a $C^2$ function in the disk. We know convolution preserves this property, so $u$ is $C^2$ on the disk. Thus, (formally, by the inverse function theorem), $v$ is also $C^2$ on the disk. 
+    \hop Now, let's check the Laplacian. Let $f(r \theta) = r^{|n|}e^{in\theta}$. For $|n| \ge 2$, we have $f_{rr} = r^{|n| - 2}(|n|-1)|n|e^{in\theta}$ and $f_{\theta\theta} = -r^{|n|}|n|^2e^{in\theta}$ and $f_r = |n|r^{|n|-1}e^{in\theta}$. Thus, $f$ is harmonic. So, $P_r$ is the sum of harmonic functions, so it is harmonic.
 \end{enumerate}
 
 
