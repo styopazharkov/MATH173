@@ -231,7 +231,7 @@ However, this isn't continuous, so we have a contradiction. So, this sequence is
         u(r, \theta) &= \frac{1}{2\pi}\int_0^{2\pi} P_r(\theta-\phi) \del{\sum_{n\in\ZZ}h_ne^{in\phi}}d\phi\\
         &= \frac{1}{2\pi}\int_0^{2\pi} \del{\sum_{n\in\ZZ}r^{|n|}e^{in(\theta - \phi)}} \del{\sum_{n\in\ZZ}h_ne^{in\phi}}d\phi \\
         &= \sum_{n,m\in\ZZ}\frac{1}{2\pi}\int_0^{2\pi} \del{r^{|n|}e^{in(\theta - \phi)}} \del{h_me^{im\phi}}d\phi \\
-        &= \sum_{n,m\in\ZZ}r^{|n|}h_me^{in\theta}\frac{1}{2\pi}\int_0^{2\pi} e^{i\phi(n - m)}d\phi.\\
+        &= \sum_{n,m\in\ZZ}r^{|n|}h_me^{in\theta}\frac{1}{2\pi}\int_0^{2\pi} e^{i\phi(m -n)}d\phi.\\
     \end{align*}
     For $n\ne m$, the term is 0, so 
     \[u(r,\theta) = \sum_{n\in\ZZ}r^{|n|}h_ne^{in\theta}\frac{1}{2\pi}\int_0^{2\pi}1d\phi = \sum_{n\in\ZZ}r^{|n|}h_ne^{in\theta}\]
