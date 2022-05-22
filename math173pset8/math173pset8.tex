@@ -58,7 +58,10 @@ So, the statement follows for all  $u \in C^1(\ol{\Omega})$. By continuity and d
         \ang{Pv, v'}  &= \ang{u, l'+w'} = \ang{u, u'} + \ang{u,w'} = \ang{u, u'} = \ang{u,u'}+\ang{w, u'} = \ang{u+w, u'} = \ang{v, Pv'},
     \end{align*}
     So $P = P^*$ by definition. \qed 
-    \item TODO
+    \item Since $T$ is linear, $T(H)$ is a subspace. For any sequence $v_j$ in $T(H)$ where $v_j \to v$ in $H$, we know $T(v_j) = v_j$ because $T^2 = T$. So, by continuity of $T$, we have $T(v) = v$, so $v \in T(H)$ and we can conclude $T(H)$ is closed. 
+    \hop 
+    Let $u = T(v)$ and let $w = v - u$. Note $u \in T(H)$. For any $y = T(x) \in T(H)$, we have 
+    \[\ang{y, w} = \ang{T(x), v- u} = \ang{x, T(v-u)} = \ang{x, T(v)- T(u)} = \ang{x, u- u} = 0.\]
 \end{enumerate}
 
 \newpage
