@@ -33,9 +33,15 @@ This problem is straightforward. Since $\ol{\Omega}$ is closed, and $c > 0$, the
 \begin{align*}
     ||u||^2_{H^1_c(\Omega)} &= \int_\Omega |u(x)|^2 dx + \int_\Omega c(x) |\D u (x)|^2 dx \\
     &\ge C_1^2\int_\Omega |u(x)|^2 dx + \int_\Omega C_1^2|\D u (x)|^2 dx\\
-    &= C_1^2||u||^2_{H^1(\Omega)} 
+    &= C_1^2||u||^2_{H^1(\Omega)}.
 \end{align*}
-
+Similarly, 
+\begin{align*}
+    ||u||^2_{H^1_c(\Omega)} &= \int_\Omega |u(x)|^2 dx + \int_\Omega c(x) |\D u (x)|^2 dx \\
+    &\le C_2^2\int_\Omega |u(x)|^2 dx + \int_\Omega C_2^2|\D u (x)|^2 dx\\
+    &= C_2^2||u||^2_{H^1(\Omega)}.
+\end{align*}
+So, the statement follows for all  $u \in C^1(\ol{\Omega})$. By continuity and density, it follows that the statement holds for $u \in H^1(\Omega)$. \qed
 \newpage
 \problem{2} 
  \tri

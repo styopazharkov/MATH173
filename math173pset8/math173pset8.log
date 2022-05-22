@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.4.8)  22 MAY 2022 16:05
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.4.8)  22 MAY 2022 16:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -287,7 +287,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 Here is how much of TeX's memory you used:
  3941 strings out of 479719
  59869 string characters out of 5880575
- 351478 words of memory out of 5000000
+ 354478 words of memory out of 5000000
  21895 multiletter control sequences out of 15000+600000
  476870 words of font info for 58 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
@@ -306,7 +306,7 @@ local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></us
 r/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></
 usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pf
 b>
-Output written on math173pset8.pdf (6 pages, 124334 bytes).
+Output written on math173pset8.pdf (6 pages, 125457 bytes).
 PDF statistics:
  83 PDF objects out of 1000 (max. 8388607)
  50 compressed objects within 1 object stream
