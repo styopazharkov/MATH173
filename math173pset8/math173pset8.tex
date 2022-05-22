@@ -29,7 +29,12 @@
  \tri
 \hop 
 \solution
-TODO
+This problem is straightforward. Since $\ol{\Omega}$ is closed, and $c > 0$, there exists constants $C_1, C_2 >0$ such that $C_1 < c(x) < C_2$. Assume $C_1 < 1$ and $C_2 > 1$. If not, we can always choose smaller $C_1$ and larger $C_2$. So, for any $u \in C^1(\ol{\Omega})$, 
+\begin{align*}
+    ||u||^2_{H^1_c(\Omega)} &= \int_\Omega |u(x)|^2 dx + \int_\Omega c(x) |\D u (x)|^2 dx \\
+    &\ge C_1^2\int_\Omega |u(x)|^2 dx + \int_\Omega C_1^2|\D u (x)|^2 dx\\
+    C_1^2||u||^2_{H^1(\Omega)} 
+\end{align*}
 
 \newpage
 \problem{2} 
