@@ -287,7 +287,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 Here is how much of TeX's memory you used:
  3944 strings out of 479719
  59943 string characters out of 5880575
- 354478 words of memory out of 5000000
+ 355478 words of memory out of 5000000
  21898 multiletter control sequences out of 15000+600000
  476870 words of font info for 58 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
@@ -307,7 +307,7 @@ r/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></
 usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pf
 b></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7
 .pfb>
-Output written on math173pset8.pdf (6 pages, 140690 bytes).
+Output written on math173pset8.pdf (6 pages, 140965 bytes).
 PDF statistics:
  88 PDF objects out of 1000 (max. 8388607)
  53 compressed objects within 1 object stream
