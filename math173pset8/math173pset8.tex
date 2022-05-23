@@ -82,7 +82,15 @@ In this problem, we will use $H^1$ to denote $H^1((0,1))$ to reduce clutter.
         &=  4\intzo \abs{f}^2 + 4\intzo \abs{\D f}^2 \\
         &= 4||f||_{H^1}.
     \end{align*}
-    So, $T$ is bounded.
+    So, $T$ is bounded. It's easy to see that $T(f) \in M$ by definition, and if $f \in M$, then $T(f) = f$. So, $T = T^2$ and $T(H^1) = M$. Also, 
+    \begin{align*}
+        \ang{Tf, g} &= \ang{f-\intzo f, g } \\ 
+        &= \intzo \del{f \ol{g} + \D f \ol{\D g}} - \intzo \del{\intzo f}\ol{g} \\
+        &= \intzo \del{f \ol{g} + \D f \ol{\D g}} - \del{\intzo\ol{g}} \del{\intzo f} \\
+        &= \intzo \del{f \ol{g} + \D f \ol{\D g}} - \intzo \del{\intzo \ol{g}}f \\
+        &=\ang{f, g = \intzo g} \\
+        &= \ang{f, Tg}.
+    \end{align*}
     \item TODO
 \end{enumerate}
 
