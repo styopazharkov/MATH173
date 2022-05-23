@@ -65,12 +65,22 @@ So, the statement follows for all  $u \in C^1(\ol{\Omega})$. By continuity and d
     because $T = T^2 = T^*$. So, $w\in T(H)^\perp$ and thus $T$ is the projection. \qed
 \end{enumerate}
 
+
 \newpage
 \problem{3} 
  \tri
 \hop 
 \solution
-TODO
+In this problem, we will use $H^1$ to denote $H^1((0,1))$ to reduce clutter.
+\begin{enumerate}[(a)]
+    \item Consider the operator $T: H^1 \to H^1$ where $Tf = f - \intzo f$. It's easy to see that $T$ is linear since integration is linear. We see that 
+    \begin{align}
+        ||Tf||_{H^1} &= \intzo \abs{f - \intzo f}^2 + \intzo \abs{\D f} \\
+        &\le  \intzo \abs{\abs{f} - \abs{\intzo f}}^2 + \intzo \abs{\D f} \\
+        &\le  \intzo \del{2\abs{f}^2 - \abs{\intzo f}^2} + \intzo \abs{\D f} \\
+    \end{align}
+    \item TODO
+\end{enumerate}
 
 \newpage
 \problem{4} 
