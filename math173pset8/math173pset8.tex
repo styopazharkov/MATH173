@@ -118,7 +118,7 @@ TODO
 \solution
 \begin{enumerate}[(a)]
     \item From problem 5(b), and what we did in class, we see 
-    \[\D u = \D F * f = \delta * f  = f.\]
+    \[\Delta u = \Delta F * f = \delta * f  = f.\]
     \qed
     \item We have seen that the Fourier transform of $\delta$ is 1, but let us confirm this. We see that for any test function $\phi$, 
     \begin{align*}
@@ -126,7 +126,12 @@ TODO
         &= \delta\del{\int \phi(x)e^{-ix\cdot y}dx}\\
         &= \int \phi(x)dx.
     \end{align*}
-    So, by definition, $\F(\delta) = 1$
+    So, by definition, $\F(\delta) = 1$.
+    \hop 
+    Now, note that using our Fourier transform of derivative rules, we have 
+    \[\F(\Delta F) = \sum_{j=1}^n (-i|y|)^2 \F(F) = -n|y|^2\F(F).\]
+    Since $\F(\Delta F) = \F(\delta) = 1$, we can say 
+    \[\F(F) = -\frac{1}{n|y|^2}\]
 \end{enumerate}
 
 \end{document}
