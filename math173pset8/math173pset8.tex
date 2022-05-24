@@ -121,8 +121,11 @@ TODO
     So, plugging this in, we have 
     \begin{align*}
         \Delta F_\eps &= c_n (2-n)(|x|^2+\eps^2)^{-n/2}- |x|^2c_n(2-n)n(|x|^2+\eps^2)^{-(n-2)/2} - (n-1)(2-n)c_n(|x|^2 + \eps^2)^{-n/2}\\
-        &=\eps^2 c_n(2-n)(|x|^2 + \eps^2)^{-(n+2)/2}
+        &=\eps^2 c_n(2-n)(|x|^2 + \eps^2)^{-(n+2)/2}\\
+        &=-\eps^{-n} c_n(n-2)(|x/\eps|^2 + 1)^{-(n+2)/2}\\
+        &= \eps^{-n}g(x/\eps),
     \end{align*}
+    as we wanted. \qed
     \item TODO
 \end{enumerate}
 
