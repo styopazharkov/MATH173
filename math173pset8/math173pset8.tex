@@ -106,9 +106,9 @@ Let
 \[J^*g = \int_0^x\int_0^t g(s)dsdt - x\intzo\int_0^t g(s)ds dt. \]
 It's easy to see that $J^*$ is linear. Now, we show it is bounded. Note that 
 \[(J^*g)' = \int_0^x g(s) ds - \int_0^1 \int_0^t g(s)ds dt.\]
-We see 
+We see by Cauchy-Schwartz
 \begin{align*}
-    \int_0^1 \abs{\int_0^x g(s) ds}^2 &\le  \int_0^1 \int_0^x \abs{g(s)}^2 ds
+    \int_0^1 \abs{\int_0^x g(s) ds}^2dx &\le  \int_0^1 \int_0^x \abs{g(s)}^2 dsdx
 \end{align*}
 
 \newpage
