@@ -131,7 +131,10 @@ TODO: check adjointness
         &= \eps^{-n}g(x/\eps),
     \end{align*}
     as we wanted. \qed
-    \item TODO
+    \item Since $F_\eps$ is bounded by $F$, for any test function $\phi$, we have 
+    \begin{align*}
+       \lim_{\eps \to 0} |(F-F_\eps)(\phi)| &= \lim_{\eps \to 0} \abs{\int c_n\del{|x|^{2-n} - (|x|2 + \eps^2)^{(2-n)/2} }\phi(x) dx}
+    \end{align*}
 \end{enumerate}
 
 \newpage
@@ -140,7 +143,7 @@ TODO: check adjointness
 \hop 
 \solution
 \begin{enumerate}[(a)]
-    \item From problem 5(b), and what we did in class, we see since $F$ is compactly supported,$a \over b$, $\frac{a}{b}$
+    \item From problem 5(b), and what we did in class, we see since $F$ is compactly supported,$a \over b$, 
     \[\Delta u = \Delta F * f = \delta * f  = f.\]
     \qed
     \item We have seen that the Fourier transform of $\delta$ is 1, but let us confirm this. We see that for any test function $\phi$, 
