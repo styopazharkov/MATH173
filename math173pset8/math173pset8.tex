@@ -133,7 +133,8 @@ TODO: check adjointness
     as we wanted. \qed
     \item Since $F_\eps$ is bounded by $F$, for any test function $\phi$, we have 
     \begin{align*}
-       \lim_{\eps \to 0} |(F-F_\eps)(\phi)| &= \lim_{\eps \to 0} \abs{\int c_n\del{|x|^{2-n} - (|x|2 + \eps^2)^{(2-n)/2} }\phi(x) dx}
+       \lim_{\eps \to 0} |(F-F_\eps)(\phi)| &= \lim_{\eps \to 0} \abs{\int c_n\del{|x|^{2-n} - (|x|2 + \eps^2)^{(2-n)/2} }\phi(x) dx} \\
+       &=  \abs{\int c_n\del{ \lim_{\eps \to 0}\del{|x|^{2-n} - (|x|2 + \eps^2)^{(2-n)/2} }}\phi(x) dx}
     \end{align*}
 \end{enumerate}
 
