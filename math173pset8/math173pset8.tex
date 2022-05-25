@@ -138,7 +138,17 @@ TODO: check adjointness
        &=  \abs{\int c_n\del{0}\phi(x) dx}\\
        &= 0.
     \end{align*}
-    So, $F_\eps \to F$ in the sense of distributions indeed. \qed
+    So, $F_\eps \to F$ in the sense of distributions indeed. 
+    \hop 
+    Now we see that from part (a) and page 59 of chapter 5,
+    \begin{align*}
+        \Delta F(\phi) &= F(\Delta \phi) \\
+        &= \lim_{\eps \to 0} F_\eps (\Delta \phi) \\
+        &= \lim_{\eps \to 0} \int \eps^{-n}g(x/\eps) \phi(x) dx\\
+        &= \delta(\phi) \\
+        &= \phi(0).
+    \end{align*}
+    \qed
 \end{enumerate}
 
 \newpage
