@@ -123,13 +123,13 @@ Similarly,
 So, by the triangle inequality on the $L^2$ norm, 
 \[||J^*g||_{H_0^1} = ||(J^*g)'||_{L^2} \le 2||g||_{L^2}. \]
 Thus, $J^*$ is bounded. The last thing to check is that $J^*$ is actually the adjoint. For that, we importantly note that $(J^*g)'' = -g$. Integrating by parts,
-\begin{align}
+\begin{align*}
     \ang{Jf, g}_{L^2} &=  \ang{f, g}_{L^2} \\
     &= \int f\ol{g} \\
     &= -\int f\ol{(J^*g)}''\\
     &= \int f'\ol{(J^*g)}' \\
     &= \ang{f, J^* g}_{H_0^1}.
-\end{align}
+\end{align*}
 So, $J^*$ is the adjoint. \qed
 \newpage
 \problem{5} 
