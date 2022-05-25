@@ -104,7 +104,7 @@ In this problem, we will use $H^1$ to denote $H^1((0,1))$ to reduce clutter.
 \solution
 Let 
 \[J^*g = \int_0^x\int_0^t g(s)dsdt - x\intzo\int_0^t g(s)ds dt. \]
-It's easy to see that $J^*$ is linear. Now, we show it is bounded. Note that 
+It's easy to see that $J^*$ is linear and thi image is indeed in $H_0^1$ because it is differentiable and is 0 on the endpoints. Now, we show it is bounded. Note that 
 \[(J^*g)' = \int_0^x g(s) ds - \int_0^1 \int_0^t g(s)ds dt.\]
 We see by Cauchy-Schwartz
 \begin{align*}
@@ -122,7 +122,15 @@ Similarly,
 \end{align*}
 So, by the triangle inequality on the $L^2$ norm, 
 \[||J^*g||_{H_0^1} = ||(J^*g)'||_{L^2} \le 2||g||_{L^2}. \]
-Thus, $J^*$ is bounded. 
+Thus, $J^*$ is bounded. The last thing to check is that $J^*$ is actually the adjoint. For that, we importantly note that $(J^*g)'' = -g$. Integrating by parts,
+\begin{align}
+    \ang{Jf, g}_{L^2} &=  \ang{f, g}_{L^2} \\
+    &= \int f\ol{g} \\
+    &= -\int f\ol{(J^*g)}''\\
+    &= \int f'\ol{(J^*g)}' \\
+    &= \ang{f, J^* g}_{H_0^1}.
+\end{align}
+So, $J^*$ is the adjoint. \qed
 \newpage
 \problem{5} 
  \tri
