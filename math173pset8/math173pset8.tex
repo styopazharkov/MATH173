@@ -104,10 +104,12 @@ In this problem, we will use $H^1$ to denote $H^1((0,1))$ to reduce clutter.
 \solution
 Let 
 \[J^*g = \int_0^x\int_0^t g(s)dsdt - x\intzo\int_0^t g(s)ds dt. \]
-It's easy to see that $J^*$ is linear. Now, we show it is bounded.
-TODO: finish this
-TODO: check boundedness
-TODO: check adjointness
+It's easy to see that $J^*$ is linear. Now, we show it is bounded. Note that 
+\[(J^*g)' = \int_0^x g(s) ds - \int_0^1 \int_0^t g(s)ds dt.\]
+We see 
+\begin{align*}
+    \int_0^1 \abs{\int_0^x g(s) ds}^2 &\le  \int_0^1 \int_0^x \abs{g(s)}^2 ds
+\end{align*}
 
 \newpage
 \problem{5} 
@@ -157,7 +159,7 @@ TODO: check adjointness
 \hop 
 \solution
 \begin{enumerate}[(a)]
-    \item From problem 5(b), and what we did in class, we see since $F$ is compactly supported,$a \over b$, 
+    \item From problem 5(b), and what we did in class, we see since $F$ is compactly supported,
     \[\Delta u = \Delta F * f = \delta * f  = f.\]
     \qed
     \item We have seen that the Fourier transform of $\delta$ is 1, but let us confirm this. We see that for any test function $\phi$, 
