@@ -95,6 +95,22 @@ In this problem, we will use $H^1$ to denote $H^1((0,1))$ to reduce clutter.
     \hop 
     Since $T$ is the projection onto $M$, we know $M^\perp = \ker T$. That is $f$ such that $f - \intzo f = 0$. Thus, $f$ must be constant. We see that any constant function is in the kernel, so $M^\perp$ is the constant functions. \qed
     \item First, let us derive a useful fact. Let $g$ be a function, $h,w$ be distributions. We know from homework that $w' = 0$ as distributions implies $w = c$ as functions. Now, we know $\del{\int_0^x}' = g$ by FTC, and the same is true as distributions. So, if $h'= g$ as distributions, then $\del{h-\int_0^xg}' = 0$ as distributions. Plugging in for $w$, we see $h=  \int_0^x + C$. We will use this fact.
+    \hop 
+    Let $g \in N^\perp$. We see that for any $f \in N$, 
+    \[\int g'\ol{f}' + \int g \ol{f} = \ang{g,f} = 0,\]
+    som with $g$ ar a distribution,
+    \[g(\ol{f}) =\int g \ol{f} = -\int g'\ol{f}' =-g'(\ol{f}') = g''(\ol{f}).\]
+    Thus, $g = g''$ as distributions. By our useful fact,
+    \[g' = \int_0^x g + C\]
+    as functions, so $g'$ is continuous. Also $g''' = g'$ as distributions, so by our useful fact,
+    \[g'' = \int_0^x g' +C\]
+    as continuous functions. Thus, $g = g''$ as functions. 
+    \hop 
+    We see that for any $g$ such that $g = g''$, we have for any $f \in N$, integration by parts gives
+    \[\ang{g,f} = \int g\ol{f} + \int g' \ol{f}' = \int g\ol{f} - \int g'' \ol{f} = 0.\]
+    So, $g \in N^\perp$. Thus, $N^\perp$ is all of the functions such that $g'' = g$. This is functions of the form 
+    \[ae^x+be^{-x}.\]
+    We could have also done this by defining an operator and using problem 2c, but bounding that operator turned out to be painful. \qed
 \end{enumerate}
 
 \newpage
