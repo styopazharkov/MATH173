@@ -77,9 +77,9 @@ In this problem, we will use $H^1$ to denote $H^1((0,1))$ to reduce clutter.
     \begin{align*}
         ||Tf||_{H^1} &= \intzo \abs{f - \intzo f}^2 + \intzo \abs{\D f}^2 \\
         &\le  \intzo \abs{\abs{f} - \abs{\intzo f}}^2 + \intzo \abs{\D f} ^2\\
-        &\le  \intzo \del{2\abs{f}^2 - \abs{\intzo f}^2} + \intzo \abs{\D f}^2 \\
+        &\le  \intzo \del{2\abs{f}^2 +2 \abs{\intzo f}^2} + \intzo \abs{\D f}^2 \\
         &=  4\intzo \abs{f}^2 + \intzo \abs{\D f}^2 \\
-        &=  4\intzo \abs{f}^2 + 4\intzo \abs{\D f}^2 \\
+        &\le  4\intzo \abs{f}^2 + 4\intzo \abs{\D f}^2 \\
         &= 4||f||_{H^1}.
     \end{align*}
     So, $T$ is bounded. It's easy to see that $T(f) \in M$ by definition, and if $f \in M$, then $T(f) = f$. So, $T = T^2$ and $T(H^1) = M$. Also, 
@@ -106,7 +106,8 @@ Let
 \[J^*g = \int_0^x\int_0^t g(s)dsdt - x\intzo\int_0^t g(s)ds dt. \]
 It's easy to see that $J^*$ is linear. Now, we show it is bounded.
 TODO: finish this
-TODO: check 
+TODO: check boundedness
+TODO: check adjointness
 
 \newpage
 \problem{5} 
