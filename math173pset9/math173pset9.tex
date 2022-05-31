@@ -35,8 +35,9 @@
 \tri
 \hop 
 \solution
-\begin{enumerate}
+\begin{enumerate}[(a)]
     \item We need $\intzo |x^\alpha|^2 = \intzo x^{2\alpha}$ to converge. This converges for $\alpha > -1/2$ and diverges for $\alpha \le -1/2$, so $\phi_\alpha \in L^2((0,1))$ for $\alpha > -1/2$. \qed
+    \item We need $\phi_\alpha \in L^2((0,1))$, so $\alpha > -1/2$. But, since $\phi_\alpha$ are smooth, we also need $\intzo |\phi_\alpha ' |^2$ to converge. We see $\phi_\alpha' = \alpha x^{\alpha-1}$. and $\intzo |\alpha x^{\alpha-1}|^2 = |\alpha|^2\intzo x^{2(\alpha-1)}$ converges for $\alpha > 1/2$ and diverges for $\alpha \le 1/2$. So, $\phi_\alpha \in H^1((0,1))$ for $\alpha > 1/2$. \qed
 \end{enumerate}
 
 \newpage
