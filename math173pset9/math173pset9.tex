@@ -55,7 +55,14 @@ Recall that we defined $G(x,y) = E(x-y) - \phi^x(y)$ where $\Delta \phi^x = 0$ a
     So, 
     \[f(y) - f(x) =  \int_x^yf'(t)dt\]
     as we wanted. \qed %TODO: aren't 
-    \item 
+    \item By Cauchy-Schwartz and part (a) and that $|f'|$ is bounded by $C$, 
+    \begin{align*}
+        |f(y) - f(x)|^2 &= |\int_x^y f'(t)dt|^2\\
+        &\le \int_x^y|f'(t)|^2 dt \\
+        &\le \int_x^yC^2 dt \\
+        &= |y-x|C^2.
+    \end{align*}
+    So, $|f(x) - f(y)| \le C|x-y|^{1/2}$. \qed
 \end{enumerate}
 
 \newpage
