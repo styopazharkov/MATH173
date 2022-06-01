@@ -49,13 +49,13 @@ Recall that we defined $G(x,y) = E(x-y) - \phi^x(y)$ where $\Delta \phi^x = 0$ a
 \solution
 \begin{enumerate}[(a)]
     \item We know the statement is true for $f \in C^1((a,b))$ by FTC. Now, let $f_n \to f$ where $f_n \in C^1((a,b))$. By the continuity of the trace operator, 
-    \[f(x) - f(y) = \limty (f_n(x)-f_n(y)) = \limty \int_x^yf_n'(t)dt\]
+    \[f(y) - f(x) = \limty (f_n(y)-f_n(x)) = \limty \int_x^yf_n'(t)dt\]
     Now, since we are on a bounded interval, we can move the limit inside the derivative after applying dominated convergence to see that 
     \[\limty \int_x^yf'_n(t)dt - \int_x^yf'_n(t)dt = \limty \int_x^y(f_n(t) - f(t))'dt = 0.\]
     So, 
-    \[f(x) - f(y) =  \int_x^yf'(t)dt\]
-    as we wanted. \qed
-    \item TODO
+    \[f(y) - f(x) =  \int_x^yf'(t)dt\]
+    as we wanted. \qed %TODO: aren't 
+    \item 
 \end{enumerate}
 
 \newpage
