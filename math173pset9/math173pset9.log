@@ -293,11 +293,11 @@ Package pdftex.def Info: ../images/dogbowl.jpeg  used on input line 68.
 Here is how much of TeX's memory you used:
  3967 strings out of 479719
  60411 string characters out of 5880575
- 355485 words of memory out of 5000000
+ 354485 words of memory out of 5000000
  21915 multiletter control sequences out of 15000+600000
  476870 words of font info for 58 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
- 55i,8n,62p,435b,232s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 55i,8n,62p,435b,234s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive
 /2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/tex
 live/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/loc
@@ -314,7 +314,7 @@ msfonts/cm/cmr7.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public
 /amsfonts/cm/cmsy10.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/pu
 blic/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1
 /public/amsfonts/cm/cmsy7.pfb>
-Output written on math173pset9.pdf (7 pages, 537798 bytes).
+Output written on math173pset9.pdf (7 pages, 537752 bytes).
 PDF statistics:
  99 PDF objects out of 1000 (max. 8388607)
  60 compressed objects within 1 object stream
