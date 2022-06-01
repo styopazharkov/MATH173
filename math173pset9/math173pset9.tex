@@ -63,7 +63,7 @@
 \tri
 \hop 
 \solution Consider the dogbowl functions 
-\[f_n := 1-\max(n\cdot d(x, \d B), 1).\]
+\[f_n := 1-\min(n\cdot d(x, \d B), 1).\]
 
 \image{4cm}{dogbowl}
 
@@ -86,4 +86,23 @@ We have shown in class that this is sufficient to say $T_{B_+}(u|_{B_+}) = 0$, s
 \tri
 \hop 
 \solution
+\begin{enumerate}[(a)]
+    \item Let $V_n = \{x : |x| < 1/n\}$ and let $W_n =\{x: 1- 1/n < |x| < 1\}$. Then, consider lemonsqueezer functions $f_n \in $ such that $f \in C_0^1(U)$ and $f_n|_{B(V_n \cap W_n)} = 1$ and $f_n|_{V_{2n} \cup W_{2n}} = 0$. 
+    
+    TODO: image
+
+    Note that $u_n := uf_n \in C_0^1(U)$. We claim $u_n \to u$ in $H^1(B)$. Note that 
+    \[||u-u_n||_{H^1}^2 = \int_B|u - u_n|^2+ \int_B|\D u' -u_n'|^2.\] 
+    Now, since $u$ is bounded,
+    \begin{align}
+        \int_B |u - u_n|^2 &= \int_B|u|^2|1-f_n|^2 \\
+        &= \int_BO(1)|1-f_n|^2 \\
+        &=O(1) \int_B|1-f_n|^2 \\
+        &=O(1) \int_{V_n \cup W_n}|1-f_n|^2 \\
+        &=O(1) \int_{V_n \cup W_n}O(1) \\
+        &=O(1/n^2) \\
+    \end{align}
+    \item TODO
+    \item TODO
+\end{enumerate}
 \end{document}
