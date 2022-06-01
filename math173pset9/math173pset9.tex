@@ -48,7 +48,8 @@
 \begin{enumerate}[(a)]
     \item We know the statement is true for $f \in C^1((a,b))$ by FTC. Now, let $f_n \to f$ where $f_n \in C^1((a,b))$. By the continuity of the trace operator, 
     \[f(x) - f(y) = \limty (f_n(x)-f_n(y)) = \limty \int_x^yf_n'(t)dt\]
-    TODO: finish this.
+    Now, since we are on a bounded interval, we can move the limit inside the derivative after applying dominated convergence to see that 
+    \[\limty \int_x^yf'_n(t)dt - \int_x^yf'_n(t)dt = \limty \int_x^y(f_n(t) - f(t))'dt = 0\]
     \item TODO
 \end{enumerate}
 
@@ -67,7 +68,7 @@
 
 \image{4cm}{dogbowl}
 
-We see that $Tf_n = 1$ for all $n4$, so $Tf_n \to 1 \ne 0$. However, 
+We see that $Tf_n = 1$ for all $n$, so $Tf_n \to 1 \ne 0$. However, 
 \[||f_n||_{L_2}^2 = \int_B |f_n(x)|^2dx = \int_{d(x,\d B)< 1/n} |f_n(x)|^2dx \le  \int_{d(x,\d B)< 1/n} 1 dx  = O(1/n) \to 0.\]
 So, $f_n \to 0$ in $L^2$. \qed
  
