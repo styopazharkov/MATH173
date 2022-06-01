@@ -148,14 +148,24 @@ We have shown in class that this is sufficient to say $T_{B_+}(u|_{B_+}) = 0$, s
     \item Consider $u(x) = 1- x^2 \in C^1((-1,1))$. Note that $T_{(-1,1)} u = 0$, so $u \in H_0^1((-1,1))$. However, $T_{(-1,0) \cup (0,1)}u \ne0 $ so $u \not \in H_0^1((-1,0) \cup (0,1))$. Thus, 
     \[ H_0^1((-1,1)) \ne H_0^1((-1,0) \cup (0,1))\]
     \qed
-    \item Note that the logic in part (a) does not go through with $n=2$ because we get $O(1)$ where we need $o(1)$. To fix this, it suffices to pick a different set of $f_k$ and it turns out that $H_0^1(B) = H_0^1(U)$ for two-dimensional balls. The problem is that our $f_k$ were interesting (nonflat) on a quickly decreasing region, so the derivative was forced to be large. 
+    \item Note that the logic in part (a) does not go through with $n=2$ because we get $O(1)$ where we need $o(1)$. To fix this, it suffices to pick a different set of $f_k$ and it turns out that $H_0^1(B) = H_0^1(U)$ for two-dimensional balls. The problem is that our $f_k$ were interesting (nonflat) on a quickly shrinking region, so the derivative was forced to be large. 
     \hop
-    So, instead we will make the $f_k$ interesting on a slowly decreasing region. Keeping it linear will not work because we need it to still approach 1 quickly. So, consider the following set of lemonsqueezer functions:
+    So, instead we will make the $f_k$ interesting on a nonshrinking region. Keeping it linear will not work because we need it to still approach 1 quickly. So, consider the following set of lemonsqueezer functions:
     \hop 
-    Let $c_k$ be a slowly decreasing sequence that we will define later. Let $a_k$ be a quickly decreasing sequence. Now, let $f_k$ be constant 0 inside the square of sidelength $2a_k$ around the origin. Let $f_k$ be constant 1 outside the square of sidelength $c_k$ but outside of $W_k$. Let the outer edge be smoothed out to 0, as in part (a). For the square in the middle, let each side follow the function $1 - (1-r/c)^{k}$ where $r = \min(|x|, |y|)$. So, our picture looks something like this: 
+    Let $c$ be a constant less than $1/\sqrt{2}$. Let $a_k$ be a quickly decreasing sequence. Now, let $f_k$ be constant 0 inside the square of sidelength $2a_k$ around the origin. Let $f_k$ be constant 1 outside the square of sidelength $2c$ but outside of $W_k$. Let the outer edge be smoothed out to 0, as in part (a). For the square in the middle, let each side follow the function $1 - (1-r/c)^{k}$ where $r := \min(|x-a_k|, |y-a_k|)$. We can smooth out the edges on arbitrarily small areas later. So, our picture looks something like this: 
 
     TODO: images
 
+    Note that all of the steps in part (a) go through the same for $n=2$ except for bounding 
+    \[\int_B|u \D f_k|^2.\]
+    Since $u$ approaches 0, on the edges, we only have to worry about what happens in the center. 
+    \[\int_{x,y: r < c-a_k}|u \D f_k|^2.\]
+    % We can approximate $u$ by a sequence of functions that are flat around the origin. Selecting $k$ large enough that $c_k$ fits inside the flat region, we can assume that $u$ is constant in the region $\{x,y: r < c_k - a_k\}$. We will abuse notation by calling $u$ the value of $u$ at 0. 
+    We see that since $u = O(1)$ and $|\D f_k| = O(k)(1-r)^{k-1}$, we have
+    \begin{align*}
+        \int_{x,y : r < c-a_k}|u \D f_k|^2 &= O(1) \int_{x,y : r < c-a_k}|u \D f_k|^2
+
+    \end{align*}
 
 \end{enumerate}
 \end{document}
