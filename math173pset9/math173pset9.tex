@@ -92,16 +92,20 @@ We have shown in class that this is sufficient to say $T_{B_+}(u|_{B_+}) = 0$, s
     TODO: image
 
     Note that $u_k := uf_k \in C_0^1(U)$. We claim $u_k \to u$ in $H^1(B)$. Note that 
-    \[||u-u_k||_{H^1}^2 = \int_B|u - u_k|^2+ \int_B|\D u' -u_k'|^2.\] 
-    Now, since $u$ is bounded,
+    \[||u-u_k||_{H^1}^2 = \int_B|u - u_k|^2+ \int_B|\D u -\D u_k|^2.\] 
+    Now, since $u$ is bounded
     \begin{align*}
         \int_B |u - u_k|^2 &= \int_B|u|^2|1-f_k|^2 \\
         &= \int_BO(1)|1-f_k|^2 \\
         &=O(1) \int_B|1-f_k|^2 \\
         &=O(1) \int_{V_k \cup W_k}|1-f_k|^2 \\
         &=O(1) \int_{V_k \cup W_k}O(1) \\
-        &=O(1/n^2) \\
-        &=o(1) \\
+        &=O(1/k^2)=o(1)
+    \end{align*}
+    where the asymptotic notation is with respect to $k$.
+    Also, 
+    \begin{align*}
+        \int_B|\D u -\D u_k|^2 = \int_B|\D u -\D u f_k - u \D f_k |^2.
     \end{align*}
     \item TODO
     \item TODO
