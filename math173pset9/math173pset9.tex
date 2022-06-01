@@ -69,7 +69,17 @@ Recall that we defined $G(x,y) = E(x-y) - \phi^x(y)$ where $\Delta \phi^x = 0$ a
 \problem{4} 
 \tri
 \hop 
-\solution TODO
+\solution First, note that for $f \in C_0^1((a,b))$, and any $x \in (a,b)$, we have by Cauchy Schwartz,
+\begin{align*}
+    2||f||_2||f'||_2 &= 2\del{\int_a^b|f(t)|^2}^{1/2}\del{\int_a^b |f'(t)|^2}^{1/2}\\
+    &\ge 2\int_a^b |f(t)f'(t)|dt \\
+    &\ge 2\int_a^x |f(t)f'(t)|dt \\
+    &\ge \abs{\int_a^x 2f(t)f'(t)dt} \\
+    &= \abs{\int_a^x (f(t)^2)'dt} \\
+    &= |f(x)^2 - f(a)^2|
+    &= |f(x)^2|.
+\end{align*}
+Since $x$ was arbitrary, \[\sup_{(a,b)} |f(x)|^2 \le 2||f||_2||f'||_2\]
 
 \newpage
 \problem{5} 
