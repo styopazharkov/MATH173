@@ -165,9 +165,12 @@ We have shown in class that this is sufficient to say $T_{B_+}(u|_{B_+}) = 0$, s
     \begin{align*}
         \int_{x,y : r < c-a_k}|u \D f_k|^2 &= O(1) \int_{x,y : r < c-a_k}|\D f_k|^2 \\
         &=  O(1)\int_{x,y : r < c-a_k} O(k)(1-r)^{k-1} \\
-        &= O(1)\int_0^c\int_0^x O(k)(1-r)^{k-1} dydx \\
-        &= O(k)\int_0^c\int_0^x (1-r)^{k-1} dydx \\
+        &= O(1)\int_0^c\int_0^x O(k^2)(1-r)^{2k-1} dydx \\
+        &= O(k)\int_0^c\int_0^x (1-r)^{2k-2} dydx \\
         &= O(k)\int_0^c\int_0^x (1-r)^{\Theta(k)} dydx \\
+        &= O(k)\int_0^c\int_0^x (1-r)^{\Theta(k)} dydx \\
+        &= O(k)O(k\inv)\int_0^c (1-r)^{\Theta(k)} dx \\
+
     \end{align*}
 
 \end{enumerate}
