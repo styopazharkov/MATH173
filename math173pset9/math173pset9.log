@@ -303,12 +303,12 @@ Runaway argument?
                    \par 
 l.167 
       
-? X
+? X^^[[A
  
 Here is how much of TeX's memory you used:
  3982 strings out of 479719
  60915 string characters out of 5880575
- 357485 words of memory out of 5000000
+ 357494 words of memory out of 5000000
  21931 multiletter control sequences out of 15000+600000
  476870 words of font info for 58 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
