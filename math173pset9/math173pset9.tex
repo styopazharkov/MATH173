@@ -79,7 +79,7 @@ Recall that we defined $G(x,y) = E(x-y) - \phi^x(y)$ where $\Delta \phi^x = 0$ a
     &= |f(x)^2 - f(a)^2|
     &= |f(x)^2|.
 \end{align*}
-Since $x$ was arbitrary, \[\sup_{(a,b)} |f(x)|^2 \le 2||f||_2||f'||_2\]
+Since $x$ was arbitrary, \[\sup_{(a,b)} |f(x)|^2 \le 2||f||_2||f'||_2.\]
 
 \newpage
 \problem{5} 
@@ -147,6 +147,6 @@ We have shown in class that this is sufficient to say $T_{B_+}(u|_{B_+}) = 0$, s
     \item Consider $u(x) = 1- x^2 \in C^1((-1,1))$. Note that $T_{(-1,1)} u = 0$, so $u \in H_0^1((-1,1))$. However, $T_{(-1,0) \cup (0,1)}u \ne0 $ so $u \not \in H_0^1((-1,0) \cup (0,1))$. Thus, 
     \[ H_0^1((-1,1)) \ne H_0^1((-1,0) \cup (0,1))\]
     \qed
-    \item TODO
+    \item Note that the logic in part (a) does not go through with $n=2$ because we get $O(1)$ where we need $o(1)$. To fix this, it suffices to pick a different set of $f_k$. 
 \end{enumerate}
 \end{document}
