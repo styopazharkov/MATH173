@@ -69,7 +69,7 @@ Recall that we defined $G(x,y) = E(x-y) - \phi^x(y)$ where $\Delta \phi^x = 0$ a
 \problem{4} 
 \tri
 \hop 
-\solution First, note that for $f \in C_0^1((a,b))$, and any $x \in (a,b)$, we have by Cauchy Schwartz,
+\solution First, note that for $f \in C^1((a,b))$ where $f(a)= f(b)= 0$, and any $x \in (a,b)$, we have by Cauchy Schwartz,
 \begin{align*}
     2||f||_2||f'||_2 &= 2\del{\int_a^b|f(t)|^2}^{1/2}\del{\int_a^b |f'(t)|^2}^{1/2}\\
     &\ge 2\int_a^b |f(t)f'(t)|dt \\
@@ -80,6 +80,7 @@ Recall that we defined $G(x,y) = E(x-y) - \phi^x(y)$ where $\Delta \phi^x = 0$ a
     &= |f(x)^2|.
 \end{align*}
 Since $x$ was arbitrary, \[\sup_{(a,b)} |f(x)|^2 \le 2||f||_2||f'||_2.\]
+Now, problem 3(b) and the fact that $H_0^1((a,b)) \sse H^1((a,b)) \sse C([a,b])$ gives us the same bounding argument as in chapter 9.1, leading us to conclude the statement for all $f \in H^1((a,b))$. 
 
 \newpage
 \problem{5} 
@@ -154,5 +155,7 @@ We have shown in class that this is sufficient to say $T_{B_+}(u|_{B_+}) = 0$, s
     Let $c_k$ be a slowly decreasing sequence that we will define later. Let $a_k$ be a quickly decreasing sequence. Now, let $f_k$ be constant 0 inside the square of sidelength $2a_k$ around the origin. Let $f_k$ be constant 1 outside the square of sidelength $c_k$ but outside of $W_k$. Let the outer edge be smoothed out to 0, as in part (a). For the square in the middle, let each side follow the function $1 - (1-r/c)^{k}$ where $r = \min(|x|, |y|)$. So, our picture looks something like this: 
 
     TODO: images
+
+
 \end{enumerate}
 \end{document}
